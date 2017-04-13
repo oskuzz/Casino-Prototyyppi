@@ -648,13 +648,19 @@ public class Game1 extends javax.swing.JFrame {
         System.out.println(Lines);
         if (Lines == 1) {
             jLabel7.setVisible(true);
+            jLabel8.setVisible(false);
+            jLabel19.setVisible(false);
+            jLabel20.setVisible(false);
         } else if (Lines == 2) {
             jLabel7.setVisible(true);
             jLabel8.setVisible(true);
+            jLabel19.setVisible(false);
+            jLabel20.setVisible(false);
         } else if (Lines == 3) {
             jLabel7.setVisible(true);
             jLabel8.setVisible(true);
             jLabel19.setVisible(true);
+            jLabel20.setVisible(false);
         } else if (Lines == 4) {
             jLabel7.setVisible(true);
             jLabel8.setVisible(true);
@@ -663,12 +669,14 @@ public class Game1 extends javax.swing.JFrame {
         } else if (Lines == 5) {
             System.out.println("Lines 5");
         }
+
         if (Lines == 0) {
             jLabel7.setVisible(false);
             jLabel8.setVisible(false);
             jLabel19.setVisible(false);
             jLabel20.setVisible(false);
         }
+
         lopullinenPanos = Panos.panos(panos);
         lopullinenPanos2 = lopullinenPanos * taso;
 
@@ -704,7 +712,6 @@ public class Game1 extends javax.swing.JFrame {
         } else if (Lines == 5) {
             System.out.println("Lines 5");
         }
-
         if (Lines == 0) {
             jLabel7.setVisible(false);
             jLabel8.setVisible(false);
@@ -758,11 +765,22 @@ public class Game1 extends javax.swing.JFrame {
 
                 taso1Voitto = taso1Voitto * lopullinenPanos2;
 
+                if (taso1Voitto > 0) {
+                    jLabel7.setVisible(true);
+                }
+
                 voitto = VoitonJako.voitto(taso1Voitto, taso2Voitto, taso3Voitto, taso4Voitto, taso5Voitto, taso);
                 VoittoField.setText(Double.toString(voitto));
             } else if (taso == 2) {
                 taso1Voitto = VoitonJako.Taso1(num2, num5, num8);
                 taso2Voitto = VoitonJako.Taso2(num3, num6, num9);
+
+                if (taso1Voitto > 0) {
+                    jLabel7.setVisible(true);
+                }
+                if (taso2Voitto > 0) {
+                    jLabel8.setVisible(true);
+                }
 
                 taso1Voitto = taso1Voitto * lopullinenPanos2;
                 taso2Voitto = taso2Voitto * lopullinenPanos2;
@@ -774,6 +792,16 @@ public class Game1 extends javax.swing.JFrame {
                 taso2Voitto = VoitonJako.Taso2(num3, num6, num9);
                 taso3Voitto = VoitonJako.Taso3(num1, num4, num7);
 
+                if (taso1Voitto > 0) {
+                    jLabel7.setVisible(true);
+                }
+                if (taso2Voitto > 0) {
+                    jLabel8.setVisible(true);
+                }
+                if (taso3Voitto > 0) {
+                    jLabel19.setVisible(true);
+                }
+
                 taso1Voitto = taso1Voitto * lopullinenPanos2;
                 taso2Voitto = taso2Voitto * lopullinenPanos2;
                 taso3Voitto = taso3Voitto * lopullinenPanos2;
@@ -781,10 +809,24 @@ public class Game1 extends javax.swing.JFrame {
                 voitto = VoitonJako.voitto(taso1Voitto, taso2Voitto, taso3Voitto, taso4Voitto, taso5Voitto, taso);
                 VoittoField.setText(Double.toString(voitto));
             } else if (taso == 4) {
+
                 taso1Voitto = VoitonJako.Taso1(num2, num5, num8);
                 taso2Voitto = VoitonJako.Taso2(num3, num6, num9);
                 taso3Voitto = VoitonJako.Taso3(num1, num4, num7);
                 taso4Voitto = VoitonJako.Taso4(num1, num5, num9);
+
+                if (taso1Voitto > 0) {
+                    jLabel7.setVisible(true);
+                }
+                if (taso2Voitto > 0) {
+                    jLabel8.setVisible(true);
+                }
+                if (taso3Voitto > 0) {
+                    jLabel19.setVisible(true);
+                }
+                if (taso4Voitto > 0) {
+                    jLabel20.setVisible(true);
+                }
 
                 taso1Voitto = taso1Voitto * lopullinenPanos2;
                 taso2Voitto = taso2Voitto * lopullinenPanos2;
@@ -794,11 +836,28 @@ public class Game1 extends javax.swing.JFrame {
                 voitto = VoitonJako.voitto(taso1Voitto, taso2Voitto, taso3Voitto, taso4Voitto, taso5Voitto, taso);
                 VoittoField.setText(Double.toString(voitto));
             } else if (taso == 5) {
+
                 taso1Voitto = VoitonJako.Taso1(num2, num5, num8);
                 taso2Voitto = VoitonJako.Taso2(num3, num6, num9);
                 taso3Voitto = VoitonJako.Taso3(num1, num4, num7);
                 taso4Voitto = VoitonJako.Taso4(num1, num5, num9);
                 taso5Voitto = VoitonJako.Taso5(num3, num5, num7);
+
+                if (taso1Voitto > 0) {
+                    jLabel7.setVisible(true);
+                }
+                if (taso2Voitto > 0) {
+                    jLabel8.setVisible(true);
+                }
+                if (taso3Voitto > 0) {
+                    jLabel19.setVisible(true);
+                }
+                if (taso4Voitto > 0) {
+                    jLabel20.setVisible(true);
+                }
+                if (taso5Voitto > 0) {
+                    System.out.println("Line5");
+                }
 
                 taso1Voitto = taso1Voitto * lopullinenPanos2;
                 taso2Voitto = taso2Voitto * lopullinenPanos2;
@@ -820,7 +879,12 @@ public class Game1 extends javax.swing.JFrame {
             Num7.setText(Integer.toString(num7));
             Num8.setText(Integer.toString(num8));
             Num9.setText(Integer.toString(num9));
-
+            System.out.println("L1 kerroin: " + taso1Voitto);
+            System.out.println("L2 kerroin: " + taso2Voitto);
+            System.out.println("L3 kerroin: " + taso3Voitto);
+            System.out.println("L4 kerroin: " + taso4Voitto);
+            System.out.println("L5 kerroin: " + taso5Voitto);
+            System.out.println("Voitto: " + voitto);
             if (voitto == 0) {
                 double loppuKassa = kassa - lopullinenPanos2;
                 KassaField.setText(Double.toString(loppuKassa));
