@@ -110,7 +110,6 @@ public class Login extends javax.swing.JFrame {
             if (Login.equals("Completed")) {
                 System.out.println(uName);
                 DB.getMoneyBalanse(uName);
-                new CasinoFirstPage().setVisible(true);
 
                 this.setVisible(false);
             } else {

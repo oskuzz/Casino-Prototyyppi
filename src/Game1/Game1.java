@@ -15,17 +15,21 @@ public class Game1 extends javax.swing.JFrame {
 
     double panos = 1;
     int taso = 1;
+    int Lines;
+    double lopullinenPanos;
+    double lopullinenPanos2;
+    double voitto;
 
     /**
      * Creates new form Game1
      */
     public Game1() {
         initComponents();
-        jLabel7.setVisible(false);
+
         jLabel8.setVisible(false);
         jLabel19.setVisible(false);
         jLabel20.setVisible(false);
-        
+        jTextField3.setVisible(false);
     }
 
     /**
@@ -45,7 +49,7 @@ public class Game1 extends javax.swing.JFrame {
         jLabel28 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         jButton1 = new javax.swing.JButton();
-        jLabel6 = new javax.swing.JLabel();
+        jLabel21 = new javax.swing.JLabel();
         jTextField1 = new javax.swing.JTextField();
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
@@ -60,7 +64,12 @@ public class Game1 extends javax.swing.JFrame {
         VoittoLabel = new javax.swing.JLabel();
         VoittoField = new javax.swing.JTextField();
         jLabel9 = new javax.swing.JLabel();
+        jTextField3 = new javax.swing.JTextField();
+        jLabel6 = new javax.swing.JLabel();
+        jTextField4 = new javax.swing.JTextField();
         jLabel10 = new javax.swing.JLabel();
+        jLabel22 = new javax.swing.JLabel();
+        jLabel23 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         jButton5 = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
@@ -128,8 +137,8 @@ public class Game1 extends javax.swing.JFrame {
         });
         jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 43, -1, -1));
 
-        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/BackgroundImages/PanosBar.png"))); // NOI18N
-        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 43, -1, -1));
+        jLabel21.setIcon(new javax.swing.ImageIcon(getClass().getResource("/BackgroundImages/PanosBar.png"))); // NOI18N
+        jPanel1.add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 43, -1, -1));
 
         jTextField1.setEditable(false);
         jTextField1.setBackground(new java.awt.Color(0, 0, 1));
@@ -138,7 +147,7 @@ public class Game1 extends javax.swing.JFrame {
         jTextField1.setText("0.10 €");
         jTextField1.setBorder(null);
         jTextField1.setOpaque(false);
-        jPanel1.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 43, 54, 25));
+        jPanel1.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 44, 54, 25));
 
         jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/BackgroundImages/Panos+1.png"))); // NOI18N
         jButton2.setBorder(null);
@@ -215,7 +224,13 @@ public class Game1 extends javax.swing.JFrame {
         KassaField.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
         KassaField.setText("1");
         KassaField.setBorder(null);
-        jPanel1.add(KassaField, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 40, 80, 28));
+        KassaField.setPreferredSize(new java.awt.Dimension(6, 13));
+        KassaField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                KassaFieldActionPerformed(evt);
+            }
+        });
+        jPanel1.add(KassaField, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 40, 69, 28));
 
         VoittoLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/BackgroundImages/Game1KassaJaVoittoFrame.png"))); // NOI18N
         jPanel1.add(VoittoLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 40, -1, -1));
@@ -233,10 +248,39 @@ public class Game1 extends javax.swing.JFrame {
         jLabel9.setText("Kassa");
         jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 20, -1, -1));
 
+        jTextField3.setBackground(new java.awt.Color(0, 0, 0));
+        jTextField3.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
+        jTextField3.setForeground(new java.awt.Color(255, 255, 255));
+        jTextField3.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jTextField3.setBorder(null);
+        jTextField3.setRequestFocusEnabled(false);
+        jPanel1.add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 20, 180, 20));
+
+        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/BackgroundImages/PanosBar.png"))); // NOI18N
+        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 55, -1, -1));
+
+        jTextField4.setEditable(false);
+        jTextField4.setBackground(new java.awt.Color(0, 0, 1));
+        jTextField4.setForeground(new java.awt.Color(255, 255, 255));
+        jTextField4.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jTextField4.setText("0.10 €");
+        jTextField4.setBorder(null);
+        jTextField4.setOpaque(false);
+        jPanel1.add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 56, 54, 25));
+
         jLabel10.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
         jLabel10.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel10.setText("Panos");
-        jPanel1.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 23, -1, -1));
+        jLabel10.setText("LopullinenPanos:");
+        jPanel1.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 59, -1, -1));
+
+        jLabel22.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
+        jLabel22.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel22.setText("Panos");
+        jPanel1.add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 23, -1, -1));
+
+        jLabel23.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel23.setText("€");
+        jPanel1.add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(693, 49, 10, 10));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 350, 800, 100));
 
@@ -568,8 +612,12 @@ public class Game1 extends javax.swing.JFrame {
         if (panos == 10) {
             panos = 9;
         }
+        lopullinenPanos = Panos.panos(panos);
+        jTextField1.setText(Double.toString(lopullinenPanos) + "0 €");
 
-        jTextField1.setText(Double.toString(Panos.panos(panos)) + "0 €");
+        lopullinenPanos2 = lopullinenPanos * taso;
+
+        jTextField4.setText(Double.toString(lopullinenPanos2) + "0 €");
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
@@ -578,18 +626,53 @@ public class Game1 extends javax.swing.JFrame {
         if (panos == 0) {
             panos = 1;
         }
+        lopullinenPanos = Panos.panos(panos);
+        jTextField1.setText(Double.toString(lopullinenPanos) + "0 €");
 
-        jTextField1.setText(Double.toString(Panos.panos(panos)) + "0 €");
+        lopullinenPanos2 = lopullinenPanos * taso;
+
+        jTextField4.setText(Double.toString(lopullinenPanos2) + "0 €");
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
+
         taso = taso - 1;
         if (taso <= 0) {
             taso = 1;
         }
 
+        Lines = taso;
         jTextField2.setText(Integer.toString(taso));
+
+        System.out.println(Lines);
+        if (Lines == 1) {
+            jLabel7.setVisible(true);
+        } else if (Lines == 2) {
+            jLabel7.setVisible(true);
+            jLabel8.setVisible(true);
+        } else if (Lines == 3) {
+            jLabel7.setVisible(true);
+            jLabel8.setVisible(true);
+            jLabel19.setVisible(true);
+        } else if (Lines == 4) {
+            jLabel7.setVisible(true);
+            jLabel8.setVisible(true);
+            jLabel19.setVisible(true);
+            jLabel20.setVisible(true);
+        } else if (Lines == 5) {
+            System.out.println("Lines 5");
+        }
+        if (Lines == 0) {
+            jLabel7.setVisible(false);
+            jLabel8.setVisible(false);
+            jLabel19.setVisible(false);
+            jLabel20.setVisible(false);
+        }
+        lopullinenPanos = Panos.panos(panos);
+        lopullinenPanos2 = lopullinenPanos * taso;
+
+        jTextField4.setText(Double.toString(lopullinenPanos2) + "0 €");
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
@@ -599,8 +682,41 @@ public class Game1 extends javax.swing.JFrame {
         if (taso == 6) {
             taso = 5;
         }
+
+        Lines = taso;
+
         jTextField2.setText(Integer.toString(taso));
+        System.out.println(Lines);
+        if (Lines == 1) {
+            jLabel7.setVisible(true);
+        } else if (Lines == 2) {
+            jLabel7.setVisible(true);
+            jLabel8.setVisible(true);
+        } else if (Lines == 3) {
+            jLabel7.setVisible(true);
+            jLabel8.setVisible(true);
+            jLabel19.setVisible(true);
+        } else if (Lines == 4) {
+            jLabel7.setVisible(true);
+            jLabel8.setVisible(true);
+            jLabel19.setVisible(true);
+            jLabel20.setVisible(true);
+        } else if (Lines == 5) {
+            System.out.println("Lines 5");
+        }
+
+        if (Lines == 0) {
+            jLabel7.setVisible(false);
+            jLabel8.setVisible(false);
+            jLabel19.setVisible(false);
+            jLabel20.setVisible(false);
+        }
+        lopullinenPanos = Panos.panos(panos);
+        lopullinenPanos2 = lopullinenPanos * taso;
+
+        jTextField4.setText(Double.toString(lopullinenPanos2) + "0 €");
     }//GEN-LAST:event_jButton4ActionPerformed
+
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
         // TODO add your handling code here:
@@ -610,8 +726,16 @@ public class Game1 extends javax.swing.JFrame {
 
     private void PlayButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PlayButtonActionPerformed
         // TODO add your handling code here:
-        String kassa = KassaField.getText();
-        if (Integer.parseInt(kassa) > 0) {
+        double kassa = Double.parseDouble(KassaField.getText());
+        System.out.println(kassa);
+
+        jTextField3.setVisible(false);
+        jLabel7.setVisible(false);
+        jLabel8.setVisible(false);
+        jLabel19.setVisible(false);
+        jLabel20.setVisible(false);
+
+        if (kassa > 0 && lopullinenPanos2 <= kassa) {
             System.out.println("moi");
 
             int num1 = NumeroidenArvonta.num1();
@@ -624,26 +748,67 @@ public class Game1 extends javax.swing.JFrame {
             int num8 = NumeroidenArvonta.num8();
             int num9 = NumeroidenArvonta.num9();
 
+            double taso1Voitto = 0;
+            double taso2Voitto = 0;
+            double taso3Voitto = 0;
+            double taso4Voitto = 0;
+            double taso5Voitto = 0;
             if (taso == 1) {
-                VoitonJako.Taso1(num2, num5, num8);
+                taso1Voitto = VoitonJako.Taso1(num2, num5, num8);
+
+                taso1Voitto = taso1Voitto * lopullinenPanos2;
+
+                voitto = VoitonJako.voitto(taso1Voitto, taso2Voitto, taso3Voitto, taso4Voitto, taso5Voitto, taso);
+                VoittoField.setText(Double.toString(voitto));
             } else if (taso == 2) {
-                VoitonJako.Taso1(num2, num5, num8);
-                VoitonJako.Taso2(num3, num6, num9);
+                taso1Voitto = VoitonJako.Taso1(num2, num5, num8);
+                taso2Voitto = VoitonJako.Taso2(num3, num6, num9);
+
+                taso1Voitto = taso1Voitto * lopullinenPanos2;
+                taso2Voitto = taso2Voitto * lopullinenPanos2;
+
+                voitto = VoitonJako.voitto(taso1Voitto, taso2Voitto, taso3Voitto, taso4Voitto, taso5Voitto, taso);
+                VoittoField.setText(Double.toString(voitto));
             } else if (taso == 3) {
-                VoitonJako.Taso1(num2, num5, num8);
-                VoitonJako.Taso2(num3, num6, num9);
-                VoitonJako.Taso3(num1, num4, num7);
+                taso1Voitto = VoitonJako.Taso1(num2, num5, num8);
+                taso2Voitto = VoitonJako.Taso2(num3, num6, num9);
+                taso3Voitto = VoitonJako.Taso3(num1, num4, num7);
+
+                taso1Voitto = taso1Voitto * lopullinenPanos2;
+                taso2Voitto = taso2Voitto * lopullinenPanos2;
+                taso3Voitto = taso3Voitto * lopullinenPanos2;
+
+                voitto = VoitonJako.voitto(taso1Voitto, taso2Voitto, taso3Voitto, taso4Voitto, taso5Voitto, taso);
+                VoittoField.setText(Double.toString(voitto));
             } else if (taso == 4) {
-                VoitonJako.Taso1(num2, num5, num8);
-                VoitonJako.Taso2(num3, num6, num9);
-                VoitonJako.Taso3(num1, num4, num7);
-                VoitonJako.Taso4(num1, num5, num9);
+                taso1Voitto = VoitonJako.Taso1(num2, num5, num8);
+                taso2Voitto = VoitonJako.Taso2(num3, num6, num9);
+                taso3Voitto = VoitonJako.Taso3(num1, num4, num7);
+                taso4Voitto = VoitonJako.Taso4(num1, num5, num9);
+
+                taso1Voitto = taso1Voitto * lopullinenPanos2;
+                taso2Voitto = taso2Voitto * lopullinenPanos2;
+                taso3Voitto = taso3Voitto * lopullinenPanos2;
+                taso4Voitto = taso4Voitto * lopullinenPanos2;
+
+                voitto = VoitonJako.voitto(taso1Voitto, taso2Voitto, taso3Voitto, taso4Voitto, taso5Voitto, taso);
+                VoittoField.setText(Double.toString(voitto));
             } else if (taso == 5) {
-                VoitonJako.Taso1(num2, num5, num8);
-                VoitonJako.Taso2(num3, num6, num9);
-                VoitonJako.Taso3(num1, num4, num7);
-                VoitonJako.Taso4(num1, num5, num9);
-                VoitonJako.Taso5(num3, num5, num7);
+                taso1Voitto = VoitonJako.Taso1(num2, num5, num8);
+                taso2Voitto = VoitonJako.Taso2(num3, num6, num9);
+                taso3Voitto = VoitonJako.Taso3(num1, num4, num7);
+                taso4Voitto = VoitonJako.Taso4(num1, num5, num9);
+                taso5Voitto = VoitonJako.Taso5(num3, num5, num7);
+
+                taso1Voitto = taso1Voitto * lopullinenPanos2;
+                taso2Voitto = taso2Voitto * lopullinenPanos2;
+                taso3Voitto = taso3Voitto * lopullinenPanos2;
+                taso4Voitto = taso4Voitto * lopullinenPanos2;
+                taso5Voitto = taso5Voitto * lopullinenPanos2;
+
+                voitto = VoitonJako.voitto(taso1Voitto, taso2Voitto, taso3Voitto, taso4Voitto, taso5Voitto, taso);
+                VoittoField.setText(Double.toString(voitto));
+
             }
 
             Num1.setText(Integer.toString(num1));
@@ -656,10 +821,25 @@ public class Game1 extends javax.swing.JFrame {
             Num8.setText(Integer.toString(num8));
             Num9.setText(Integer.toString(num9));
 
+            if (voitto == 0) {
+                double loppuKassa = kassa - lopullinenPanos2;
+                KassaField.setText(Double.toString(loppuKassa));
+            } else {
+                double loppuKassa = (kassa - lopullinenPanos2) + voitto;
+                KassaField.setText(Double.toString(loppuKassa));
+            }
+
         } else {
-            System.out.println("Ohnoh");
+            jTextField3.setVisible(true);
+            jTextField3.setText("Ei tarpeeksi rahaa");
         }
+
+
     }//GEN-LAST:event_PlayButtonActionPerformed
+
+    private void KassaFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_KassaFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_KassaFieldActionPerformed
 
     /**
      * @param args the command line arguments
@@ -729,6 +909,9 @@ public class Game1 extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel20;
+    private javax.swing.JLabel jLabel21;
+    private javax.swing.JLabel jLabel22;
+    private javax.swing.JLabel jLabel23;
     private javax.swing.JLabel jLabel28;
     private javax.swing.JLabel jLabel29;
     private javax.swing.JLabel jLabel3;
@@ -755,5 +938,7 @@ public class Game1 extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel9;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
+    private javax.swing.JTextField jTextField3;
+    private javax.swing.JTextField jTextField4;
     // End of variables declaration//GEN-END:variables
 }

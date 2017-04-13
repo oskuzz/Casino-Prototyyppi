@@ -21,8 +21,9 @@ public class CasinoFirstPage extends javax.swing.JFrame {
 
         initComponents();
         Kassa = kassa;
-        jTextField1.setText(Integer.toString(Kassa));
-
+        if (Kassa > 0) {
+            jTextField1.setText(Integer.toString(Kassa));
+        }
     }
 
     /**
@@ -77,6 +78,11 @@ public class CasinoFirstPage extends javax.swing.JFrame {
         jTextField1.setText("0");
         jTextField1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
         jTextField1.setOpaque(false);
+        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField1ActionPerformed(evt);
+            }
+        });
         jPanel1.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1229, 10, 110, 18));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/BackgroundImages/Bar2.png"))); // NOI18N
@@ -118,6 +124,7 @@ public class CasinoFirstPage extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton2ActionPerformed
 
     public static void bankBalance(int Kassa) {
+
         Kassa = kassa;
     }
 
@@ -126,6 +133,11 @@ public class CasinoFirstPage extends javax.swing.JFrame {
         new Game1().setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+        // TODO add your handling code here:
+
+    }//GEN-LAST:event_jTextField1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -159,6 +171,7 @@ public class CasinoFirstPage extends javax.swing.JFrame {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new CasinoFirstPage().setVisible(true);
+                bankBalance(kassa);
                 //DBConnections DB = new DBConnections();
                 //String uName = DB.getProfile("");
                 //new CasinoFirstPage().jTextField1.setText("moi");
