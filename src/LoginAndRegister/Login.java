@@ -112,6 +112,7 @@ public class Login extends javax.swing.JFrame {
                 DB.getMoneyBalanse(uName);
 
                 this.setVisible(false);
+                
             } else {
                 System.out.println("Ouhnoh");
             }

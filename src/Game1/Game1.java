@@ -19,6 +19,10 @@ public class Game1 extends javax.swing.JFrame {
     double lopullinenPanos;
     double lopullinenPanos2;
     double voitto;
+    double Kassa;
+    static double kassa;
+    static double loppukassa;
+    double loppuKassa;
 
     /**
      * Creates new form Game1
@@ -31,6 +35,9 @@ public class Game1 extends javax.swing.JFrame {
         jLabel20.setVisible(false);
         jLabel24.setVisible(false);
         jTextField3.setVisible(false);
+        Kassa = kassa;
+        loppukassa = loppuKassa;
+        toKassa();
     }
 
     /**
@@ -745,11 +752,12 @@ public class Game1 extends javax.swing.JFrame {
         // TODO add your handling code here:
         new CasinoFirstPage().setVisible(true);
         this.setVisible(false);
+        toKassa();
     }//GEN-LAST:event_jButton5ActionPerformed
 
     private void PlayButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PlayButtonActionPerformed
         // TODO add your handling code here:
-        double kassa = Double.parseDouble(KassaField.getText());
+        kassa = Double.parseDouble(KassaField.getText());
         System.out.println(kassa);
 
         jTextField3.setVisible(false);
@@ -898,11 +906,13 @@ public class Game1 extends javax.swing.JFrame {
             Num9.setText(Integer.toString(num9));
 
             if (voitto == 0) {
-                double loppuKassa = kassa - lopullinenPanos2;
+                loppuKassa = kassa - lopullinenPanos2;
                 KassaField.setText(Double.toString(loppuKassa));
+
             } else {
-                double loppuKassa = (kassa - lopullinenPanos2) + voitto;
+                loppuKassa = (kassa - lopullinenPanos2) + voitto;
                 KassaField.setText(Double.toString(loppuKassa));
+                
             }
 
         } else {
@@ -912,6 +922,15 @@ public class Game1 extends javax.swing.JFrame {
 
 
     }//GEN-LAST:event_PlayButtonActionPerformed
+
+    public static void kassa(double Kassa2) {
+        kassa = Kassa2;
+        CasinoFirstPage.bankBalance(loppukassa);
+    }
+
+    private void toKassa() {
+        KassaField.setText(Double.toString(Kassa));
+    }
 
     private void KassaFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_KassaFieldActionPerformed
         // TODO add your handling code here:

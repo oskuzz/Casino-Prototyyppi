@@ -14,16 +14,17 @@ import Menu.Menu;
  */
 public class CasinoFirstPage extends javax.swing.JFrame {
 
-    static int kassa;
-    int Kassa;
+    static double kassa;
+    double Kassa;
 
     public CasinoFirstPage() {
 
         initComponents();
+        getKassa();
+
         Kassa = kassa;
-        if (Kassa > 0) {
-            jTextField1.setText(Integer.toString(Kassa));
-        }
+
+        toKassa();
     }
 
     /**
@@ -70,12 +71,11 @@ public class CasinoFirstPage extends javax.swing.JFrame {
         });
         jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 250, 20));
 
-        jTextField1.setEditable(false);
         jTextField1.setBackground(new java.awt.Color(72, 74, 82));
         jTextField1.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
         jTextField1.setForeground(new java.awt.Color(255, 255, 255));
         jTextField1.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-        jTextField1.setText("0");
+        jTextField1.setText("1000");
         jTextField1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
         jTextField1.setOpaque(false);
         jTextField1.addActionListener(new java.awt.event.ActionListener() {
@@ -123,16 +123,33 @@ public class CasinoFirstPage extends javax.swing.JFrame {
 
     }//GEN-LAST:event_jButton2ActionPerformed
 
-    public static void bankBalance(int Kassa) {
-
-        Kassa = kassa;
+    public static void bankBalance(double Kassa) {
+        //CasinoFirstPage CFP = new CasinoFirstPage();
+        kassa = Kassa;
     }
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
         new Game1().setVisible(true);
+
         this.setVisible(false);
     }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void getKassa() {
+        Kassa = Double.parseDouble(jTextField1.getText());
+        Game1.kassa(Kassa);
+    }
+
+    public void DBtoKassa(double luku) {
+        jTextField1.setText(Double.toString(luku));
+
+    }
+
+    private void toKassa() {
+
+        jTextField1.setText(Double.toString(Kassa));
+
+    }
 
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
         // TODO add your handling code here:
