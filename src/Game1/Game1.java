@@ -29,6 +29,7 @@ public class Game1 extends javax.swing.JFrame {
         jLabel8.setVisible(false);
         jLabel19.setVisible(false);
         jLabel20.setVisible(false);
+        jLabel24.setVisible(false);
         jTextField3.setVisible(false);
     }
 
@@ -82,6 +83,7 @@ public class Game1 extends javax.swing.JFrame {
         jLabel17 = new javax.swing.JLabel();
         jLabel18 = new javax.swing.JLabel();
         jLabel20 = new javax.swing.JLabel();
+        jLabel24 = new javax.swing.JLabel();
         jPanel12 = new javax.swing.JPanel();
         Num9 = new javax.swing.JLabel();
         jPanel11 = new javax.swing.JPanel();
@@ -302,13 +304,13 @@ public class Game1 extends javax.swing.JFrame {
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/BackgroundImages/Game1Line1,2,3.png"))); // NOI18N
-        jPanel2.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 282, -1, 20));
+        jPanel2.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(119, 277, -1, 20));
 
         jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/BackgroundImages/Game1Line1,2,3.png"))); // NOI18N
-        jPanel2.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 166, -1, 20));
+        jPanel2.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(119, 156, -1, 30));
 
         jLabel19.setIcon(new javax.swing.ImageIcon(getClass().getResource("/BackgroundImages/Game1Line1,2,3.png"))); // NOI18N
-        jPanel2.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 50, -1, 20));
+        jPanel2.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(119, 40, -1, 30));
 
         jLabel14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/BackgroundImages/Game1Line2Button.png"))); // NOI18N
         jPanel2.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(16, 282, -1, -1));
@@ -325,8 +327,11 @@ public class Game1 extends javax.swing.JFrame {
         jLabel18.setIcon(new javax.swing.ImageIcon(getClass().getResource("/BackgroundImages/Game1Line4Button.png"))); // NOI18N
         jPanel2.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(523, 282, -1, -1));
 
-        jLabel20.setIcon(new javax.swing.ImageIcon(getClass().getResource("/BackgroundImages/Game1Line4,5.png"))); // NOI18N
-        jPanel2.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(82, 0, 430, 350));
+        jLabel20.setIcon(new javax.swing.ImageIcon(getClass().getResource("/BackgroundImages/Game1Line4.png"))); // NOI18N
+        jPanel2.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(121, 1, 370, 350));
+
+        jLabel24.setIcon(new javax.swing.ImageIcon(getClass().getResource("/BackgroundImages/Game1Line5.png"))); // NOI18N
+        jPanel2.add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(121, 53, -1, -1));
 
         jPanel12.setOpaque(false);
         jPanel12.setPreferredSize(new java.awt.Dimension(125, 100));
@@ -542,21 +547,17 @@ public class Game1 extends javax.swing.JFrame {
         jPanel5.setLayout(jPanel5Layout);
         jPanel5Layout.setHorizontalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 130, Short.MAX_VALUE)
-            .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel5Layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(Num2)
-                    .addGap(0, 0, Short.MAX_VALUE)))
+            .addGroup(jPanel5Layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(Num2)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
-            .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel5Layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(Num2)
-                    .addGap(0, 0, Short.MAX_VALUE)))
+            .addGroup(jPanel5Layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(Num2)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         jPanel2.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 125, 130, 100));
@@ -651,23 +652,31 @@ public class Game1 extends javax.swing.JFrame {
             jLabel8.setVisible(false);
             jLabel19.setVisible(false);
             jLabel20.setVisible(false);
+            jLabel24.setVisible(false);
         } else if (Lines == 2) {
             jLabel7.setVisible(true);
             jLabel8.setVisible(true);
             jLabel19.setVisible(false);
             jLabel20.setVisible(false);
+            jLabel24.setVisible(false);
         } else if (Lines == 3) {
             jLabel7.setVisible(true);
             jLabel8.setVisible(true);
             jLabel19.setVisible(true);
             jLabel20.setVisible(false);
+            jLabel24.setVisible(false);
         } else if (Lines == 4) {
             jLabel7.setVisible(true);
             jLabel8.setVisible(true);
             jLabel19.setVisible(true);
             jLabel20.setVisible(true);
+            jLabel24.setVisible(false);
         } else if (Lines == 5) {
-            System.out.println("Lines 5");
+            jLabel7.setVisible(true);
+            jLabel8.setVisible(true);
+            jLabel19.setVisible(true);
+            jLabel20.setVisible(true);
+            jLabel24.setVisible(true);
         }
 
         if (Lines == 0) {
@@ -675,6 +684,7 @@ public class Game1 extends javax.swing.JFrame {
             jLabel8.setVisible(false);
             jLabel19.setVisible(false);
             jLabel20.setVisible(false);
+            jLabel24.setVisible(false);
         }
 
         lopullinenPanos = Panos.panos(panos);
@@ -710,14 +720,20 @@ public class Game1 extends javax.swing.JFrame {
             jLabel19.setVisible(true);
             jLabel20.setVisible(true);
         } else if (Lines == 5) {
-            System.out.println("Lines 5");
+            jLabel24.setVisible(true);
+            jLabel7.setVisible(true);
+            jLabel8.setVisible(true);
+            jLabel19.setVisible(true);
+            jLabel20.setVisible(true);
         }
         if (Lines == 0) {
             jLabel7.setVisible(false);
             jLabel8.setVisible(false);
             jLabel19.setVisible(false);
             jLabel20.setVisible(false);
+            jLabel24.setVisible(false);
         }
+
         lopullinenPanos = Panos.panos(panos);
         lopullinenPanos2 = lopullinenPanos * taso;
 
@@ -741,6 +757,7 @@ public class Game1 extends javax.swing.JFrame {
         jLabel8.setVisible(false);
         jLabel19.setVisible(false);
         jLabel20.setVisible(false);
+        jLabel24.setVisible(false);
 
         if (kassa > 0 && lopullinenPanos2 <= kassa) {
             System.out.println("moi");
@@ -856,7 +873,7 @@ public class Game1 extends javax.swing.JFrame {
                     jLabel20.setVisible(true);
                 }
                 if (taso5Voitto > 0) {
-                    System.out.println("Line5");
+                    jLabel24.setVisible(true);
                 }
 
                 taso1Voitto = taso1Voitto * lopullinenPanos2;
@@ -976,6 +993,7 @@ public class Game1 extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel21;
     private javax.swing.JLabel jLabel22;
     private javax.swing.JLabel jLabel23;
+    private javax.swing.JLabel jLabel24;
     private javax.swing.JLabel jLabel28;
     private javax.swing.JLabel jLabel29;
     private javax.swing.JLabel jLabel3;
