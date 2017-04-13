@@ -669,8 +669,8 @@ public class Game1 extends javax.swing.JFrame {
             jLabel7.setVisible(true);
             jLabel8.setVisible(true);
             jLabel19.setVisible(true);
-            jLabel20.setVisible(true);
-            jLabel24.setVisible(false);
+            jLabel20.setVisible(false);
+            jLabel24.setVisible(true);
         } else if (Lines == 5) {
             jLabel7.setVisible(true);
             jLabel8.setVisible(true);
@@ -718,7 +718,7 @@ public class Game1 extends javax.swing.JFrame {
             jLabel7.setVisible(true);
             jLabel8.setVisible(true);
             jLabel19.setVisible(true);
-            jLabel20.setVisible(true);
+            jLabel24.setVisible(true);
         } else if (Lines == 5) {
             jLabel24.setVisible(true);
             jLabel7.setVisible(true);
@@ -842,7 +842,7 @@ public class Game1 extends javax.swing.JFrame {
                     jLabel19.setVisible(true);
                 }
                 if (taso4Voitto > 0) {
-                    jLabel20.setVisible(true);
+                    jLabel24.setVisible(true);
                 }
 
                 taso1Voitto = taso1Voitto * lopullinenPanos2;
@@ -870,10 +870,10 @@ public class Game1 extends javax.swing.JFrame {
                     jLabel19.setVisible(true);
                 }
                 if (taso4Voitto > 0) {
-                    jLabel20.setVisible(true);
+                    jLabel24.setVisible(true);
                 }
                 if (taso5Voitto > 0) {
-                    jLabel24.setVisible(true);
+                    jLabel20.setVisible(true);
                 }
 
                 taso1Voitto = taso1Voitto * lopullinenPanos2;
@@ -896,12 +896,7 @@ public class Game1 extends javax.swing.JFrame {
             Num7.setText(Integer.toString(num7));
             Num8.setText(Integer.toString(num8));
             Num9.setText(Integer.toString(num9));
-            System.out.println("L1 kerroin: " + taso1Voitto);
-            System.out.println("L2 kerroin: " + taso2Voitto);
-            System.out.println("L3 kerroin: " + taso3Voitto);
-            System.out.println("L4 kerroin: " + taso4Voitto);
-            System.out.println("L5 kerroin: " + taso5Voitto);
-            System.out.println("Voitto: " + voitto);
+
             if (voitto == 0) {
                 double loppuKassa = kassa - lopullinenPanos2;
                 KassaField.setText(Double.toString(loppuKassa));
