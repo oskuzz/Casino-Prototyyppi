@@ -12,7 +12,7 @@ import Menu.Menu;
  *
  * @author s1601396
  */
-public class CasinoFirstPage extends javax.swing.JFrame {
+public final class CasinoFirstPage extends javax.swing.JFrame {
 
     static double kassa;
     double Kassa;
@@ -20,11 +20,11 @@ public class CasinoFirstPage extends javax.swing.JFrame {
     public CasinoFirstPage() {
 
         initComponents();
-        getKassa();
+        
 
         Kassa = kassa;
-
-        toKassa();
+        DBtoKassa();
+        //toKassa();
     }
 
     /**
@@ -75,7 +75,7 @@ public class CasinoFirstPage extends javax.swing.JFrame {
         jTextField1.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
         jTextField1.setForeground(new java.awt.Color(255, 255, 255));
         jTextField1.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-        jTextField1.setText("1000");
+        jTextField1.setText("0");
         jTextField1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
         jTextField1.setOpaque(false);
         jTextField1.addActionListener(new java.awt.event.ActionListener() {
@@ -125,7 +125,10 @@ public class CasinoFirstPage extends javax.swing.JFrame {
 
     public static void bankBalance(double Kassa) {
         //CasinoFirstPage CFP = new CasinoFirstPage();
+        System.out.println(Kassa);
         kassa = Kassa;
+        CasinoFirstPage CFP = new CasinoFirstPage();
+        CFP.toKassa(Kassa);
     }
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
@@ -135,19 +138,20 @@ public class CasinoFirstPage extends javax.swing.JFrame {
         this.setVisible(false);
     }//GEN-LAST:event_jButton3ActionPerformed
 
-    private void getKassa() {
-        Kassa = Double.parseDouble(jTextField1.getText());
-        Game1.kassa(Kassa);
+    public void getKassa() {
+        double Kassa2 = Double.parseDouble(jTextField1.getText());
+        Game1.kassa(Kassa2);
     }
 
-    public void DBtoKassa(double luku) {
-        jTextField1.setText(Double.toString(luku));
+    
+    public void DBtoKassa() {
+        toKassa(Kassa);
 
     }
 
-    private void toKassa() {
+    public void toKassa(double kassa) {
 
-        jTextField1.setText(Double.toString(Kassa));
+        jTextField1.setText(Double.toString(kassa));
 
     }
 

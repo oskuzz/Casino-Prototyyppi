@@ -6,6 +6,7 @@
 package DB;
 
 import Casino.CasinoFirstPage;
+import FirstInstructionPage.StartInstructions;
 
 import java.sql.*;
 import java.util.logging.Level;
@@ -110,9 +111,10 @@ public class DBConnections {
             System.out.println(kassa);
 
             CasinoFirstPage.bankBalance(kassa);
-            
+            new CasinoFirstPage().setVisible(true);
+            new StartInstructions().setVisible(true);
         }
-        new CasinoFirstPage().setVisible(true);
+
         return "";
     }
 }

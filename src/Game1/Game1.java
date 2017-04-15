@@ -29,7 +29,8 @@ public class Game1 extends javax.swing.JFrame {
      */
     public Game1() {
         initComponents();
-
+        CasinoFirstPage CFP = new CasinoFirstPage();
+        CFP.getKassa();
         jLabel8.setVisible(false);
         jLabel19.setVisible(false);
         jLabel20.setVisible(false);
