@@ -112,7 +112,7 @@ public class DBConnections {
 
             CasinoFirstPage.bankBalance(kassa);
             new CasinoFirstPage().setVisible(true);
-            new StartInstructions().setVisible(true);
+            //new StartInstructions().setVisible(true);
         }
 
         return "";

@@ -24,7 +24,7 @@ public final class CasinoFirstPage extends javax.swing.JFrame {
 
         Kassa = kassa;
         DBtoKassa();
-        //toKassa();
+        
     }
 
     /**
@@ -139,6 +139,7 @@ public final class CasinoFirstPage extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton3ActionPerformed
 
     public void getKassa() {
+        Game1 Game1 = new Game1();
         double Kassa2 = Double.parseDouble(jTextField1.getText());
         Game1.kassa(Kassa2);
     }
