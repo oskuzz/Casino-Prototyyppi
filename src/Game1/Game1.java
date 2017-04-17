@@ -23,14 +23,13 @@ public class Game1 extends javax.swing.JFrame {
     static double kassa;
     static double loppukassa;
     double loppuKassa;
-
+    
     /**
      * Creates new form Game1
      */
     public Game1() {
         initComponents();
-        CasinoFirstPage CFP = new CasinoFirstPage();
-        CFP.getKassa();
+        CasinoFirstPage.kassa();
         jLabel8.setVisible(false);
         jLabel19.setVisible(false);
         jLabel20.setVisible(false);
@@ -758,7 +757,7 @@ public class Game1 extends javax.swing.JFrame {
 
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-        // TODO add your handling code here:
+        //TODO add your handling code here:
         new CasinoFirstPage().setVisible(true);
         this.setVisible(false);
         toKassa();
@@ -941,7 +940,7 @@ public class Game1 extends javax.swing.JFrame {
 
     public static void kassa(double Kassa2) {
         kassa = Kassa2;
-        CasinoFirstPage.bankBalance(loppukassa);
+        //CasinoFirstPage.bankBalance(loppukassa);
     }
 
     private void toKassa() {

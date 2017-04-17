@@ -16,6 +16,7 @@ public class DBConnections {
 
     private String Login;
     private Connection conn;
+    private double Kassa = 0;
 
     public DBConnections(String urlToDataBase) throws ClassNotFoundException, SQLException {
 
@@ -109,7 +110,7 @@ public class DBConnections {
         while (rs.next()) {
             int kassa = rs.getInt(1);
             System.out.println(kassa);
-
+            Kassa = kassa;
             CasinoFirstPage.bankBalance(kassa);
             new CasinoFirstPage().setVisible(true);
             //new StartInstructions().setVisible(true);
@@ -117,4 +118,6 @@ public class DBConnections {
 
         return "";
     }
+    
+    
 }

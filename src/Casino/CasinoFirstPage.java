@@ -130,14 +130,17 @@ public final class CasinoFirstPage extends javax.swing.JFrame {
         CasinoFirstPage CFP = new CasinoFirstPage();
         CFP.toKassa(Kassa);
     }
-
+    
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
         new Game1().setVisible(true);
-
+        getKassa();
         this.setVisible(false);
     }//GEN-LAST:event_jButton3ActionPerformed
-
+    public static void kassa(){
+        CasinoFirstPage CFP = new CasinoFirstPage();
+        CFP.getKassa();
+    }
     public void getKassa() {
         Game1 Game1 = new Game1();
         double Kassa2 = Double.parseDouble(jTextField1.getText());
