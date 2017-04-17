@@ -6,15 +6,21 @@
 package DB;
 
 import Casino.CasinoFirstPage;
+import java.sql.SQLException;
 
 /**
  *
  * @author osku0
  */
 public class DBBank {
-    static double Kassa;
     
-    public static void bank(double kassa){
+    static double Kassa;
+    static String uname;
+    
+  
+    
+    public static void bank(String uName, double kassa){
+        uname = uName;
         Kassa = kassa;
         System.out.println(Kassa);
     }
@@ -31,5 +37,10 @@ public class DBBank {
     
     public static void CFPBank(){
         CasinoFirstPage.bankBalance(Kassa);
+    }
+    
+    public static void updateBank(double kassa) throws SQLException{
+        
+        DBConnections.updateMoneyBalance(uname, kassa);
     }
 }

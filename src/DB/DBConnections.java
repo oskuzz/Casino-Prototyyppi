@@ -17,12 +17,13 @@ public class DBConnections {
     private String Login;
     private Connection conn;
     private double Kassa = 0;
-
+    static private Connection con;
     public DBConnections(String urlToDataBase) throws ClassNotFoundException, SQLException {
 
         String driver = "net.ucanaccess.jdbc.UcanaccessDriver";
         Class.forName(driver);
         conn = DriverManager.getConnection("jdbc:ucanaccess://" + urlToDataBase);
+        con = conn;
         System.out.println("Connected");
     }
 
@@ -51,7 +52,7 @@ public class DBConnections {
         try {
             Statement sta = conn.createStatement();
 
-            int s = sta.executeUpdate("INSERT INTO Login (ID, eNimi, sNimi, Salasana) VALUES (' " + ID + " ',' " + eName + " ',' " + sName + " ', ' " + password + " ');");
+            sta.executeUpdate("INSERT INTO Login (ID, eNimi, sNimi, Salasana) VALUES (' " + ID + " ',' " + eName + " ',' " + sName + " ', ' " + password + " ');");
             System.out.println("Inserted into database");
         } catch (SQLException e) {
             System.out.println(e);
@@ -111,7 +112,7 @@ public class DBConnections {
             int kassa = rs.getInt(1);
             System.out.println(kassa);
             Kassa = kassa;
-            DBBank.bank(Kassa);
+            DBBank.bank(uName, Kassa);
             CasinoFirstPage.bankBalance(kassa);
             new CasinoFirstPage().setVisible(true);
             //new StartInstructions().setVisible(true);
@@ -119,6 +120,17 @@ public class DBConnections {
 
         return "";
     }
-    
-    
+
+    public static void updateMoneyBalance(String uName, double kassa) throws SQLException {
+        try {
+            Statement sta = con.createStatement();
+
+            sta.executeUpdate("UPDATE Login SET Kassa = ('" + kassa + "') WHERE ID = (' " + uName + " ');");
+            System.out.println("Inserted into database");
+        } catch (SQLException e) {
+            System.out.println(e);
+        }
+
+        
+    }
 }

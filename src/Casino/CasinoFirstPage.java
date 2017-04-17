@@ -8,6 +8,9 @@ package Casino;
 import DB.DBBank;
 import Game1.Game1;
 import Menu.Menu;
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -17,11 +20,12 @@ public final class CasinoFirstPage extends javax.swing.JFrame {
 
     static double kassa;
     double Kassa;
+    
 
     public CasinoFirstPage() {
 
         initComponents();
-
+        
         Kassa = kassa;
         DBtoKassa();
 
@@ -48,6 +52,8 @@ public final class CasinoFirstPage extends javax.swing.JFrame {
         } catch (java.io.IOException e) {
             e.printStackTrace();
         }
+        jTextField2 = new javax.swing.JTextField();
+        jButton4 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -105,6 +111,15 @@ public final class CasinoFirstPage extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 340, 200, 112));
+        getContentPane().add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 190, 110, 30));
+
+        jButton4.setText("Rahaa");
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 190, -1, -1));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/BackgroundImages/Best HD Walls - FreeHD.Blogspot (64).jpg"))); // NOI18N
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
@@ -125,8 +140,8 @@ public final class CasinoFirstPage extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton2ActionPerformed
 
     public static void bankBalance(double Kassa) {
-        //CasinoFirstPage CFP = new CasinoFirstPage();
-        System.out.println(Kassa);
+        
+        System.out.println(Kassa + " kassa");
         kassa = Kassa;
         CasinoFirstPage CFP = new CasinoFirstPage();
         CFP.toKassa(Kassa);
@@ -138,13 +153,7 @@ public final class CasinoFirstPage extends javax.swing.JFrame {
         this.setVisible(false);
         DBBank.Game1Bank();
     }//GEN-LAST:event_jButton3ActionPerformed
-    public static void kassa() {
-        
-    }
-
-    public void getKassa() {
-        
-    }
+ 
 
     public void DBtoKassa() {
         toKassa(Kassa);
@@ -161,6 +170,16 @@ public final class CasinoFirstPage extends javax.swing.JFrame {
         // TODO add your handling code here:
 
     }//GEN-LAST:event_jTextField1ActionPerformed
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        // TODO add your handling code here:
+        double kassa = Double.parseDouble(jTextField2.getText());
+        try {
+            DBBank.updateBank(kassa);
+        } catch (SQLException ex) {
+            Logger.getLogger(CasinoFirstPage.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_jButton4ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -206,9 +225,11 @@ public final class CasinoFirstPage extends javax.swing.JFrame {
     public javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton4;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextField jTextField2;
     // End of variables declaration//GEN-END:variables
 }

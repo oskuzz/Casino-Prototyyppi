@@ -7,6 +7,9 @@ package Game1;
 
 import Casino.CasinoFirstPage;
 import DB.DBBank;
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -30,7 +33,7 @@ public final class Game1 extends javax.swing.JFrame {
      */
     public Game1() {
         initComponents();
-        CasinoFirstPage.kassa();
+        
         DBBank.Game1Bank();
         jLabel8.setVisible(false);
         jLabel19.setVisible(false);
@@ -940,6 +943,11 @@ public final class Game1 extends javax.swing.JFrame {
             jTextField3.setText("Ei tarpeeksi rahaa");
         }
         DBBank.getGame1Bank(loppuKassa);
+        try {
+            DBBank.updateBank(loppuKassa);
+        } catch (SQLException ex) {
+            Logger.getLogger(Game1.class.getName()).log(Level.SEVERE, null, ex);
+        }
 
     }//GEN-LAST:event_PlayButtonActionPerformed
 
