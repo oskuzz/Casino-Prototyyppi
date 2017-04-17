@@ -5,6 +5,8 @@
  */
 package DB;
 
+import Casino.CasinoFirstPage;
+
 /**
  *
  * @author osku0
@@ -20,5 +22,14 @@ public class DBBank {
     public static void Game1Bank(){
         Game1.Game1.kassa(Kassa);
         
+    }
+    
+    public static void getGame1Bank(double kassa){
+        Kassa = kassa;
+        CFPBank();
+    }
+    
+    public static void CFPBank(){
+        CasinoFirstPage.bankBalance(Kassa);
     }
 }

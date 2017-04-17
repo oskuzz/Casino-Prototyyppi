@@ -762,6 +762,7 @@ public final class Game1 extends javax.swing.JFrame {
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
         //TODO add your handling code here:
+        DBBank.getGame1Bank(loppuKassa);
         new CasinoFirstPage().setVisible(true);
         this.setVisible(false);
 
@@ -938,7 +939,7 @@ public final class Game1 extends javax.swing.JFrame {
             jTextField3.setVisible(true);
             jTextField3.setText("Ei tarpeeksi rahaa");
         }
-
+        DBBank.getGame1Bank(loppuKassa);
 
     }//GEN-LAST:event_PlayButtonActionPerformed
 
