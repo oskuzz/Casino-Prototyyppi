@@ -6,12 +6,13 @@
 package Game1;
 
 import Casino.CasinoFirstPage;
+import DB.DBBank;
 
 /**
  *
  * @author s1601396
  */
-public class Game1 extends javax.swing.JFrame {
+public final class Game1 extends javax.swing.JFrame {
 
     double panos = 1;
     int taso = 1;
@@ -23,13 +24,14 @@ public class Game1 extends javax.swing.JFrame {
     static double kassa;
     static double loppukassa;
     double loppuKassa;
-    
+
     /**
      * Creates new form Game1
      */
     public Game1() {
         initComponents();
         CasinoFirstPage.kassa();
+        DBBank.Game1Bank();
         jLabel8.setVisible(false);
         jLabel19.setVisible(false);
         jLabel20.setVisible(false);
@@ -37,6 +39,7 @@ public class Game1 extends javax.swing.JFrame {
         jLabel25.setVisible(false);
         jTextField3.setVisible(false);
         Kassa = kassa;
+        System.out.println(Kassa + " MOi");
         loppukassa = loppuKassa;
         toKassa();
     }
@@ -230,6 +233,7 @@ public class Game1 extends javax.swing.JFrame {
         KassaLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/BackgroundImages/Game1KassaJaVoittoFrame.png"))); // NOI18N
         jPanel1.add(KassaLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 40, -1, -1));
 
+        KassaField.setEditable(false);
         KassaField.setBackground(new java.awt.Color(0, 0, 2));
         KassaField.setForeground(new java.awt.Color(255, 255, 255));
         KassaField.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
@@ -760,7 +764,7 @@ public class Game1 extends javax.swing.JFrame {
         //TODO add your handling code here:
         new CasinoFirstPage().setVisible(true);
         this.setVisible(false);
-        toKassa();
+
     }//GEN-LAST:event_jButton5ActionPerformed
 
     private void PlayButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PlayButtonActionPerformed
@@ -939,11 +943,12 @@ public class Game1 extends javax.swing.JFrame {
     }//GEN-LAST:event_PlayButtonActionPerformed
 
     public static void kassa(double Kassa2) {
+        System.out.println(Kassa2);
         kassa = Kassa2;
         //CasinoFirstPage.bankBalance(loppukassa);
     }
 
-    private void toKassa() {
+    public void toKassa() {
         KassaField.setText(Double.toString(Kassa));
     }
 

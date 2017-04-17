@@ -5,6 +5,7 @@
  */
 package Casino;
 
+import DB.DBBank;
 import Game1.Game1;
 import Menu.Menu;
 
@@ -20,11 +21,10 @@ public final class CasinoFirstPage extends javax.swing.JFrame {
     public CasinoFirstPage() {
 
         initComponents();
-        
 
         Kassa = kassa;
         DBtoKassa();
-        
+
     }
 
     /**
@@ -71,6 +71,7 @@ public final class CasinoFirstPage extends javax.swing.JFrame {
         });
         jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 250, 20));
 
+        jTextField1.setEditable(false);
         jTextField1.setBackground(new java.awt.Color(72, 74, 82));
         jTextField1.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
         jTextField1.setForeground(new java.awt.Color(255, 255, 255));
@@ -130,24 +131,21 @@ public final class CasinoFirstPage extends javax.swing.JFrame {
         CasinoFirstPage CFP = new CasinoFirstPage();
         CFP.toKassa(Kassa);
     }
-    
+
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
         new Game1().setVisible(true);
-        getKassa();
         this.setVisible(false);
+        DBBank.Game1Bank();
     }//GEN-LAST:event_jButton3ActionPerformed
-    public static void kassa(){
-        CasinoFirstPage CFP = new CasinoFirstPage();
-        CFP.getKassa();
-    }
-    public void getKassa() {
-        Game1 Game1 = new Game1();
-        double Kassa2 = Double.parseDouble(jTextField1.getText());
-        Game1.kassa(Kassa2);
+    public static void kassa() {
+        
     }
 
-    
+    public void getKassa() {
+        
+    }
+
     public void DBtoKassa() {
         toKassa(Kassa);
 
