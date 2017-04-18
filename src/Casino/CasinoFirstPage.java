@@ -82,12 +82,12 @@ public final class CasinoFirstPage extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 250, 20));
+        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 15, 250, 20));
 
         jTextField2.setBackground(new java.awt.Color(72, 74, 82));
         jTextField2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
         jTextField2.setOpaque(false);
-        jPanel1.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 250, 20));
+        jPanel1.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 15, 250, 20));
 
         jTextField1.setEditable(false);
         jTextField1.setBackground(new java.awt.Color(72, 74, 82));
