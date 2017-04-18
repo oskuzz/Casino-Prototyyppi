@@ -18,6 +18,7 @@ public class DBConnections {
     private Connection conn;
     private double Kassa = 0;
     static private Connection con;
+
     public DBConnections(String urlToDataBase) throws ClassNotFoundException, SQLException {
 
         String driver = "net.ucanaccess.jdbc.UcanaccessDriver";
@@ -100,7 +101,6 @@ public class DBConnections {
     public String getMoneyBalanse(String uName) throws SQLException {
 
         String query = "SELECT Kassa FROM Login WHERE ID = (' " + uName + " ')";
-        System.out.println(uName);
         Statement sta = null;
         try {
             sta = conn.createStatement();
@@ -110,7 +110,6 @@ public class DBConnections {
         ResultSet rs = sta.executeQuery(query);
         while (rs.next()) {
             int kassa = rs.getInt(1);
-            System.out.println(kassa);
             Kassa = kassa;
             DBBank.bank(uName, Kassa);
             CasinoFirstPage.bankBalance(kassa);
@@ -131,6 +130,5 @@ public class DBConnections {
             System.out.println(e);
         }
 
-        
     }
 }

@@ -22,7 +22,7 @@ public class DBBank {
     public static void bank(String uName, double kassa){
         uname = uName;
         Kassa = kassa;
-        System.out.println(Kassa);
+        
     }
     
     public static void Game1Bank(){

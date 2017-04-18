@@ -20,12 +20,11 @@ public final class CasinoFirstPage extends javax.swing.JFrame {
 
     static double kassa;
     double Kassa;
-    
 
     public CasinoFirstPage() {
 
         initComponents();
-        
+
         Kassa = kassa;
         DBtoKassa();
 
@@ -140,8 +139,7 @@ public final class CasinoFirstPage extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton2ActionPerformed
 
     public static void bankBalance(double Kassa) {
-        
-        System.out.println(Kassa + " kassa");
+
         kassa = Kassa;
         CasinoFirstPage CFP = new CasinoFirstPage();
         CFP.toKassa(Kassa);
@@ -153,7 +151,6 @@ public final class CasinoFirstPage extends javax.swing.JFrame {
         this.setVisible(false);
         DBBank.Game1Bank();
     }//GEN-LAST:event_jButton3ActionPerformed
- 
 
     public void DBtoKassa() {
         toKassa(Kassa);
