@@ -349,10 +349,10 @@ public final class Game1 extends javax.swing.JFrame {
         jLabel18.setIcon(new javax.swing.ImageIcon(getClass().getResource("/BackgroundImages/Game1Line4Button.png"))); // NOI18N
         jPanel2.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(523, 282, -1, -1));
 
-        jLabel20.setIcon(new javax.swing.ImageIcon(getClass().getResource("/BackgroundImages/Game1Line4.png"))); // NOI18N
+        jLabel20.setIcon(new javax.swing.ImageIcon(getClass().getResource("/BackgroundImages/Game1Line5.png"))); // NOI18N
         jPanel2.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(121, 1, 370, 350));
 
-        jLabel24.setIcon(new javax.swing.ImageIcon(getClass().getResource("/BackgroundImages/Game1Line5.png"))); // NOI18N
+        jLabel24.setIcon(new javax.swing.ImageIcon(getClass().getResource("/BackgroundImages/Game1Line4.png"))); // NOI18N
         jPanel2.add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(121, 53, -1, -1));
 
         jPanel12.setOpaque(false);

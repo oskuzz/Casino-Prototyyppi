@@ -6,6 +6,8 @@
 package Menu;
 
 import Casino.CasinoFirstPage;
+import LoginAndRegister.AdminLogin;
+import LoginAndRegister.Start;
 
 /**
  *
@@ -29,6 +31,10 @@ public class Menu extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        Return = new javax.swing.JButton();
+        Bank = new javax.swing.JButton();
+        Logout = new javax.swing.JButton();
+        Admin = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
@@ -36,8 +42,39 @@ public class Menu extends javax.swing.JFrame {
         setMinimumSize(new java.awt.Dimension(290, 374));
         setUndecorated(true);
         setOpacity(0.8F);
-        setPreferredSize(new java.awt.Dimension(290, 374));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        Return.setText("Return");
+        Return.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ReturnActionPerformed(evt);
+            }
+        });
+        getContentPane().add(Return, new org.netbeans.lib.awtextra.AbsoluteConstraints(118, 70, -1, -1));
+
+        Bank.setText("Bank");
+        Bank.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BankActionPerformed(evt);
+            }
+        });
+        getContentPane().add(Bank, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 170, -1, -1));
+
+        Logout.setText("Logout");
+        Logout.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                LogoutActionPerformed(evt);
+            }
+        });
+        getContentPane().add(Logout, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 220, -1, -1));
+
+        Admin.setText("Admin");
+        Admin.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                AdminActionPerformed(evt);
+            }
+        });
+        getContentPane().add(Admin, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 120, -1, -1));
 
         jButton1.setText("Exit");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -45,7 +82,7 @@ public class Menu extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 170, -1, -1));
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 260, -1, -1));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/BackgroundImages/MenuPhoto.png"))); // NOI18N
         jLabel1.setName(""); // NOI18N
@@ -55,9 +92,31 @@ public class Menu extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void ReturnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ReturnActionPerformed
         // TODO add your handling code here:
         this.setVisible(false);
+        new CasinoFirstPage().setVisible(true);
+    }//GEN-LAST:event_ReturnActionPerformed
+
+    private void BankActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BankActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_BankActionPerformed
+
+    private void LogoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LogoutActionPerformed
+        // TODO add your handling code here:
+        this.setVisible(false);
+        new Start().setVisible(true);
+    }//GEN-LAST:event_LogoutActionPerformed
+
+    private void AdminActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AdminActionPerformed
+        // TODO add your handling code here:
+        this.setVisible(false);
+        new AdminLogin().setVisible(true);
+    }//GEN-LAST:event_AdminActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        System.exit(0);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
@@ -97,6 +156,10 @@ public class Menu extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton Admin;
+    private javax.swing.JButton Bank;
+    private javax.swing.JButton Logout;
+    private javax.swing.JButton Return;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables

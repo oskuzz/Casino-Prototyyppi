@@ -6,6 +6,8 @@
 package LoginAndRegister;
 
 import Casino.CasinoFirstPage;
+import Casino.RegisterMoneyPage;
+import DB.DBBank;
 import DB.DBConnections;
 import DB.DBConnections2;
 import java.sql.SQLException;
@@ -114,7 +116,7 @@ private DBConnections2 bMan;
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
         this.setVisible(false);
-        new Login().setVisible(true);
+        new AdminLogin().setVisible(true);
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
@@ -124,7 +126,8 @@ private DBConnections2 bMan;
         try {
             DB.writeToDataBase(ID.getText(), eName.getText(), sName.getText(), password.getText());
             this.setVisible(false);
-            new CasinoFirstPage().setVisible(true);
+            new RegisterMoneyPage().setVisible(true);
+            DBBank.UserName(ID.getText());
         } catch (ClassNotFoundException ex) {
             Logger.getLogger(Register.class.getName()).log(Level.SEVERE, null, ex);
         } catch (SQLException ex) {
