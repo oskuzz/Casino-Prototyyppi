@@ -6,6 +6,7 @@
 package Menu;
 
 import Casino.CasinoFirstPage;
+import LoginAndRegister.AdminLogin;
 import LoginAndRegister.Start;
 
 /**
@@ -85,6 +86,7 @@ public class Menu extends javax.swing.JFrame {
     private void ReturnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ReturnActionPerformed
         // TODO add your handling code here:
         this.setVisible(false);
+        new CasinoFirstPage().setVisible(true);
     }//GEN-LAST:event_ReturnActionPerformed
 
     private void BankActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BankActionPerformed
@@ -93,11 +95,14 @@ public class Menu extends javax.swing.JFrame {
 
     private void LogoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LogoutActionPerformed
         // TODO add your handling code here:
+        this.setVisible(false);
+        new Start().setVisible(true);
     }//GEN-LAST:event_LogoutActionPerformed
 
     private void AdminActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AdminActionPerformed
         // TODO add your handling code here:
-        
+        this.setVisible(false);
+        new AdminLogin().setVisible(true);
     }//GEN-LAST:event_AdminActionPerformed
 
     /**

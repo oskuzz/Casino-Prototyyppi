@@ -135,12 +135,10 @@ public final class CasinoFirstPage extends javax.swing.JFrame {
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
         new Menu().setVisible(true);
-
+        this.setVisible(false);
     }//GEN-LAST:event_jButton2ActionPerformed
 
-    public void close() {
-        this.setVisible(false);
-    }
+    
 
     public static void bankBalance(double Kassa) {
 
