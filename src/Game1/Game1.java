@@ -274,7 +274,7 @@ public final class Game1 extends javax.swing.JFrame {
         jTextField3.setRequestFocusEnabled(false);
         jPanel1.add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 20, 180, 20));
 
-        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/BackgroundImages/PanosBar.png"))); // NOI18N
+        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/BackgroundImages/Game1FinalBetFrame.png"))); // NOI18N
         jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 55, -1, -1));
 
         jTextField4.setEditable(false);
@@ -284,7 +284,7 @@ public final class Game1 extends javax.swing.JFrame {
         jTextField4.setText("0.10 €");
         jTextField4.setBorder(null);
         jTextField4.setOpaque(false);
-        jPanel1.add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 56, 54, 25));
+        jPanel1.add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(409, 56, 60, 25));
 
         jLabel10.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
         jLabel10.setForeground(new java.awt.Color(255, 255, 255));

@@ -116,6 +116,8 @@ public class Menu extends javax.swing.JFrame {
 
     private void BankActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BankActionPerformed
         // TODO add your handling code here:
+        this.setVisible(false);
+        new MoreMoneyToBank().setVisible(true);
     }//GEN-LAST:event_BankActionPerformed
 
     private void LogoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LogoutActionPerformed

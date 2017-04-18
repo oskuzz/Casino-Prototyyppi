@@ -402,7 +402,7 @@
         <Component class="javax.swing.JLabel" name="jLabel6">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/BackgroundImages/PanosBar.png"/>
+              <Image iconType="3" name="/BackgroundImages/Game1FinalBetFrame.png"/>
             </Property>
           </Properties>
           <Constraints>
@@ -429,7 +429,7 @@
           </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="400" y="56" width="54" height="25"/>
+              <AbsoluteConstraints x="409" y="56" width="60" height="25"/>
             </Constraint>
           </Constraints>
         </Component>
