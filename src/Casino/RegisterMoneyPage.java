@@ -42,7 +42,9 @@ public class RegisterMoneyPage extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        getContentPane().add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(185, 140, 180, 25));
+
+        jTextField1.setFont(new java.awt.Font("Tahoma", 0, 13)); // NOI18N
+        getContentPane().add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(185, 140, 180, 30));
 
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/BackgroundImages/MoneyPageLisaaButton.png"))); // NOI18N
         jButton1.setBorder(null);
