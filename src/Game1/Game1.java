@@ -764,7 +764,7 @@ public final class Game1 extends javax.swing.JFrame {
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
         //TODO add your handling code here:
-        DBBank.getGame1Bank(loppuKassa);
+        DBBank.getGame1Bank(Double.parseDouble(KassaField.getText()));
         new CasinoFirstPage().setVisible(true);
         this.setVisible(false);
 

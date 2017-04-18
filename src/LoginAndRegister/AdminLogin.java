@@ -5,6 +5,7 @@
  */
 package LoginAndRegister;
 
+import AdminPanel.AdminPanel;
 import Casino.CasinoFirstPage;
 
 /**
@@ -89,6 +90,8 @@ public class AdminLogin extends javax.swing.JFrame {
         
         if(uName.equals("Admin") && Password.equals("Adm!Hkok!")){
             System.out.println("Completed");
+            this.setVisible(false);
+            new AdminPanel().setVisible(true);
         }else{
             System.out.println("Ohnoh");
         }
