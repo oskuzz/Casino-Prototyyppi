@@ -7,6 +7,7 @@ package LoginAndRegister;
 
 import Casino.CasinoFirstPage;
 import Casino.RegisterMoneyPage;
+import DB.DBBank;
 import DB.DBConnections;
 import DB.DBConnections2;
 import java.sql.SQLException;
@@ -126,6 +127,7 @@ private DBConnections2 bMan;
             DB.writeToDataBase(ID.getText(), eName.getText(), sName.getText(), password.getText());
             this.setVisible(false);
             new RegisterMoneyPage().setVisible(true);
+            DBBank.UserName(ID.getText());
         } catch (ClassNotFoundException ex) {
             Logger.getLogger(Register.class.getName()).log(Level.SEVERE, null, ex);
         } catch (SQLException ex) {

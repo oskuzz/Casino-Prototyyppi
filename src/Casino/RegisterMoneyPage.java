@@ -16,11 +16,14 @@ import java.util.logging.Logger;
  */
 public class RegisterMoneyPage extends javax.swing.JFrame {
 
+    
+    
     /**
      * Creates new form RegisterMoneyPage
      */
     public RegisterMoneyPage() {
         initComponents();
+        
     }
 
     /**
@@ -41,7 +44,7 @@ public class RegisterMoneyPage extends javax.swing.JFrame {
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
         getContentPane().add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(185, 140, 180, 25));
 
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/BackgroundImages/MoneyPageLisääButton.png"))); // NOI18N
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/BackgroundImages/MoneyPageLisaaButton.png"))); // NOI18N
         jButton1.setBorder(null);
         jButton1.setBorderPainted(false);
         jButton1.setContentAreaFilled(false);
@@ -54,7 +57,7 @@ public class RegisterMoneyPage extends javax.swing.JFrame {
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/BackgroundImages/MoneyPageLisääText.png"))); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/BackgroundImages/MoneyPageLisaaText.png"))); // NOI18N
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 60, 160, 40));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/BackgroundImages/LoginRegisterPage.png"))); // NOI18N
@@ -67,8 +70,11 @@ public class RegisterMoneyPage extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
         double Kassa = Double.parseDouble(jTextField1.getText());
+
         DBBank.getGame1Bank(Kassa);
         
+        
+
         try {
             DBBank.updateBank(Kassa);
         } catch (SQLException ex) {
@@ -77,6 +83,8 @@ public class RegisterMoneyPage extends javax.swing.JFrame {
         this.setVisible(false);
         new CasinoFirstPage().setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    
 
     /**
      * @param args the command line arguments
