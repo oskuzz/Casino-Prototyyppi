@@ -8,6 +8,8 @@ package Casino;
 import DB.DBBank;
 import Game1.Game1;
 import Game2.Game2;
+import Game3.Game3;
+import Game4.Game4;
 import Menu.Menu;
 
 /**
@@ -48,6 +50,7 @@ public final class CasinoFirstPage extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
         jButton4 = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
+        jPanel3 = new javax.swing.JPanel();
         try {
             jButton3 =(javax.swing.JButton)java.beans.Beans.instantiate(getClass().getClassLoader(), "Casino.CasinoFirstPage_jButton3");
         } catch (ClassNotFoundException e) {
@@ -56,6 +59,8 @@ public final class CasinoFirstPage extends javax.swing.JFrame {
             e.printStackTrace();
         }
         jButton6 = new javax.swing.JButton();
+        jButton7 = new javax.swing.JButton();
+        jButton5 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -131,12 +136,15 @@ public final class CasinoFirstPage extends javax.swing.JFrame {
 
         getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 113, 450, 620));
 
+        jPanel3.setOpaque(false);
+        jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 280, 310, 172));
+        jPanel3.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 310, 176));
 
         jButton6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/BackgroundImages/game2ButtonDesing.png"))); // NOI18N
         jButton6.setBorder(null);
@@ -147,7 +155,27 @@ public final class CasinoFirstPage extends javax.swing.JFrame {
                 jButton6ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 280, -1, -1));
+        jPanel3.add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 0, 310, 176));
+
+        jButton7.setText("Game4");
+        jButton7.setPreferredSize(new java.awt.Dimension(200, 112));
+        jButton7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton7ActionPerformed(evt);
+            }
+        });
+        jPanel3.add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 196, 310, 176));
+
+        jButton5.setText("Game3");
+        jButton5.setPreferredSize(new java.awt.Dimension(200, 112));
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton5ActionPerformed(evt);
+            }
+        });
+        jPanel3.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 196, 310, 176));
+
+        getContentPane().add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 220, 650, 380));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/BackgroundImages/Best HD Walls - FreeHD.Blogspot (64).jpg"))); // NOI18N
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1370, -1));
@@ -221,6 +249,18 @@ public final class CasinoFirstPage extends javax.swing.JFrame {
         new Game2().setVisible(true);
     }//GEN-LAST:event_jButton6ActionPerformed
 
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+        // TODO add your handling code here:
+        this.setVisible(false);
+        new Game3().setVisible(true);
+    }//GEN-LAST:event_jButton5ActionPerformed
+
+    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
+        // TODO add your handling code here:
+        this.setVisible(false);
+        new Game4().setVisible(true);
+    }//GEN-LAST:event_jButton7ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -268,12 +308,15 @@ public final class CasinoFirstPage extends javax.swing.JFrame {
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
+    private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
+    private javax.swing.JButton jButton7;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
     // End of variables declaration//GEN-END:variables
