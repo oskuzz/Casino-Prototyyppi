@@ -138,7 +138,7 @@ public final class CasinoFirstPage extends javax.swing.JFrame {
         });
         getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 280, 310, 172));
 
-        jButton6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/BackgroundImages/Game2ButtonDesing.jpg"))); // NOI18N
+        jButton6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/BackgroundImages/game2ButtonDesing.png"))); // NOI18N
         jButton6.setBorder(null);
         jButton6.setBorderPainted(false);
         jButton6.setContentAreaFilled(false);
