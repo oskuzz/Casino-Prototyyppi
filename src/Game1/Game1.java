@@ -33,7 +33,7 @@ public final class Game1 extends javax.swing.JFrame {
      */
     public Game1() {
         initComponents();
-        
+
         DBBank.Game1Bank();
         jLabel8.setVisible(false);
         jLabel19.setVisible(false);
@@ -42,7 +42,7 @@ public final class Game1 extends javax.swing.JFrame {
         jLabel25.setVisible(false);
         jTextField3.setVisible(false);
         Kassa = kassa;
-        System.out.println(Kassa + " MOi");
+
         loppukassa = loppuKassa;
         toKassa();
     }
@@ -668,7 +668,6 @@ public final class Game1 extends javax.swing.JFrame {
         Lines = taso;
         jTextField2.setText(Integer.toString(taso));
 
-        System.out.println(Lines);
         if (Lines == 1) {
             jLabel7.setVisible(true);
             jLabel8.setVisible(false);
@@ -726,7 +725,7 @@ public final class Game1 extends javax.swing.JFrame {
         Lines = taso;
 
         jTextField2.setText(Integer.toString(taso));
-        System.out.println(Lines);
+
         if (Lines == 1) {
             jLabel7.setVisible(true);
         } else if (Lines == 2) {
@@ -774,7 +773,6 @@ public final class Game1 extends javax.swing.JFrame {
     private void PlayButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PlayButtonActionPerformed
         // TODO add your handling code here:
         kassa = Double.parseDouble(KassaField.getText());
-        System.out.println(kassa);
 
         jTextField3.setVisible(false);
         jLabel7.setVisible(false);
@@ -785,7 +783,6 @@ public final class Game1 extends javax.swing.JFrame {
         jLabel25.setVisible(false);
 
         if (kassa > 0 && lopullinenPanos2 <= kassa) {
-            System.out.println("moi");
 
             int num1 = NumeroidenArvonta.num1();
             int num2 = NumeroidenArvonta.num2();
@@ -952,7 +949,7 @@ public final class Game1 extends javax.swing.JFrame {
     }//GEN-LAST:event_PlayButtonActionPerformed
 
     public static void kassa(double Kassa2) {
-        System.out.println(Kassa2);
+
         kassa = Kassa2;
         //CasinoFirstPage.bankBalance(loppukassa);
     }
