@@ -42,8 +42,8 @@ public final class CasinoFirstPage extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jButton1 = new javax.swing.JButton();
         jTextField1 = new javax.swing.JTextField();
-        jLabel2 = new javax.swing.JLabel();
         jButton2 = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
         try {
             jButton3 =(javax.swing.JButton)java.beans.Beans.instantiate(getClass().getClassLoader(), "Casino.CasinoFirstPage_jButton3");
         } catch (ClassNotFoundException e) {
@@ -89,12 +89,7 @@ public final class CasinoFirstPage extends javax.swing.JFrame {
                 jTextField1ActionPerformed(evt);
             }
         });
-        jPanel1.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1229, 10, 110, 18));
-
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/BackgroundImages/Bar2.png"))); // NOI18N
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
-
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1360, 120));
+        jPanel1.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1160, 14, 110, 18));
 
         jButton2.setText("Menu");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -102,7 +97,12 @@ public final class CasinoFirstPage extends javax.swing.JFrame {
                 jButton2ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 220, -1, -1));
+        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1280, 10, -1, -1));
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/BackgroundImages/Bar2.png"))); // NOI18N
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1360, 120));
 
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -137,6 +137,10 @@ public final class CasinoFirstPage extends javax.swing.JFrame {
         new Menu().setVisible(true);
 
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    public void close() {
+        this.setVisible(false);
+    }
 
     public static void bankBalance(double Kassa) {
 
