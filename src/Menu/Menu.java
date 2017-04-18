@@ -45,45 +45,60 @@ public class Menu extends javax.swing.JFrame {
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        Return.setText("Return");
+        Return.setIcon(new javax.swing.ImageIcon(getClass().getResource("/BackgroundImages/MenuReturnButton.png"))); // NOI18N
+        Return.setBorder(null);
+        Return.setBorderPainted(false);
+        Return.setContentAreaFilled(false);
         Return.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 ReturnActionPerformed(evt);
             }
         });
-        getContentPane().add(Return, new org.netbeans.lib.awtextra.AbsoluteConstraints(118, 70, -1, -1));
+        getContentPane().add(Return, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 60, -1, -1));
 
-        Bank.setText("Bank");
+        Bank.setIcon(new javax.swing.ImageIcon(getClass().getResource("/BackgroundImages/MenuBankButton.png"))); // NOI18N
+        Bank.setBorder(null);
+        Bank.setBorderPainted(false);
+        Bank.setContentAreaFilled(false);
         Bank.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 BankActionPerformed(evt);
             }
         });
-        getContentPane().add(Bank, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 170, -1, -1));
+        getContentPane().add(Bank, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 160, -1, -1));
 
-        Logout.setText("Logout");
+        Logout.setIcon(new javax.swing.ImageIcon(getClass().getResource("/BackgroundImages/MenuLogoutButton.png"))); // NOI18N
+        Logout.setBorder(null);
+        Logout.setBorderPainted(false);
+        Logout.setContentAreaFilled(false);
         Logout.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 LogoutActionPerformed(evt);
             }
         });
-        getContentPane().add(Logout, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 220, -1, -1));
+        getContentPane().add(Logout, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 210, -1, -1));
 
-        Admin.setText("Admin");
+        Admin.setIcon(new javax.swing.ImageIcon(getClass().getResource("/BackgroundImages/MenuAdminButton.png"))); // NOI18N
+        Admin.setBorder(null);
+        Admin.setBorderPainted(false);
+        Admin.setContentAreaFilled(false);
         Admin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 AdminActionPerformed(evt);
             }
         });
-        getContentPane().add(Admin, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 120, -1, -1));
+        getContentPane().add(Admin, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 110, -1, -1));
 
-        jButton1.setText("Exit");
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/BackgroundImages/MenuExitButton.png"))); // NOI18N
+        jButton1.setBorder(null);
+        jButton1.setBorderPainted(false);
+        jButton1.setContentAreaFilled(false);
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 260, -1, -1));
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 260, -1, -1));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/BackgroundImages/MenuPhoto.png"))); // NOI18N
         jLabel1.setName(""); // NOI18N
