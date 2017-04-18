@@ -14,7 +14,7 @@ import java.sql.SQLException;
  */
 public class DBBank {
 
-    static double Kassa;
+    static double Kassa = 0;
     static String uname;
 
     public static void UserName(String uName) {
@@ -43,7 +43,13 @@ public class DBBank {
     public static void CFPBank() {
         CasinoFirstPage.bankBalance(Kassa);
     }
-
+    
+    public static void updateBank2(double kassa) throws SQLException{
+        kassa = Kassa + kassa;
+        updateBank(kassa);
+        getGame1Bank(kassa);
+    }
+    
     public static void updateBank(double kassa) throws SQLException {
         Kassa = kassa;
         DBConnections.updateMoneyBalance(uname, kassa);

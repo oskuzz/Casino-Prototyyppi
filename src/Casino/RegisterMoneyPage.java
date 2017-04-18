@@ -16,14 +16,12 @@ import java.util.logging.Logger;
  */
 public class RegisterMoneyPage extends javax.swing.JFrame {
 
-    
-    
     /**
      * Creates new form RegisterMoneyPage
      */
     public RegisterMoneyPage() {
         initComponents();
-        
+
     }
 
     /**
@@ -73,20 +71,14 @@ public class RegisterMoneyPage extends javax.swing.JFrame {
         // TODO add your handling code here:
         double Kassa = Double.parseDouble(jTextField1.getText());
 
-        DBBank.getGame1Bank(Kassa);
-        
-        
-
         try {
-            DBBank.updateBank(Kassa);
+            DBBank.updateBank2(Kassa);
         } catch (SQLException ex) {
             Logger.getLogger(RegisterMoneyPage.class.getName()).log(Level.SEVERE, null, ex);
         }
         this.setVisible(false);
         new CasinoFirstPage().setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
-
-    
 
     /**
      * @param args the command line arguments

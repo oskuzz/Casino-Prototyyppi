@@ -80,9 +80,9 @@ public class MoreMoneyToBank extends javax.swing.JFrame {
         // TODO add your handling code here:
         double Kassa = Double.parseDouble(jTextField1.getText());
 
-        DBBank.getGame1Bank(Kassa);
+        
         try {
-            DBBank.updateBank(Kassa);
+            DBBank.updateBank2(Kassa);
         } catch (SQLException ex) {
             Logger.getLogger(MoreMoneyToBank.class.getName()).log(Level.SEVERE, null, ex);
         }
