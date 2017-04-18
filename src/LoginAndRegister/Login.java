@@ -5,6 +5,7 @@
  */
 package LoginAndRegister;
 
+import Casino.CasinoFirstPage;
 import DB.DBConnections;
 import DB.DBConnections2;
 import java.sql.SQLException;
@@ -101,7 +102,7 @@ public class Login extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
         DBConnections DB = cMan.getStorageManager();
-
+        CasinoFirstPage CFP = new CasinoFirstPage();
         String uName = jTextField1.getText();
         String Password = jPasswordField1.getText();
 
@@ -112,7 +113,8 @@ public class Login extends javax.swing.JFrame {
                 DB.getMoneyBalanse(uName);
 
                 this.setVisible(false);
-                
+                CFP.profile(uName);
+                CFP.toProfile();
             } else {
                 System.out.println("Ouhnoh");
             }

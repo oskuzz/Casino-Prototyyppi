@@ -18,7 +18,10 @@ public class DBBank {
     static String uname;
 
     public static void UserName(String uName) {
+        CasinoFirstPage CFP = new CasinoFirstPage();
         uname = uName;
+        CFP.profile(uName);
+        CFP.toProfile();
     }
 
     public static void bank(String uName, double kassa) {

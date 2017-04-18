@@ -20,7 +20,9 @@ import javax.swing.JOptionPane;
  * @author s1601396
  */
 public class Register extends javax.swing.JFrame {
-private DBConnections2 bMan;
+
+    private DBConnections2 bMan;
+
     /**
      * Creates new form Register
      */
@@ -122,12 +124,14 @@ private DBConnections2 bMan;
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
         DBConnections DB = bMan.getStorageManager();
-
+        CasinoFirstPage CFP = new CasinoFirstPage();
         try {
             DB.writeToDataBase(ID.getText(), eName.getText(), sName.getText(), password.getText());
             this.setVisible(false);
             new RegisterMoneyPage().setVisible(true);
             DBBank.UserName(ID.getText());
+            CFP.profile(ID.getText());
+            CFP.toProfile();
         } catch (ClassNotFoundException ex) {
             Logger.getLogger(Register.class.getName()).log(Level.SEVERE, null, ex);
         } catch (SQLException ex) {
