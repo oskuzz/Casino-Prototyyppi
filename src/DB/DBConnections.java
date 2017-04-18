@@ -6,7 +6,6 @@
 package DB;
 
 import Casino.CasinoFirstPage;
-import FirstInstructionPage.StartInstructions;
 
 import java.sql.*;
 import java.util.logging.Level;
