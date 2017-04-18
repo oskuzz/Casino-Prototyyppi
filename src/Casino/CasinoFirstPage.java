@@ -138,8 +138,6 @@ public final class CasinoFirstPage extends javax.swing.JFrame {
         this.setVisible(false);
     }//GEN-LAST:event_jButton2ActionPerformed
 
-    
-
     public static void bankBalance(double Kassa) {
 
         kassa = Kassa;

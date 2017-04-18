@@ -5,6 +5,11 @@
  */
 package Casino;
 
+import DB.DBBank;
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 /**
  *
  * @author s1601396
@@ -27,21 +32,51 @@ public class RegisterMoneyPage extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        jTextField1 = new javax.swing.JTextField();
+        jButton1 = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
-        );
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        getContentPane().add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(185, 140, 180, 25));
+
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/BackgroundImages/MoneyPageLisääButton.png"))); // NOI18N
+        jButton1.setBorder(null);
+        jButton1.setBorderPainted(false);
+        jButton1.setContentAreaFilled(false);
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 140, -1, -1));
+
+        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/BackgroundImages/MoneyPageLisääText.png"))); // NOI18N
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 60, 160, 40));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/BackgroundImages/LoginRegisterPage.png"))); // NOI18N
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        double Kassa = Double.parseDouble(jTextField1.getText());
+        DBBank.getGame1Bank(Kassa);
+        
+        try {
+            DBBank.updateBank(Kassa);
+        } catch (SQLException ex) {
+            Logger.getLogger(RegisterMoneyPage.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        this.setVisible(false);
+        new CasinoFirstPage().setVisible(true);
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -79,5 +114,9 @@ public class RegisterMoneyPage extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButton1;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JTextField jTextField1;
     // End of variables declaration//GEN-END:variables
 }
