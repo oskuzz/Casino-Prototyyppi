@@ -5,7 +5,6 @@
  */
 package Game2;
 
-import Game1.*;
 import java.util.Random;
 
 /**
@@ -87,6 +86,60 @@ public class NumeroidenArvonta {
     }
     
     public static int num9() {
+        int START = 1;
+        int END = 9;
+        Random random = new Random();
+        int number = showRandomInteger(START, END, random);
+
+        return (number);
+    }
+    
+    public static int num10() {
+        int START = 1;
+        int END = 9;
+        Random random = new Random();
+        int number = showRandomInteger(START, END, random);
+
+        return (number);
+    }
+    
+    public static int num11() {
+        int START = 1;
+        int END = 9;
+        Random random = new Random();
+        int number = showRandomInteger(START, END, random);
+
+        return (number);
+    }
+    
+    public static int num12() {
+        int START = 1;
+        int END = 9;
+        Random random = new Random();
+        int number = showRandomInteger(START, END, random);
+
+        return (number);
+    }
+    
+    public static int num13() {
+        int START = 1;
+        int END = 9;
+        Random random = new Random();
+        int number = showRandomInteger(START, END, random);
+
+        return (number);
+    }
+    
+    public static int num14() {
+        int START = 1;
+        int END = 9;
+        Random random = new Random();
+        int number = showRandomInteger(START, END, random);
+
+        return (number);
+    }
+    
+    public static int num15() {
         int START = 1;
         int END = 9;
         Random random = new Random();

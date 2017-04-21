@@ -66,6 +66,9 @@ public class Game2 extends javax.swing.JFrame {
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
+        jButton2 = new javax.swing.JButton();
+        jPanel2 = new javax.swing.JPanel();
+        jLabel7 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -473,7 +476,23 @@ public class Game2 extends javax.swing.JFrame {
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/BackgroundImages/Game2NumberFrame2.png"))); // NOI18N
         jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(604, 0, -1, -1));
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 50, 754, 350));
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 70, 754, 350));
+
+        jButton2.setText("Pelaa");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 570, -1, -1));
+
+        jPanel2.setOpaque(false);
+        jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/BackgroundImages/Game2ButtonFrame.png"))); // NOI18N
+        jPanel2.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+
+        getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(235, 610, 900, 150));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/BackgroundImages/Game2Wall.jpg"))); // NOI18N
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
@@ -487,6 +506,27 @@ public class Game2 extends javax.swing.JFrame {
         this.setVisible(false);
         new CasinoFirstPage().setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+        Num1.setText(Integer.toString(NumeroidenArvonta.num1()));
+        Num2.setText(Integer.toString(NumeroidenArvonta.num2()));
+        Num3.setText(Integer.toString(NumeroidenArvonta.num3()));
+        Num4.setText(Integer.toString(NumeroidenArvonta.num4()));
+        Num5.setText(Integer.toString(NumeroidenArvonta.num5()));
+        Num6.setText(Integer.toString(NumeroidenArvonta.num6()));
+        Num7.setText(Integer.toString(NumeroidenArvonta.num7()));
+        Num8.setText(Integer.toString(NumeroidenArvonta.num8()));
+        Num9.setText(Integer.toString(NumeroidenArvonta.num9()));
+        Num10.setText(Integer.toString(NumeroidenArvonta.num10()));
+        Num11.setText(Integer.toString(NumeroidenArvonta.num11()));
+        Num12.setText(Integer.toString(NumeroidenArvonta.num12()));
+        Num13.setText(Integer.toString(NumeroidenArvonta.num13()));
+        Num14.setText(Integer.toString(NumeroidenArvonta.num14()));
+        Num15.setText(Integer.toString(NumeroidenArvonta.num15()));
+        
+        
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -556,12 +596,15 @@ public class Game2 extends javax.swing.JFrame {
     private javax.swing.JPanel NumPanel8;
     private javax.swing.JPanel NumPanel9;
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
     // End of variables declaration//GEN-END:variables
 }
