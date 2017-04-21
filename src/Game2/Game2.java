@@ -12,7 +12,7 @@ import Casino.CasinoFirstPage;
  * @author s1601396
  */
 public class Game2 extends javax.swing.JFrame {
-
+    int Kerroin = 0;
     /**
      * Creates new form Game1
      */
@@ -30,6 +30,45 @@ public class Game2 extends javax.swing.JFrame {
     private void initComponents() {
 
         jButton1 = new javax.swing.JButton();
+        jPanel1 = new javax.swing.JPanel();
+        NumPanel1 = new javax.swing.JPanel();
+        Num1 = new javax.swing.JLabel();
+        NumPanel2 = new javax.swing.JPanel();
+        Num2 = new javax.swing.JLabel();
+        NumPanel3 = new javax.swing.JPanel();
+        Num3 = new javax.swing.JLabel();
+        NumPanel4 = new javax.swing.JPanel();
+        Num4 = new javax.swing.JLabel();
+        NumPanel5 = new javax.swing.JPanel();
+        Num5 = new javax.swing.JLabel();
+        NumPanel6 = new javax.swing.JPanel();
+        Num6 = new javax.swing.JLabel();
+        NumPanel7 = new javax.swing.JPanel();
+        Num7 = new javax.swing.JLabel();
+        NumPanel8 = new javax.swing.JPanel();
+        Num8 = new javax.swing.JLabel();
+        NumPanel9 = new javax.swing.JPanel();
+        Num9 = new javax.swing.JLabel();
+        NumPanel10 = new javax.swing.JPanel();
+        Num10 = new javax.swing.JLabel();
+        NumPanel11 = new javax.swing.JPanel();
+        Num11 = new javax.swing.JLabel();
+        NumPanel12 = new javax.swing.JPanel();
+        Num12 = new javax.swing.JLabel();
+        NumPanel13 = new javax.swing.JPanel();
+        Num13 = new javax.swing.JLabel();
+        NumPanel14 = new javax.swing.JPanel();
+        Num14 = new javax.swing.JLabel();
+        NumPanel15 = new javax.swing.JPanel();
+        Num15 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jButton2 = new javax.swing.JButton();
+        jPanel2 = new javax.swing.JPanel();
+        jLabel7 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -44,6 +83,417 @@ public class Game2 extends javax.swing.JFrame {
         });
         getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 20, -1, -1));
 
+        jPanel1.setOpaque(false);
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        NumPanel1.setOpaque(false);
+
+        Num1.setFont(new java.awt.Font("Tahoma", 0, 60)); // NOI18N
+        Num1.setForeground(new java.awt.Color(255, 255, 255));
+        Num1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Num1.setText("0");
+        Num1.setPreferredSize(new java.awt.Dimension(130, 100));
+
+        javax.swing.GroupLayout NumPanel1Layout = new javax.swing.GroupLayout(NumPanel1);
+        NumPanel1.setLayout(NumPanel1Layout);
+        NumPanel1Layout.setHorizontalGroup(
+            NumPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(NumPanel1Layout.createSequentialGroup()
+                .addComponent(Num1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+        NumPanel1Layout.setVerticalGroup(
+            NumPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(NumPanel1Layout.createSequentialGroup()
+                .addComponent(Num1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+
+        jPanel1.add(NumPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 130, 100));
+
+        NumPanel2.setOpaque(false);
+
+        Num2.setFont(new java.awt.Font("Tahoma", 0, 60)); // NOI18N
+        Num2.setForeground(new java.awt.Color(255, 255, 255));
+        Num2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Num2.setText("0");
+        Num2.setPreferredSize(new java.awt.Dimension(130, 100));
+
+        javax.swing.GroupLayout NumPanel2Layout = new javax.swing.GroupLayout(NumPanel2);
+        NumPanel2.setLayout(NumPanel2Layout);
+        NumPanel2Layout.setHorizontalGroup(
+            NumPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(NumPanel2Layout.createSequentialGroup()
+                .addComponent(Num2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+        NumPanel2Layout.setVerticalGroup(
+            NumPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(NumPanel2Layout.createSequentialGroup()
+                .addComponent(Num2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+
+        jPanel1.add(NumPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 125, 130, 100));
+
+        NumPanel3.setOpaque(false);
+
+        Num3.setFont(new java.awt.Font("Tahoma", 0, 60)); // NOI18N
+        Num3.setForeground(new java.awt.Color(255, 255, 255));
+        Num3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Num3.setText("0");
+        Num3.setPreferredSize(new java.awt.Dimension(130, 100));
+
+        javax.swing.GroupLayout NumPanel3Layout = new javax.swing.GroupLayout(NumPanel3);
+        NumPanel3.setLayout(NumPanel3Layout);
+        NumPanel3Layout.setHorizontalGroup(
+            NumPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(NumPanel3Layout.createSequentialGroup()
+                .addComponent(Num3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+        NumPanel3Layout.setVerticalGroup(
+            NumPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(NumPanel3Layout.createSequentialGroup()
+                .addComponent(Num3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+
+        jPanel1.add(NumPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 240, 130, 100));
+
+        NumPanel4.setOpaque(false);
+
+        Num4.setFont(new java.awt.Font("Tahoma", 0, 60)); // NOI18N
+        Num4.setForeground(new java.awt.Color(255, 255, 255));
+        Num4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Num4.setText("0");
+        Num4.setPreferredSize(new java.awt.Dimension(130, 100));
+
+        javax.swing.GroupLayout NumPanel4Layout = new javax.swing.GroupLayout(NumPanel4);
+        NumPanel4.setLayout(NumPanel4Layout);
+        NumPanel4Layout.setHorizontalGroup(
+            NumPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(NumPanel4Layout.createSequentialGroup()
+                .addComponent(Num4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+        NumPanel4Layout.setVerticalGroup(
+            NumPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(NumPanel4Layout.createSequentialGroup()
+                .addComponent(Num4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+
+        jPanel1.add(NumPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(161, 10, 130, 100));
+
+        NumPanel5.setOpaque(false);
+
+        Num5.setFont(new java.awt.Font("Tahoma", 0, 60)); // NOI18N
+        Num5.setForeground(new java.awt.Color(255, 255, 255));
+        Num5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Num5.setText("0");
+        Num5.setPreferredSize(new java.awt.Dimension(130, 100));
+
+        javax.swing.GroupLayout NumPanel5Layout = new javax.swing.GroupLayout(NumPanel5);
+        NumPanel5.setLayout(NumPanel5Layout);
+        NumPanel5Layout.setHorizontalGroup(
+            NumPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(NumPanel5Layout.createSequentialGroup()
+                .addComponent(Num5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+        NumPanel5Layout.setVerticalGroup(
+            NumPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(NumPanel5Layout.createSequentialGroup()
+                .addComponent(Num5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+
+        jPanel1.add(NumPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(161, 125, 130, 100));
+
+        NumPanel6.setOpaque(false);
+
+        Num6.setFont(new java.awt.Font("Tahoma", 0, 60)); // NOI18N
+        Num6.setForeground(new java.awt.Color(255, 255, 255));
+        Num6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Num6.setText("0");
+        Num6.setPreferredSize(new java.awt.Dimension(130, 100));
+
+        javax.swing.GroupLayout NumPanel6Layout = new javax.swing.GroupLayout(NumPanel6);
+        NumPanel6.setLayout(NumPanel6Layout);
+        NumPanel6Layout.setHorizontalGroup(
+            NumPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(NumPanel6Layout.createSequentialGroup()
+                .addComponent(Num6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+        NumPanel6Layout.setVerticalGroup(
+            NumPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(NumPanel6Layout.createSequentialGroup()
+                .addComponent(Num6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+
+        jPanel1.add(NumPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(161, 240, 130, 100));
+
+        NumPanel7.setOpaque(false);
+
+        Num7.setFont(new java.awt.Font("Tahoma", 0, 60)); // NOI18N
+        Num7.setForeground(new java.awt.Color(255, 255, 255));
+        Num7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Num7.setText("0");
+        Num7.setPreferredSize(new java.awt.Dimension(130, 100));
+
+        javax.swing.GroupLayout NumPanel7Layout = new javax.swing.GroupLayout(NumPanel7);
+        NumPanel7.setLayout(NumPanel7Layout);
+        NumPanel7Layout.setHorizontalGroup(
+            NumPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(NumPanel7Layout.createSequentialGroup()
+                .addComponent(Num7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+        NumPanel7Layout.setVerticalGroup(
+            NumPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(NumPanel7Layout.createSequentialGroup()
+                .addComponent(Num7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+
+        jPanel1.add(NumPanel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(312, 10, 130, 100));
+
+        NumPanel8.setOpaque(false);
+
+        Num8.setFont(new java.awt.Font("Tahoma", 0, 60)); // NOI18N
+        Num8.setForeground(new java.awt.Color(255, 255, 255));
+        Num8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Num8.setText("0");
+        Num8.setPreferredSize(new java.awt.Dimension(130, 100));
+
+        javax.swing.GroupLayout NumPanel8Layout = new javax.swing.GroupLayout(NumPanel8);
+        NumPanel8.setLayout(NumPanel8Layout);
+        NumPanel8Layout.setHorizontalGroup(
+            NumPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(NumPanel8Layout.createSequentialGroup()
+                .addComponent(Num8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+        NumPanel8Layout.setVerticalGroup(
+            NumPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(NumPanel8Layout.createSequentialGroup()
+                .addComponent(Num8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+
+        jPanel1.add(NumPanel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(312, 125, 130, 100));
+
+        NumPanel9.setOpaque(false);
+
+        Num9.setFont(new java.awt.Font("Tahoma", 0, 60)); // NOI18N
+        Num9.setForeground(new java.awt.Color(255, 255, 255));
+        Num9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Num9.setText("0");
+        Num9.setPreferredSize(new java.awt.Dimension(130, 100));
+
+        javax.swing.GroupLayout NumPanel9Layout = new javax.swing.GroupLayout(NumPanel9);
+        NumPanel9.setLayout(NumPanel9Layout);
+        NumPanel9Layout.setHorizontalGroup(
+            NumPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(NumPanel9Layout.createSequentialGroup()
+                .addComponent(Num9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+        NumPanel9Layout.setVerticalGroup(
+            NumPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(NumPanel9Layout.createSequentialGroup()
+                .addComponent(Num9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+
+        jPanel1.add(NumPanel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(312, 240, 130, 100));
+
+        NumPanel10.setOpaque(false);
+
+        Num10.setFont(new java.awt.Font("Tahoma", 0, 60)); // NOI18N
+        Num10.setForeground(new java.awt.Color(255, 255, 255));
+        Num10.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Num10.setText("0");
+        Num10.setPreferredSize(new java.awt.Dimension(130, 100));
+
+        javax.swing.GroupLayout NumPanel10Layout = new javax.swing.GroupLayout(NumPanel10);
+        NumPanel10.setLayout(NumPanel10Layout);
+        NumPanel10Layout.setHorizontalGroup(
+            NumPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(NumPanel10Layout.createSequentialGroup()
+                .addComponent(Num10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+        NumPanel10Layout.setVerticalGroup(
+            NumPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(NumPanel10Layout.createSequentialGroup()
+                .addComponent(Num10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+
+        jPanel1.add(NumPanel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(463, 10, 130, 100));
+
+        NumPanel11.setOpaque(false);
+
+        Num11.setFont(new java.awt.Font("Tahoma", 0, 60)); // NOI18N
+        Num11.setForeground(new java.awt.Color(255, 255, 255));
+        Num11.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Num11.setText("0");
+        Num11.setPreferredSize(new java.awt.Dimension(130, 100));
+
+        javax.swing.GroupLayout NumPanel11Layout = new javax.swing.GroupLayout(NumPanel11);
+        NumPanel11.setLayout(NumPanel11Layout);
+        NumPanel11Layout.setHorizontalGroup(
+            NumPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(NumPanel11Layout.createSequentialGroup()
+                .addComponent(Num11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+        NumPanel11Layout.setVerticalGroup(
+            NumPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(NumPanel11Layout.createSequentialGroup()
+                .addComponent(Num11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+
+        jPanel1.add(NumPanel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(463, 125, 130, 100));
+
+        NumPanel12.setOpaque(false);
+
+        Num12.setFont(new java.awt.Font("Tahoma", 0, 60)); // NOI18N
+        Num12.setForeground(new java.awt.Color(255, 255, 255));
+        Num12.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Num12.setText("0");
+        Num12.setPreferredSize(new java.awt.Dimension(130, 100));
+
+        javax.swing.GroupLayout NumPanel12Layout = new javax.swing.GroupLayout(NumPanel12);
+        NumPanel12.setLayout(NumPanel12Layout);
+        NumPanel12Layout.setHorizontalGroup(
+            NumPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(NumPanel12Layout.createSequentialGroup()
+                .addComponent(Num12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+        NumPanel12Layout.setVerticalGroup(
+            NumPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(NumPanel12Layout.createSequentialGroup()
+                .addComponent(Num12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+
+        jPanel1.add(NumPanel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(463, 240, 130, 100));
+
+        NumPanel13.setOpaque(false);
+
+        Num13.setFont(new java.awt.Font("Tahoma", 0, 60)); // NOI18N
+        Num13.setForeground(new java.awt.Color(255, 255, 255));
+        Num13.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Num13.setText("0");
+        Num13.setPreferredSize(new java.awt.Dimension(130, 100));
+
+        javax.swing.GroupLayout NumPanel13Layout = new javax.swing.GroupLayout(NumPanel13);
+        NumPanel13.setLayout(NumPanel13Layout);
+        NumPanel13Layout.setHorizontalGroup(
+            NumPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(NumPanel13Layout.createSequentialGroup()
+                .addComponent(Num13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+        NumPanel13Layout.setVerticalGroup(
+            NumPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(NumPanel13Layout.createSequentialGroup()
+                .addComponent(Num13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+
+        jPanel1.add(NumPanel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(614, 10, 130, 100));
+
+        NumPanel14.setOpaque(false);
+
+        Num14.setFont(new java.awt.Font("Tahoma", 0, 60)); // NOI18N
+        Num14.setForeground(new java.awt.Color(255, 255, 255));
+        Num14.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Num14.setText("0");
+        Num14.setPreferredSize(new java.awt.Dimension(130, 100));
+
+        javax.swing.GroupLayout NumPanel14Layout = new javax.swing.GroupLayout(NumPanel14);
+        NumPanel14.setLayout(NumPanel14Layout);
+        NumPanel14Layout.setHorizontalGroup(
+            NumPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(NumPanel14Layout.createSequentialGroup()
+                .addComponent(Num14, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+        NumPanel14Layout.setVerticalGroup(
+            NumPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(NumPanel14Layout.createSequentialGroup()
+                .addComponent(Num14, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+
+        jPanel1.add(NumPanel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(614, 125, 130, 100));
+
+        NumPanel15.setOpaque(false);
+
+        Num15.setFont(new java.awt.Font("Tahoma", 0, 60)); // NOI18N
+        Num15.setForeground(new java.awt.Color(255, 255, 255));
+        Num15.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Num15.setText("0");
+        Num15.setPreferredSize(new java.awt.Dimension(130, 100));
+
+        javax.swing.GroupLayout NumPanel15Layout = new javax.swing.GroupLayout(NumPanel15);
+        NumPanel15.setLayout(NumPanel15Layout);
+        NumPanel15Layout.setHorizontalGroup(
+            NumPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(NumPanel15Layout.createSequentialGroup()
+                .addComponent(Num15, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+        NumPanel15Layout.setVerticalGroup(
+            NumPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(NumPanel15Layout.createSequentialGroup()
+                .addComponent(Num15, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+
+        jPanel1.add(NumPanel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(614, 240, 130, 100));
+
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/BackgroundImages/Game2NumberFrame2.png"))); // NOI18N
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/BackgroundImages/Game2NumberFrame2.png"))); // NOI18N
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(151, 0, -1, -1));
+
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/BackgroundImages/Game2NumberFrame2.png"))); // NOI18N
+        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(302, 0, -1, -1));
+
+        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/BackgroundImages/Game2NumberFrame2.png"))); // NOI18N
+        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(453, 0, -1, -1));
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/BackgroundImages/Game2NumberFrame2.png"))); // NOI18N
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(604, 0, -1, -1));
+
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 70, 754, 350));
+
+        jButton2.setText("Pelaa");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 570, -1, -1));
+
+        jPanel2.setOpaque(false);
+        jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/BackgroundImages/Game2ButtonFrame.png"))); // NOI18N
+        jPanel2.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+
+        getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(235, 610, 900, 150));
+
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/BackgroundImages/Game2Wall.jpg"))); // NOI18N
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
@@ -56,6 +506,52 @@ public class Game2 extends javax.swing.JFrame {
         this.setVisible(false);
         new CasinoFirstPage().setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+        int num1 = NumeroidenArvonta.num1();
+        int num2 = NumeroidenArvonta.num2();
+        int num3 = NumeroidenArvonta.num3();
+        int num4 = NumeroidenArvonta.num4();
+        int num5 = NumeroidenArvonta.num5();
+        int num6 = NumeroidenArvonta.num6();
+        int num7 = NumeroidenArvonta.num7();
+        int num8 = NumeroidenArvonta.num8();
+        int num9 = NumeroidenArvonta.num9();
+        int num10 = NumeroidenArvonta.num10();
+        int num11 = NumeroidenArvonta.num11();
+        int num12 = NumeroidenArvonta.num12();
+        int num13 = NumeroidenArvonta.num13();
+        int num14 = NumeroidenArvonta.num14();
+        int num15 = NumeroidenArvonta.num15();
+        
+        Num1.setText(Integer.toString(num1));
+        Num2.setText(Integer.toString(num2));
+        Num3.setText(Integer.toString(num3));
+        Num4.setText(Integer.toString(num4));
+        Num5.setText(Integer.toString(num5));
+        Num6.setText(Integer.toString(num6));
+        Num7.setText(Integer.toString(num7));
+        Num8.setText(Integer.toString(num8));
+        Num9.setText(Integer.toString(num9));
+        Num10.setText(Integer.toString(num10));
+        Num11.setText(Integer.toString(num11));
+        Num12.setText(Integer.toString(num12));
+        Num13.setText(Integer.toString(num13));
+        Num14.setText(Integer.toString(num14));
+        Num15.setText(Integer.toString(num15));
+        
+        VoitonJako.Taso1(num2, num5, num8, num11, num14);
+        VoitonJako.Taso2(num3, num6, num9, num12, num15);
+        VoitonJako.Taso3(num1, num4, num7, num10, num13);
+        VoitonJako.Taso4(num1, num4, num8, num12, num15);
+        VoitonJako.Taso5(num3, num6, num8, num10, num13);
+        VoitonJako.Taso6(num1, num4, num8, num10, num13);
+        VoitonJako.Taso7(num3, num6, num8, num12, num15);
+        VoitonJako.Taso8(num2, num4, num8, num10, num14);
+        VoitonJako.Taso9(num2, num6, num8, num12, num14);
+        
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -94,7 +590,46 @@ public class Game2 extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel Num1;
+    private javax.swing.JLabel Num10;
+    private javax.swing.JLabel Num11;
+    private javax.swing.JLabel Num12;
+    private javax.swing.JLabel Num13;
+    private javax.swing.JLabel Num14;
+    private javax.swing.JLabel Num15;
+    private javax.swing.JLabel Num2;
+    private javax.swing.JLabel Num3;
+    private javax.swing.JLabel Num4;
+    private javax.swing.JLabel Num5;
+    private javax.swing.JLabel Num6;
+    private javax.swing.JLabel Num7;
+    private javax.swing.JLabel Num8;
+    private javax.swing.JLabel Num9;
+    private javax.swing.JPanel NumPanel1;
+    private javax.swing.JPanel NumPanel10;
+    private javax.swing.JPanel NumPanel11;
+    private javax.swing.JPanel NumPanel12;
+    private javax.swing.JPanel NumPanel13;
+    private javax.swing.JPanel NumPanel14;
+    private javax.swing.JPanel NumPanel15;
+    private javax.swing.JPanel NumPanel2;
+    private javax.swing.JPanel NumPanel3;
+    private javax.swing.JPanel NumPanel4;
+    private javax.swing.JPanel NumPanel5;
+    private javax.swing.JPanel NumPanel6;
+    private javax.swing.JPanel NumPanel7;
+    private javax.swing.JPanel NumPanel8;
+    private javax.swing.JPanel NumPanel9;
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
     // End of variables declaration//GEN-END:variables
 }

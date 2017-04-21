@@ -12,7 +12,7 @@ import java.util.Random;
  * @author s1601396
  */
 public class NumeroidenArvonta {
-    
+
     public static int num1() {
         int START = 1;
         int END = 9;
@@ -39,7 +39,7 @@ public class NumeroidenArvonta {
 
         return (number);
     }
-    
+
     public static int num4() {
         int START = 1;
         int END = 9;
@@ -48,7 +48,7 @@ public class NumeroidenArvonta {
 
         return (number);
     }
-    
+
     public static int num5() {
         int START = 1;
         int END = 9;
@@ -57,7 +57,7 @@ public class NumeroidenArvonta {
 
         return (number);
     }
-    
+
     public static int num6() {
         int START = 1;
         int END = 9;
@@ -66,7 +66,7 @@ public class NumeroidenArvonta {
 
         return (number);
     }
-    
+
     public static int num7() {
         int START = 1;
         int END = 9;
@@ -75,7 +75,7 @@ public class NumeroidenArvonta {
 
         return (number);
     }
-    
+
     public static int num8() {
         int START = 1;
         int END = 9;
@@ -84,7 +84,7 @@ public class NumeroidenArvonta {
 
         return (number);
     }
-    
+
     public static int num9() {
         int START = 1;
         int END = 9;
