@@ -297,24 +297,6 @@ public class VoitonJako {
             return (1);
         } else if (num1 == num4 && num4 == num8 && num8 == 1) {
             return (1);
-        } else if (num1 == num4 && num4 == 9) {
-            return (1);
-        } else if (num1 == num4 && num4 == 8) {
-            return (0.75);
-        } else if (num1 == num4 && num4 == 7) {
-            return (0.75);
-        } else if (num1 == num4 && num4 == 6) {
-            return (0.75);
-        } else if (num1 == num4 && num4 == 5) {
-            return (0.75);
-        } else if (num1 == num4 && num4 == 4) {
-            return (0.5);
-        } else if (num1 == num4 && num4 == 3) {
-            return (0.5);
-        } else if (num1 == num4 && num4 == 2) {
-            return (0.5);
-        } else if (num1 == num4 && num4 == 1) {
-            return (0.5);
         }
         return 0;
     }
@@ -374,24 +356,6 @@ public class VoitonJako {
             return (1);
         } else if (num3 == num6 && num6 == num8 && num8 == 1) {
             return (1);
-        } else if (num3 == num6 && num6 == 9) {
-            return (1);
-        } else if (num3 == num6 && num6 == 8) {
-            return (0.75);
-        } else if (num3 == num6 && num6 == 7) {
-            return (0.75);
-        } else if (num3 == num6 && num6 == 6) {
-            return (0.75);
-        } else if (num3 == num6 && num6 == 5) {
-            return (0.75);
-        } else if (num3 == num6 && num6 == 4) {
-            return (0.5);
-        } else if (num3 == num6 && num6 == 3) {
-            return (0.5);
-        } else if (num3 == num6 && num6 == 2) {
-            return (0.5);
-        } else if (num3 == num6 && num6 == 1) {
-            return (0.5);
         }
         return 0;
     }
@@ -451,24 +415,6 @@ public class VoitonJako {
             return (1);
         } else if (num1 == num4 && num4 == num8 && num8 == 1) {
             return (1);
-        } else if (num1 == num4 && num4 == 9) {
-            return (1);
-        } else if (num1 == num4 && num4 == 8) {
-            return (0.75);
-        } else if (num1 == num4 && num4 == 7) {
-            return (0.75);
-        } else if (num1 == num4 && num4 == 6) {
-            return (0.75);
-        } else if (num1 == num4 && num4 == 5) {
-            return (0.75);
-        } else if (num1 == num4 && num4 == 4) {
-            return (0.5);
-        } else if (num1 == num4 && num4 == 3) {
-            return (0.5);
-        } else if (num1 == num4 && num4 == 2) {
-            return (0.5);
-        } else if (num1 == num4 && num4 == 1) {
-            return (0.5);
         }
         return 0;
     }
@@ -528,24 +474,6 @@ public class VoitonJako {
             return (1);
         } else if (num3 == num6 && num6 == num8 && num8 == 1) {
             return (1);
-        } else if (num3 == num6 && num6 == 9) {
-            return (1);
-        } else if (num3 == num6 && num6 == 8) {
-            return (0.75);
-        } else if (num3 == num6 && num6 == 7) {
-            return (0.75);
-        } else if (num3 == num6 && num6 == 6) {
-            return (0.75);
-        } else if (num3 == num6 && num6 == 5) {
-            return (0.75);
-        } else if (num3 == num6 && num6 == 4) {
-            return (0.5);
-        } else if (num3 == num6 && num6 == 3) {
-            return (0.5);
-        } else if (num3 == num6 && num6 == 2) {
-            return (0.5);
-        } else if (num3 == num6 && num6 == 1) {
-            return (0.5);
         }
         return 0;
     }
@@ -605,24 +533,6 @@ public class VoitonJako {
             return (1);
         } else if (num2 == num4 && num4 == num8 && num8 == 1) {
             return (1);
-        } else if (num2 == num4 && num4 == 9) {
-            return (1);
-        } else if (num2 == num4 && num4 == 8) {
-            return (0.75);
-        } else if (num2 == num4 && num4 == 7) {
-            return (0.75);
-        } else if (num2 == num4 && num4 == 6) {
-            return (0.75);
-        } else if (num2 == num4 && num4 == 5) {
-            return (0.75);
-        } else if (num2 == num4 && num4 == 4) {
-            return (0.5);
-        } else if (num2 == num4 && num4 == 3) {
-            return (0.5);
-        } else if (num2 == num4 && num4 == 2) {
-            return (0.5);
-        } else if (num2 == num4 && num4 == 1) {
-            return (0.5);
         }
         return 0;
     }
@@ -682,24 +592,6 @@ public class VoitonJako {
             return (1);
         } else if (num2 == num6 && num6 == num8 && num8 == 1) {
             return (1);
-        } else if (num2 == num6 && num6 == 9) {
-            return (1);
-        } else if (num2 == num6 && num6 == 8) {
-            return (0.75);
-        } else if (num2 == num6 && num6 == 7) {
-            return (0.75);
-        } else if (num2 == num6 && num6 == 6) {
-            return (0.75);
-        } else if (num2 == num6 && num6 == 5) {
-            return (0.75);
-        } else if (num2 == num6 && num6 == 4) {
-            return (0.5);
-        } else if (num2 == num6 && num6 == 3) {
-            return (0.5);
-        } else if (num2 == num6 && num6 == 2) {
-            return (0.5);
-        } else if (num2 == num6 && num6 == 1) {
-            return (0.5);
         }
         return 0;
     }
