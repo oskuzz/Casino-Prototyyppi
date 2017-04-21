@@ -603,4 +603,37 @@ public class VoitonJako {
             return (0);
         }
     }
+
+    public static double voitto(double line1, double line2, double line3, double line4, double line5, double line6, double line7, double line8, double line9, int taso, double jackpot) {
+        if (jackpot > 0) {
+            return (jackpot);
+        } else if (taso == 1) {
+            return (line1);
+        } else if (taso == 2) {
+            double voitto = line1 + line2;
+            return (voitto);
+        } else if (taso == 3) {
+            double voitto = line1 + line2 + line3;
+            return (voitto);
+        } else if (taso == 4) {
+            double voitto = line1 + line2 + line3 + line4;
+            return (voitto);
+        } else if (taso == 5) {
+            double voitto = line1 + line2 + line3 + line4 + line5;
+            return (voitto);
+        } else if (taso == 6) {
+            double voitto = line1 + line2 + line3 + line4 + line5 + line6;
+            return (voitto);
+        } else if (taso == 7) {
+            double voitto = line1 + line2 + line3 + line4 + line5 + line6 + line7;
+            return (voitto);
+        } else if (taso == 8) {
+            double voitto = line1 + line2 + line3 + line4 + line5 + line6 + line7 + line8;
+            return (voitto);
+        } else if (taso == 9) {
+            double voitto = line1 + line2 + line3 + line4 + line5 + line6 + line7 + line8 + line9;
+            return (voitto);
+        }
+        return 0;
+    }
 }

@@ -6,18 +6,37 @@
 package Game2;
 
 import Casino.CasinoFirstPage;
+import DB.DBBank;
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
  * @author s1601396
  */
 public class Game2 extends javax.swing.JFrame {
-    int Kerroin = 0;
+
+    double panos = 1;
+    int taso = 1;
+    int Lines;
+    double lopullinenPanos;
+    double lopullinenPanos2;
+    double voitto;
+    double Kassa;
+    static double kassa;
+    static double loppukassa;
+    double loppuKassa;
     /**
      * Creates new form Game1
      */
     public Game2() {
         initComponents();
+        
+        DBBank.GameBank();
+        Kassa = kassa;
+        loppukassa = loppuKassa;
+        toKassa();
     }
 
     /**
@@ -524,7 +543,28 @@ public class Game2 extends javax.swing.JFrame {
         int num13 = NumeroidenArvonta.num13();
         int num14 = NumeroidenArvonta.num14();
         int num15 = NumeroidenArvonta.num15();
+
+        double taso1Voitto = 0;
+        double taso2Voitto = 0;
+        double taso3Voitto = 0;
+        double taso4Voitto = 0;
+        double taso5Voitto = 0;
+        double taso6Voitto = 0;
+        double taso7Voitto = 0;
+        double taso8Voitto = 0;
+        double taso9Voitto = 0;
+        double jackPot = 0;
         
+        if(taso == 1){
+            taso1Voitto = VoitonJako.Taso1(num2, num5, num8, num11, num14);
+            taso1Voitto = taso1Voitto * lopullinenPanos2;
+            if(taso1Voitto > 0){
+                
+            }
+            voitto = VoitonJako.voitto(taso1Voitto, taso2Voitto, taso3Voitto, taso4Voitto, taso5Voitto, taso6Voitto, taso7Voitto, taso8Voitto, taso9Voitto, taso, jackPot);
+            //VoittoField.setText(Double.toString(voitto));
+        }
+
         Num1.setText(Integer.toString(num1));
         Num2.setText(Integer.toString(num2));
         Num3.setText(Integer.toString(num3));
@@ -540,8 +580,8 @@ public class Game2 extends javax.swing.JFrame {
         Num13.setText(Integer.toString(num13));
         Num14.setText(Integer.toString(num14));
         Num15.setText(Integer.toString(num15));
+
         
-        VoitonJako.Taso1(num2, num5, num8, num11, num14);
         VoitonJako.Taso2(num3, num6, num9, num12, num15);
         VoitonJako.Taso3(num1, num4, num7, num10, num13);
         VoitonJako.Taso4(num1, num4, num8, num12, num15);
@@ -550,11 +590,18 @@ public class Game2 extends javax.swing.JFrame {
         VoitonJako.Taso7(num3, num6, num8, num12, num15);
         VoitonJako.Taso8(num2, num4, num8, num10, num14);
         VoitonJako.Taso9(num2, num6, num8, num12, num14);
-        
-        VoitonJako.JackPot(num1, num2, num3, num4, num5, num6, num7, num8, num9, num10, num11, num12, num13, num14, num15);
-        
-    }//GEN-LAST:event_jButton2ActionPerformed
 
+        VoitonJako.JackPot(num1, num2, num3, num4, num5, num6, num7, num8, num9, num10, num11, num12, num13, num14, num15);
+
+    }//GEN-LAST:event_jButton2ActionPerformed
+    
+    public static void kassa(double Kassa2){
+        kassa = Kassa2;
+    }
+    
+    public void toKassa(){
+        //KassaField.setText(Double.toString(Kassa));
+    }
     /**
      * @param args the command line arguments
      */

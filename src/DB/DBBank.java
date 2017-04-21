@@ -30,7 +30,7 @@ public class DBBank {
 
     }
 
-    public static void Game1Bank() {
+    public static void GameBank() {
         Game1.Game1.kassa(Kassa);
 
     }

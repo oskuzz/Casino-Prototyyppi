@@ -34,7 +34,7 @@ public final class Game1 extends javax.swing.JFrame {
     public Game1() {
         initComponents();
 
-        DBBank.Game1Bank();
+        DBBank.GameBank();
         jLabel8.setVisible(false);
         jLabel19.setVisible(false);
         jLabel20.setVisible(false);
@@ -949,9 +949,7 @@ public final class Game1 extends javax.swing.JFrame {
     }//GEN-LAST:event_PlayButtonActionPerformed
 
     public static void kassa(double Kassa2) {
-
         kassa = Kassa2;
-        //CasinoFirstPage.bankBalance(loppukassa);
     }
 
     public void toKassa() {
