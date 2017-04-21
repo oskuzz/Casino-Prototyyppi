@@ -551,6 +551,8 @@ public class Game2 extends javax.swing.JFrame {
         VoitonJako.Taso8(num2, num4, num8, num10, num14);
         VoitonJako.Taso9(num2, num6, num8, num12, num14);
         
+        VoitonJako.JackPot(num1, num2, num3, num4, num5, num6, num7, num8, num9, num10, num11, num12, num13, num14, num15);
+        
     }//GEN-LAST:event_jButton2ActionPerformed
 
     /**

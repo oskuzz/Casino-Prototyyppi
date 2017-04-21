@@ -87,7 +87,7 @@ public class VoitonJako {
         }
         return 0;
     }
-    
+
     public static double Taso2(int num3, int num6, int num9, int num12, int num15) {
         if (num3 == num6 && num6 == num9 && num9 == num12 && num12 == num15 && num15 == 9) {
             return (10);
@@ -164,7 +164,7 @@ public class VoitonJako {
         }
         return 0;
     }
-    
+
     public static double Taso3(int num1, int num4, int num7, int num10, int num13) {
         if (num1 == num4 && num4 == num7 && num7 == num10 && num10 == num13 && num13 == 9) {
             return (10);
@@ -241,7 +241,7 @@ public class VoitonJako {
         }
         return 0;
     }
-    
+
     public static double Taso4(int num1, int num4, int num8, int num12, int num15) {
         if (num1 == num4 && num4 == num8 && num8 == num12 && num12 == num15 && num15 == 9) {
             return (10);
@@ -318,7 +318,7 @@ public class VoitonJako {
         }
         return 0;
     }
-    
+
     public static double Taso5(int num3, int num6, int num8, int num10, int num13) {
         if (num3 == num6 && num6 == num8 && num8 == num10 && num10 == num13 && num13 == 9) {
             return (10);
@@ -395,7 +395,7 @@ public class VoitonJako {
         }
         return 0;
     }
-    
+
     public static double Taso6(int num1, int num4, int num8, int num10, int num13) {
         if (num1 == num4 && num4 == num8 && num8 == num10 && num10 == num13 && num13 == 9) {
             return (10);
@@ -472,7 +472,7 @@ public class VoitonJako {
         }
         return 0;
     }
-    
+
     public static double Taso7(int num3, int num6, int num8, int num12, int num15) {
         if (num3 == num6 && num6 == num8 && num8 == num12 && num12 == num15 && num15 == 9) {
             return (10);
@@ -549,7 +549,7 @@ public class VoitonJako {
         }
         return 0;
     }
-    
+
     public static double Taso8(int num2, int num4, int num8, int num10, int num14) {
         if (num2 == num4 && num4 == num8 && num8 == num10 && num10 == num14 && num14 == 9) {
             return (10);
@@ -626,7 +626,7 @@ public class VoitonJako {
         }
         return 0;
     }
-    
+
     public static double Taso9(int num2, int num6, int num8, int num12, int num14) {
         if (num2 == num6 && num6 == num8 && num8 == num12 && num12 == num14 && num14 == 9) {
             return (10);
@@ -702,5 +702,13 @@ public class VoitonJako {
             return (0.5);
         }
         return 0;
+    }
+
+    public static double JackPot(int num1, int num2, int num3, int num4, int num5, int num6, int num7, int num8, int num9, int num10, int num11, int num12, int num13, int num14, int num15) {
+        if (num1 == num2 && num2 == num3 && num3 == num4 && num4 == num5 && num5 == num6 && num6 == num7 && num7 == num8 && num8 == num9 && num9 == num10 && num10 == num11 && num11 == num12 && num12 == num13 && num13 == num14 && num14 == num15 && num15 == 9) {
+            return (100);
+        } else {
+            return (0);
+        }
     }
 }
