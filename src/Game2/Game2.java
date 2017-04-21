@@ -12,7 +12,7 @@ import Casino.CasinoFirstPage;
  * @author s1601396
  */
 public class Game2 extends javax.swing.JFrame {
-
+    int Kerroin = 0;
     /**
      * Creates new form Game1
      */
@@ -509,22 +509,47 @@ public class Game2 extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
-        Num1.setText(Integer.toString(NumeroidenArvonta.num1()));
-        Num2.setText(Integer.toString(NumeroidenArvonta.num2()));
-        Num3.setText(Integer.toString(NumeroidenArvonta.num3()));
-        Num4.setText(Integer.toString(NumeroidenArvonta.num4()));
-        Num5.setText(Integer.toString(NumeroidenArvonta.num5()));
-        Num6.setText(Integer.toString(NumeroidenArvonta.num6()));
-        Num7.setText(Integer.toString(NumeroidenArvonta.num7()));
-        Num8.setText(Integer.toString(NumeroidenArvonta.num8()));
-        Num9.setText(Integer.toString(NumeroidenArvonta.num9()));
-        Num10.setText(Integer.toString(NumeroidenArvonta.num10()));
-        Num11.setText(Integer.toString(NumeroidenArvonta.num11()));
-        Num12.setText(Integer.toString(NumeroidenArvonta.num12()));
-        Num13.setText(Integer.toString(NumeroidenArvonta.num13()));
-        Num14.setText(Integer.toString(NumeroidenArvonta.num14()));
-        Num15.setText(Integer.toString(NumeroidenArvonta.num15()));
+        int num1 = NumeroidenArvonta.num1();
+        int num2 = NumeroidenArvonta.num2();
+        int num3 = NumeroidenArvonta.num3();
+        int num4 = NumeroidenArvonta.num4();
+        int num5 = NumeroidenArvonta.num5();
+        int num6 = NumeroidenArvonta.num6();
+        int num7 = NumeroidenArvonta.num7();
+        int num8 = NumeroidenArvonta.num8();
+        int num9 = NumeroidenArvonta.num9();
+        int num10 = NumeroidenArvonta.num10();
+        int num11 = NumeroidenArvonta.num11();
+        int num12 = NumeroidenArvonta.num12();
+        int num13 = NumeroidenArvonta.num13();
+        int num14 = NumeroidenArvonta.num14();
+        int num15 = NumeroidenArvonta.num15();
         
+        Num1.setText(Integer.toString(num1));
+        Num2.setText(Integer.toString(num2));
+        Num3.setText(Integer.toString(num3));
+        Num4.setText(Integer.toString(num4));
+        Num5.setText(Integer.toString(num5));
+        Num6.setText(Integer.toString(num6));
+        Num7.setText(Integer.toString(num7));
+        Num8.setText(Integer.toString(num8));
+        Num9.setText(Integer.toString(num9));
+        Num10.setText(Integer.toString(num10));
+        Num11.setText(Integer.toString(num11));
+        Num12.setText(Integer.toString(num12));
+        Num13.setText(Integer.toString(num13));
+        Num14.setText(Integer.toString(num14));
+        Num15.setText(Integer.toString(num15));
+        
+        VoitonJako.Taso1(num2, num5, num8, num11, num14);
+        VoitonJako.Taso2(num3, num6, num9, num12, num15);
+        VoitonJako.Taso3(num1, num4, num7, num10, num13);
+        VoitonJako.Taso4(num1, num4, num8, num12, num15);
+        VoitonJako.Taso5(num3, num6, num8, num10, num13);
+        VoitonJako.Taso6(num1, num4, num8, num10, num13);
+        VoitonJako.Taso7(num3, num6, num8, num12, num15);
+        VoitonJako.Taso8(num2, num4, num8, num10, num14);
+        VoitonJako.Taso9(num2, num6, num8, num12, num14);
         
     }//GEN-LAST:event_jButton2ActionPerformed
 
