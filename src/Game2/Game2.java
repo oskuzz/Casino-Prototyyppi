@@ -27,12 +27,13 @@ public class Game2 extends javax.swing.JFrame {
     static double kassa;
     static double loppukassa;
     double loppuKassa;
+
     /**
      * Creates new form Game1
      */
     public Game2() {
         initComponents();
-        
+
         DBBank.GameBank();
         Kassa = kassa;
         loppukassa = loppuKassa;
@@ -554,17 +555,112 @@ public class Game2 extends javax.swing.JFrame {
         double taso8Voitto = 0;
         double taso9Voitto = 0;
         double jackPot = 0;
-        
-        if(taso == 1){
+
+        if (taso == 1) {
             taso1Voitto = VoitonJako.Taso1(num2, num5, num8, num11, num14);
             taso1Voitto = taso1Voitto * lopullinenPanos2;
-            if(taso1Voitto > 0){
-                
+            if (taso1Voitto > 0) {
+
             }
             voitto = VoitonJako.voitto(taso1Voitto, taso2Voitto, taso3Voitto, taso4Voitto, taso5Voitto, taso6Voitto, taso7Voitto, taso8Voitto, taso9Voitto, taso, jackPot);
             //VoittoField.setText(Double.toString(voitto));
-        }
+        } else if (taso == 2) {
+            taso1Voitto = VoitonJako.Taso1(num2, num5, num8, num11, num14);
+            taso2Voitto = VoitonJako.Taso2(num3, num6, num9, num12, num15);
 
+            if (taso1Voitto > 0) {
+
+            }
+            if (taso2Voitto > 0) {
+
+            }
+            taso1Voitto = taso1Voitto * lopullinenPanos2;
+            taso2Voitto = taso2Voitto * lopullinenPanos2;
+            voitto = VoitonJako.voitto(taso1Voitto, taso2Voitto, taso3Voitto, taso4Voitto, taso5Voitto, taso6Voitto, taso7Voitto, taso8Voitto, taso9Voitto, taso, jackPot);
+            //VoittoField.setText(Double.toString(voitto));
+        } else if (taso == 3) {
+            taso1Voitto = VoitonJako.Taso1(num2, num5, num8, num11, num14);
+            taso2Voitto = VoitonJako.Taso2(num3, num6, num9, num12, num15);
+            taso3Voitto = VoitonJako.Taso3(num1, num4, num7, num10, num13);
+
+            if (taso1Voitto > 0) {
+
+            }
+            if (taso2Voitto > 0) {
+
+            }
+            if (taso3Voitto > 0) {
+
+            }
+
+            taso1Voitto = taso1Voitto * lopullinenPanos2;
+            taso2Voitto = taso2Voitto * lopullinenPanos2;
+            taso3Voitto = taso3Voitto * lopullinenPanos2;
+
+            voitto = VoitonJako.voitto(taso1Voitto, taso2Voitto, taso3Voitto, taso4Voitto, taso5Voitto, taso6Voitto, taso7Voitto, taso8Voitto, taso9Voitto, taso, jackPot);
+            //VoittoField.setText(Double.toString(voitto));
+        } else if (taso == 4) {
+            taso1Voitto = VoitonJako.Taso1(num2, num5, num8, num11, num14);
+            taso2Voitto = VoitonJako.Taso2(num3, num6, num9, num12, num15);
+            taso3Voitto = VoitonJako.Taso3(num1, num4, num7, num10, num13);
+            taso4Voitto = VoitonJako.Taso4(num1, num4, num8, num12, num15);
+
+            if (taso1Voitto > 0) {
+                // jLabel7.setVisible(true);
+            }
+            if (taso2Voitto > 0) {
+                // jLabel8.setVisible(true);
+            }
+            if (taso3Voitto > 0) {
+                // jLabel19.setVisible(true);
+            }
+            if (taso4Voitto > 0) {
+                // jLabel24.setVisible(true);
+            }
+
+            taso1Voitto = taso1Voitto * lopullinenPanos2;
+            taso2Voitto = taso2Voitto * lopullinenPanos2;
+            taso3Voitto = taso3Voitto * lopullinenPanos2;
+            taso4Voitto = taso4Voitto * lopullinenPanos2;
+
+            voitto = VoitonJako.voitto(taso1Voitto, taso2Voitto, taso3Voitto, taso4Voitto, taso5Voitto, taso6Voitto, taso7Voitto, taso8Voitto, taso9Voitto, taso, jackPot);
+            //VoittoField.setText(Double.toString(voitto));
+        } else if (taso == 5) {
+
+            taso1Voitto = VoitonJako.Taso1(num2, num5, num8, num11, num14);
+            taso2Voitto = VoitonJako.Taso2(num3, num6, num9, num12, num15);
+            taso3Voitto = VoitonJako.Taso3(num1, num4, num7, num10, num13);
+            taso4Voitto = VoitonJako.Taso4(num1, num4, num8, num12, num15);
+            taso5Voitto = VoitonJako.Taso5(num3, num6, num8, num10, num13);
+            
+
+            if (taso1Voitto > 0) {
+                //jLabel7.setVisible(true);
+            }
+            if (taso2Voitto > 0) {
+                //jLabel8.setVisible(true);
+            }
+            if (taso3Voitto > 0) {
+                //jLabel19.setVisible(true);
+            }
+            if (taso4Voitto > 0) {
+                //jLabel24.setVisible(true);
+            }
+            if (taso5Voitto > 0) {
+                //jLabel20.setVisible(true);
+            }
+            
+                taso1Voitto = taso1Voitto * lopullinenPanos2;
+                taso2Voitto = taso2Voitto * lopullinenPanos2;
+                taso3Voitto = taso3Voitto * lopullinenPanos2;
+                taso4Voitto = taso4Voitto * lopullinenPanos2;
+                taso5Voitto = taso5Voitto * lopullinenPanos2;
+            
+
+            voitto = VoitonJako.voitto(taso1Voitto, taso2Voitto, taso3Voitto, taso4Voitto, taso5Voitto, taso6Voitto, taso7Voitto, taso8Voitto, taso9Voitto, taso, jackPot);
+            //VoittoField.setText(Double.toString(voitto));
+
+        }
         Num1.setText(Integer.toString(num1));
         Num2.setText(Integer.toString(num2));
         Num3.setText(Integer.toString(num3));
@@ -581,7 +677,6 @@ public class Game2 extends javax.swing.JFrame {
         Num14.setText(Integer.toString(num14));
         Num15.setText(Integer.toString(num15));
 
-        
         VoitonJako.Taso2(num3, num6, num9, num12, num15);
         VoitonJako.Taso3(num1, num4, num7, num10, num13);
         VoitonJako.Taso4(num1, num4, num8, num12, num15);
@@ -594,14 +689,15 @@ public class Game2 extends javax.swing.JFrame {
         VoitonJako.JackPot(num1, num2, num3, num4, num5, num6, num7, num8, num9, num10, num11, num12, num13, num14, num15);
 
     }//GEN-LAST:event_jButton2ActionPerformed
-    
-    public static void kassa(double Kassa2){
+
+    public static void kassa(double Kassa2) {
         kassa = Kassa2;
     }
-    
-    public void toKassa(){
+
+    public void toKassa() {
         //KassaField.setText(Double.toString(Kassa));
     }
+
     /**
      * @param args the command line arguments
      */
