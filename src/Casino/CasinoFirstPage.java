@@ -64,6 +64,7 @@ public final class CasinoFirstPage extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Casino");
+        setUndecorated(true);
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -186,7 +187,7 @@ public final class CasinoFirstPage extends javax.swing.JFrame {
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/BackgroundImages/Best HD Walls - FreeHD.Blogspot (64).jpg"))); // NOI18N
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1370, -1));
 
-        setSize(new java.awt.Dimension(1366, 768));
+        setSize(new java.awt.Dimension(1350, 729));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
