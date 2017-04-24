@@ -527,6 +527,8 @@ public class Game2 extends javax.swing.JFrame {
             }
         });
         jPanel2.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 70, -1, -1));
+
+        jTextField1.setText("1");
         jPanel2.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 70, 30, -1));
 
         jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/BackgroundImages/Game2ButtonFrame.png"))); // NOI18N
