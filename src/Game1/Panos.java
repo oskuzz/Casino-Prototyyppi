@@ -46,8 +46,4 @@ public class Panos {
         return 0;
     }
 
-    public static double voitto(double panos, int taso) {
-        return 0;
-    }
-
 }

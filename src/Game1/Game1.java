@@ -34,7 +34,7 @@ public final class Game1 extends javax.swing.JFrame {
     public Game1() {
         initComponents();
 
-        DBBank.Game1Bank();
+        DBBank.GameBank();
         jLabel8.setVisible(false);
         jLabel19.setVisible(false);
         jLabel20.setVisible(false);
@@ -764,7 +764,7 @@ public final class Game1 extends javax.swing.JFrame {
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
         //TODO add your handling code here:
-        DBBank.getGame1Bank(Double.parseDouble(KassaField.getText()));
+        DBBank.getGameBank(Double.parseDouble(KassaField.getText()));
         new CasinoFirstPage().setVisible(true);
         this.setVisible(false);
 
@@ -928,18 +928,16 @@ public final class Game1 extends javax.swing.JFrame {
             if (voitto == 0) {
                 loppuKassa = kassa - lopullinenPanos2;
                 KassaField.setText(Double.toString(loppuKassa));
-
             } else {
                 loppuKassa = (kassa - lopullinenPanos2) + voitto;
                 KassaField.setText(Double.toString(loppuKassa));
-
             }
 
         } else {
             jTextField3.setVisible(true);
             jTextField3.setText("Ei tarpeeksi rahaa");
         }
-        DBBank.getGame1Bank(loppuKassa);
+        DBBank.getGameBank(loppuKassa);
         try {
             DBBank.updateBank(loppuKassa);
         } catch (SQLException ex) {
@@ -949,9 +947,7 @@ public final class Game1 extends javax.swing.JFrame {
     }//GEN-LAST:event_PlayButtonActionPerformed
 
     public static void kassa(double Kassa2) {
-
         kassa = Kassa2;
-        //CasinoFirstPage.bankBalance(loppukassa);
     }
 
     public void toKassa() {

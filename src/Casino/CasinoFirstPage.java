@@ -207,7 +207,7 @@ public final class CasinoFirstPage extends javax.swing.JFrame {
         // TODO add your handling code here:
         new Game1().setVisible(true);
         this.setVisible(false);
-        DBBank.Game1Bank();
+        DBBank.GameBank();
     }//GEN-LAST:event_jButton3ActionPerformed
 
     public void DBtoKassa() {

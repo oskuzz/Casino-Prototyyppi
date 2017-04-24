@@ -30,12 +30,13 @@ public class DBBank {
 
     }
 
-    public static void Game1Bank() {
+    public static void GameBank() {
         Game1.Game1.kassa(Kassa);
+        Game2.Game2.kassa(Kassa);
 
     }
 
-    public static void getGame1Bank(double kassa) {
+    public static void getGameBank(double kassa) {
         Kassa = kassa;
         CFPBank();
     }
@@ -47,7 +48,7 @@ public class DBBank {
     public static void updateBank2(double kassa) throws SQLException{
         kassa = Kassa + kassa;
         updateBank(kassa);
-        getGame1Bank(kassa);
+        getGameBank(kassa);
     }
     
     public static void updateBank(double kassa) throws SQLException {
