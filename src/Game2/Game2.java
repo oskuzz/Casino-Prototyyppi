@@ -20,11 +20,11 @@ public class Game2 extends javax.swing.JFrame {
     double panos = 1;
     int taso = 1;
     int Lines;
-    double lopullinenPanos;
-    double lopullinenPanos2 = 0;
+    double lopullinenPanos = 1;
+    double lopullinenPanos2 = 1;
     double voitto;
     double Kassa = 1;
-    static double kassa;
+    static double kassa = 1;
     static double loppukassa;
     double loppuKassa;
 
@@ -527,6 +527,8 @@ public class Game2 extends javax.swing.JFrame {
             }
         });
         jPanel2.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 70, -1, -1));
+
+        jTextField1.setText("1");
         jPanel2.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 70, 30, -1));
 
         jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/BackgroundImages/Game2ButtonFrame.png"))); // NOI18N

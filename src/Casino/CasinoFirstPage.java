@@ -21,6 +21,7 @@ public final class CasinoFirstPage extends javax.swing.JFrame {
     static double kassa;
     double Kassa;
     String uname;
+    static String uName;
 
     public CasinoFirstPage() {
 
@@ -28,7 +29,8 @@ public final class CasinoFirstPage extends javax.swing.JFrame {
         jPanel2.setVisible(false);
         Kassa = kassa;
         DBtoKassa();
-        toProfile();
+        uName = uname;
+        DBtoProfile();
 
     }
 
@@ -42,13 +44,12 @@ public final class CasinoFirstPage extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jButton1 = new javax.swing.JButton();
+        jToggleButton1 = new javax.swing.JToggleButton();
         jTextField2 = new javax.swing.JTextField();
         jTextField1 = new javax.swing.JTextField();
         jButton2 = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
-        jButton4 = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
         try {
@@ -65,24 +66,22 @@ public final class CasinoFirstPage extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Casino");
+        setUndecorated(true);
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel1.setOpaque(false);
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jButton1.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(255, 255, 255));
-        jButton1.setBorder(null);
-        jButton1.setBorderPainted(false);
-        jButton1.setContentAreaFilled(false);
-        jButton1.setFocusPainted(false);
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        jToggleButton1.setBorder(null);
+        jToggleButton1.setBorderPainted(false);
+        jToggleButton1.setContentAreaFilled(false);
+        jToggleButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                jToggleButton1ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 15, 250, 20));
+        jPanel1.add(jToggleButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 15, 250, 20));
 
         jTextField2.setBackground(new java.awt.Color(72, 74, 82));
         jTextField2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
@@ -121,17 +120,27 @@ public final class CasinoFirstPage extends javax.swing.JFrame {
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1360, 120));
 
         jPanel2.setOpaque(false);
-        jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jButton4.setText("Close");
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
+        jPanel2.addAncestorListener(new javax.swing.event.AncestorListener() {
+            public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
+            }
+            public void ancestorAdded(javax.swing.event.AncestorEvent evt) {
+                jPanel2AncestorAdded(evt);
+            }
+            public void ancestorRemoved(javax.swing.event.AncestorEvent evt) {
             }
         });
-        jPanel2.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 30, -1, -1));
+        jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/BackgroundImages/CFPProfileFrame.png"))); // NOI18N
+        jLabel3.addAncestorListener(new javax.swing.event.AncestorListener() {
+            public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
+            }
+            public void ancestorAdded(javax.swing.event.AncestorEvent evt) {
+                jLabel3AncestorAdded(evt);
+            }
+            public void ancestorRemoved(javax.swing.event.AncestorEvent evt) {
+            }
+        });
         jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 450, -1));
 
         getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 113, 450, 620));
@@ -180,15 +189,9 @@ public final class CasinoFirstPage extends javax.swing.JFrame {
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/BackgroundImages/Best HD Walls - FreeHD.Blogspot (64).jpg"))); // NOI18N
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1370, -1));
 
-        setSize(new java.awt.Dimension(1366, 768));
+        setSize(new java.awt.Dimension(1350, 729));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
-
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-        jPanel2.setVisible(true);
-
-    }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
@@ -215,14 +218,18 @@ public final class CasinoFirstPage extends javax.swing.JFrame {
 
     }
 
-    public void toProfile() {
-        profile(uname);
+    public static void Profile(String uname2) {
+        uName = uname2;
+        CasinoFirstPage CFP = new CasinoFirstPage();
+        CFP.toProfile(uname2);
+    }
+    public void DBtoProfile(){
+        toProfile(uname);
     }
 
-    public void profile(String uName) {
-
-        jTextField2.setText(uName);
-        uname = uName;
+    public void toProfile(String uname) {
+        System.out.println(uname);
+        jTextField2.setText(uname);
 
     }
 
@@ -236,12 +243,6 @@ public final class CasinoFirstPage extends javax.swing.JFrame {
         // TODO add your handling code here:
 
     }//GEN-LAST:event_jTextField1ActionPerformed
-
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        // TODO add your handling code here:
-        jPanel2.setVisible(false);
-
-    }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
         // TODO add your handling code here:
@@ -260,6 +261,25 @@ public final class CasinoFirstPage extends javax.swing.JFrame {
         this.setVisible(false);
         new Game4().setVisible(true);
     }//GEN-LAST:event_jButton7ActionPerformed
+
+    private void jPanel2AncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_jPanel2AncestorAdded
+        // TODO add your handling code here:
+
+
+    }//GEN-LAST:event_jPanel2AncestorAdded
+
+    private void jLabel3AncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_jLabel3AncestorAdded
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jLabel3AncestorAdded
+
+    private void jToggleButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton1ActionPerformed
+        // TODO add your handling code here:
+        if (jToggleButton1.isSelected()) {
+            jPanel2.setVisible(true);
+        } else {
+            jPanel2.setVisible(false);
+        }
+    }//GEN-LAST:event_jToggleButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -293,9 +313,8 @@ public final class CasinoFirstPage extends javax.swing.JFrame {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 CasinoFirstPage CFP = new CasinoFirstPage();
-                new CasinoFirstPage().setVisible(true);
                 bankBalance(kassa);
-                CFP.toProfile();
+                Profile(uName);
                 //DBConnections DB = new DBConnections();
                 //String uName = DB.getProfile("");
                 //new CasinoFirstPage().jTextField1.setText("moi");
@@ -304,10 +323,8 @@ public final class CasinoFirstPage extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    public javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
     private javax.swing.JButton jButton7;
@@ -319,5 +336,6 @@ public final class CasinoFirstPage extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel3;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
+    private javax.swing.JToggleButton jToggleButton1;
     // End of variables declaration//GEN-END:variables
 }

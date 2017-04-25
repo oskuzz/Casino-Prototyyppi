@@ -17,17 +17,10 @@ public class DBBank {
     static double Kassa = 0;
     static String uname;
 
-    public static void UserName(String uName) {
-        CasinoFirstPage CFP = new CasinoFirstPage();
-        uname = uName;
-        CFP.profile(uName);
-        CFP.toProfile();
-    }
-
     public static void bank(String uName, double kassa) {
         uname = uName;
         Kassa = kassa;
-
+        getProfile();
     }
 
     public static void GameBank() {
@@ -44,15 +37,19 @@ public class DBBank {
     public static void CFPBank() {
         CasinoFirstPage.bankBalance(Kassa);
     }
-    
-    public static void updateBank2(double kassa) throws SQLException{
+
+    public static void updateBank2(double kassa) throws SQLException {
         kassa = Kassa + kassa;
         updateBank(kassa);
         getGameBank(kassa);
     }
-    
+
     public static void updateBank(double kassa) throws SQLException {
         Kassa = kassa;
         DBConnections.updateMoneyBalance(uname, kassa);
+    }
+
+    public static void getProfile() {
+        CasinoFirstPage.Profile(uname);
     }
 }

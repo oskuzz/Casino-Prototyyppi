@@ -6,6 +6,7 @@
 package LoginAndRegister;
 
 import Casino.CasinoFirstPage;
+import DB.DBBank;
 import DB.DBConnections;
 import DB.DBConnections2;
 import java.sql.SQLException;
@@ -113,8 +114,7 @@ public class Login extends javax.swing.JFrame {
                 DB.getMoneyBalanse(uName);
 
                 this.setVisible(false);
-                CFP.profile(uName);
-                CFP.toProfile();
+              
             } else {
                 System.out.println("Ouhnoh");
             }
