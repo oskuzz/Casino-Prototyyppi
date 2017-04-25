@@ -914,7 +914,7 @@ public final class Game1 extends javax.swing.JFrame {
                 VoittoField.setText(Double.toString(voitto));
 
             }
-
+            
             Num1.setText(Integer.toString(num1));
             Num2.setText(Integer.toString(num2));
             Num3.setText(Integer.toString(num3));
