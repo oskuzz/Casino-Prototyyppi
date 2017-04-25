@@ -21,6 +21,7 @@ public final class CasinoFirstPage extends javax.swing.JFrame {
     static double kassa;
     double Kassa;
     String uname;
+    static String uName;
 
     public CasinoFirstPage() {
 
@@ -28,7 +29,8 @@ public final class CasinoFirstPage extends javax.swing.JFrame {
         jPanel2.setVisible(false);
         Kassa = kassa;
         DBtoKassa();
-        toProfile();
+        uName = uname;
+        DBtoProfile();
 
     }
 
@@ -216,14 +218,18 @@ public final class CasinoFirstPage extends javax.swing.JFrame {
 
     }
 
-    public void toProfile() {
-        profile(uname);
+    public static void Profile(String uname2) {
+        uName = uname2;
+        CasinoFirstPage CFP = new CasinoFirstPage();
+        CFP.toProfile(uname2);
+    }
+    public void DBtoProfile(){
+        toProfile(uname);
     }
 
-    public void profile(String uName) {
-
-        jTextField2.setText(uName);
-        uname = uName;
+    public void toProfile(String uname) {
+        System.out.println(uname);
+        jTextField2.setText(uname);
 
     }
 
@@ -258,7 +264,7 @@ public final class CasinoFirstPage extends javax.swing.JFrame {
 
     private void jPanel2AncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_jPanel2AncestorAdded
         // TODO add your handling code here:
-        
+
 
     }//GEN-LAST:event_jPanel2AncestorAdded
 
@@ -307,9 +313,8 @@ public final class CasinoFirstPage extends javax.swing.JFrame {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 CasinoFirstPage CFP = new CasinoFirstPage();
-                new CasinoFirstPage().setVisible(true);
                 bankBalance(kassa);
-                CFP.toProfile();
+                Profile(uName);
                 //DBConnections DB = new DBConnections();
                 //String uName = DB.getProfile("");
                 //new CasinoFirstPage().jTextField1.setText("moi");

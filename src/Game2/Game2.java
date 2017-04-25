@@ -20,11 +20,11 @@ public class Game2 extends javax.swing.JFrame {
     double panos = 1;
     int taso = 1;
     int Lines;
-    double lopullinenPanos;
-    double lopullinenPanos2 = 0;
+    double lopullinenPanos = 1;
+    double lopullinenPanos2 = 1;
     double voitto;
     double Kassa = 1;
-    static double kassa;
+    static double kassa = 1;
     static double loppukassa;
     double loppuKassa;
 

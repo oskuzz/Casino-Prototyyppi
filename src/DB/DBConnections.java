@@ -111,6 +111,7 @@ public class DBConnections {
             int kassa = rs.getInt(1);
             Kassa = kassa;
             DBBank.bank(uName, Kassa);
+            DBBank.getProfile();
             CasinoFirstPage.bankBalance(kassa);
             new CasinoFirstPage().setVisible(true);
             //new StartInstructions().setVisible(true);

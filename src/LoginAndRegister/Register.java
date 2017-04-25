@@ -129,9 +129,7 @@ public class Register extends javax.swing.JFrame {
             DB.writeToDataBase(ID.getText(), eName.getText(), sName.getText(), password.getText());
             this.setVisible(false);
             new RegisterMoneyPage().setVisible(true);
-            DBBank.UserName(ID.getText());
-            CFP.profile(ID.getText());
-            CFP.toProfile();
+
         } catch (ClassNotFoundException ex) {
             Logger.getLogger(Register.class.getName()).log(Level.SEVERE, null, ex);
         } catch (SQLException ex) {
