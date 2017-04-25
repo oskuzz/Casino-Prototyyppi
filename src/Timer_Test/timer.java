@@ -10,7 +10,7 @@ package Timer_Test;
  * @author osku0
  */
 public class timer extends javax.swing.JFrame {
-
+    int moi = 0;
     /**
      * Creates new form timer
      */
@@ -37,6 +37,8 @@ public class timer extends javax.swing.JFrame {
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        Num1.setText(":P");
         jPanel1.add(Num1, new org.netbeans.lib.awtextra.AbsoluteConstraints(25, 25, 50, 50));
         jPanel1.add(Num2, new org.netbeans.lib.awtextra.AbsoluteConstraints(25, 120, 50, 50));
         jPanel1.add(Num3, new org.netbeans.lib.awtextra.AbsoluteConstraints(25, 220, 50, 50));
@@ -56,8 +58,29 @@ public class timer extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        
+        Timer2 Timer2 = new Timer2();
+
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    public void num1(int num) {
+        Num1.setText(Integer.toString(num));
+        /*/System.out.println(num + " Juu");
+        moi++;
+        System.out.println(moi + " = moi");
+        String moi2 = Integer.toString(moi);
+        /*/
+        //Integer.toString(num)
+    }
+
+    public void num2(int num) {
+        System.out.println(num + " Juu2");
+        Num2.setText(Integer.toString(num));
+    }
+
+    public void num3(int num) {
+        System.out.println(num + " Juu3");
+        Num3.setText(Integer.toString(num));
+    }
 
     /**
      * @param args the command line arguments
@@ -95,7 +118,7 @@ public class timer extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel Num1;
+    public javax.swing.JLabel Num1;
     private javax.swing.JLabel Num2;
     private javax.swing.JLabel Num3;
     private javax.swing.JButton jButton1;
