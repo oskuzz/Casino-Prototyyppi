@@ -36,8 +36,4 @@ public class Timer {
             ajastin.stop();
         }
     }
-    
-    public static void main(String[] args) {
-        
-    }
 }
