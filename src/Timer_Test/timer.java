@@ -5,12 +5,26 @@
  */
 package Timer_Test;
 
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
 /**
  *
  * @author osku0
  */
 public class timer extends javax.swing.JFrame {
+
     int moi = 0;
+    private javax.swing.Timer ajastin;
+    private javax.swing.Timer ajastin2;
+    private javax.swing.Timer ajastin3;
+    private int laskuri = 0;
+    private int laskuri2 = 0;
+    private int laskuri3 = 0;
+    private int num = 0;
+    private int num2 = 0;
+    private int num3 = 0;
+
     /**
      * Creates new form timer
      */
@@ -38,19 +52,26 @@ public class timer extends javax.swing.JFrame {
 
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        Num1.setText(":P");
+        Num1.setFont(new java.awt.Font("Tahoma", 0, 50)); // NOI18N
+        Num1.setText("0");
         jPanel1.add(Num1, new org.netbeans.lib.awtextra.AbsoluteConstraints(25, 25, 50, 50));
-        jPanel1.add(Num2, new org.netbeans.lib.awtextra.AbsoluteConstraints(25, 120, 50, 50));
-        jPanel1.add(Num3, new org.netbeans.lib.awtextra.AbsoluteConstraints(25, 220, 50, 50));
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 100, 300));
+        Num2.setFont(new java.awt.Font("Tahoma", 0, 50)); // NOI18N
+        Num2.setText("0");
+        jPanel1.add(Num2, new org.netbeans.lib.awtextra.AbsoluteConstraints(25, 90, 50, 50));
+
+        Num3.setFont(new java.awt.Font("Tahoma", 0, 50)); // NOI18N
+        Num3.setText("0");
+        jPanel1.add(Num3, new org.netbeans.lib.awtextra.AbsoluteConstraints(25, 160, 50, 50));
+
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 100, 220));
 
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 130, 30, 30));
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 100, 30, 30));
 
         pack();
         setLocationRelativeTo(null);
@@ -58,28 +79,81 @@ public class timer extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        Timer2 Timer2 = new Timer2();
+        
+        laskuri = 0;
+        laskuri2 = laskuri;
+        laskuri3 = laskuri2;
+        ajastin = new javax.swing.Timer(100, new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                paivitanumero();
+
+                num = Timer2.num1();
+                Num1.setText(Integer.toString(num));
+               
+            }
+        });
+        ajastin.setInitialDelay(0);
+
+        ajastin.start();
+        
+        
+        ajastin2 = new javax.swing.Timer(100, new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                paivitanumero2();
+                if (laskuri2 >= 29) {
+                    num = Timer2.num1();
+                }
+
+                Num2.setText(Integer.toString(num));
+
+            }
+        });
+        ajastin2.setInitialDelay(200);
+
+        ajastin2.start();
+
+        ajastin3 = new javax.swing.Timer(100, new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                paivitanumero3();
+                if (laskuri3 >= 38) {
+                    num = Timer2.num1();
+                }
+
+                Num3.setText(Integer.toString(num));
+
+            }
+        });
+        ajastin3.setInitialDelay(500);
+        ajastin3.start();
+
 
     }//GEN-LAST:event_jButton1ActionPerformed
 
-    public void num1(int num) {
-        Num1.setText(Integer.toString(num));
-        /*/System.out.println(num + " Juu");
-        moi++;
-        System.out.println(moi + " = moi");
-        String moi2 = Integer.toString(moi);
-        /*/
-        //Integer.toString(num)
+    private void paivitanumero() {
+        laskuri++;
+        System.out.println(laskuri);
+        if (laskuri == 30) {
+            ajastin.stop();
+        }
     }
 
-    public void num2(int num) {
-        System.out.println(num + " Juu2");
-        Num2.setText(Integer.toString(num));
+    private void paivitanumero2() {
+        laskuri2++;
+        System.out.println(laskuri2);
+        if (laskuri2 == 40) {
+            ajastin2.stop();
+        }
     }
 
-    public void num3(int num) {
-        System.out.println(num + " Juu3");
-        Num3.setText(Integer.toString(num));
+    private void paivitanumero3() {
+        laskuri3++;
+        System.out.println(laskuri3);
+        if (laskuri3 == 50) {
+            ajastin3.stop();
+        }
     }
 
     /**
