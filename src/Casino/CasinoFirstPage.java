@@ -228,7 +228,7 @@ public final class CasinoFirstPage extends javax.swing.JFrame {
     }
 
     public void toProfile(String uname) {
-        System.out.println(uname);
+        
         jTextField2.setText(uname);
 
     }

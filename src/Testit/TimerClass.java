@@ -23,7 +23,7 @@ public class TimerClass extends JFrame {
     private JLabel numero = new JLabel("0");
 
     public TimerClass() {
-        ajastin = new Timer(1000, new ActionListener() {
+        ajastin = new Timer(100, new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 paivitanumero();

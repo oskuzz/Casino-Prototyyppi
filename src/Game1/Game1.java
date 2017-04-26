@@ -243,6 +243,7 @@ public final class Game1 extends javax.swing.JFrame {
         jLabel4.setText("Voitto");
         jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 20, -1, -1));
 
+        PlayButton.setBackground(null);
         PlayButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/BackgroundImages/Game1Pelaa.png"))); // NOI18N
         PlayButton.setBorder(null);
         PlayButton.setBorderPainted(false);
@@ -793,6 +794,7 @@ public final class Game1 extends javax.swing.JFrame {
 
     private void PlayButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PlayButtonActionPerformed
         // TODO add your handling code here:
+        
         kassa = Double.parseDouble(KassaField.getText());
         VoittoField.setText("0");
         jTextField3.setVisible(false);
@@ -810,7 +812,7 @@ public final class Game1 extends javax.swing.JFrame {
         number1 = Timer2.num1();
         number3 = Timer2.num1();
         if (kassa > 0 && lopullinenPanos2 <= kassa) {
-
+            PlayButton.setEnabled(false);
             num1 = NumeroidenArvonta.num1();
             num2 = NumeroidenArvonta.num2();
             num3 = NumeroidenArvonta.num3();
@@ -842,7 +844,7 @@ public final class Game1 extends javax.swing.JFrame {
         } catch (SQLException ex) {
             Logger.getLogger(Game1.class.getName()).log(Level.SEVERE, null, ex);
         }
-
+        
     }//GEN-LAST:event_PlayButtonActionPerformed
 
     public void Tasot() {
@@ -1075,6 +1077,7 @@ public final class Game1 extends javax.swing.JFrame {
                     System.out.println(num8);
                     System.out.println(num9);
                     Tasot();
+                    PlayButton.setEnabled(true);
                 }
             }
         });
