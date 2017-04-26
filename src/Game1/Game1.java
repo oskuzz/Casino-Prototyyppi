@@ -55,6 +55,7 @@ public final class Game1 extends javax.swing.JFrame {
 
     int Auto = 1;
     int auto = 5;
+    int Auto2 = 0;
 
     /**
      * Creates new form Game1
@@ -73,6 +74,9 @@ public final class Game1 extends javax.swing.JFrame {
         jButton8.setVisible(false);
         jToggleButton1.setVisible(false);
         jLabel26.setVisible(false);
+        jLabel22.setVisible(false);
+        jLabel27.setVisible(false);
+
         Kassa = kassa;
 
         loppukassa = loppuKassa;
@@ -122,6 +126,8 @@ public final class Game1 extends javax.swing.JFrame {
         jButton7 = new javax.swing.JButton();
         jButton8 = new javax.swing.JButton();
         jToggleButton1 = new javax.swing.JToggleButton();
+        jLabel27 = new javax.swing.JLabel();
+        jLabel34 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         jButton5 = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
@@ -330,8 +336,8 @@ public final class Game1 extends javax.swing.JFrame {
 
         jLabel22.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
         jLabel22.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel22.setText("Panos");
-        jPanel1.add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 23, -1, -1));
+        jLabel22.setText("Pyöräytykset");
+        jPanel1.add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(285, 43, -1, -1));
 
         jLabel23.setForeground(new java.awt.Color(255, 255, 255));
         jLabel23.setText("€");
@@ -378,6 +384,17 @@ public final class Game1 extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jToggleButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 20, -1, -1));
+
+        jLabel27.setFont(new java.awt.Font("Tahoma", 0, 15)); // NOI18N
+        jLabel27.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel27.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel27.setText("0");
+        jPanel1.add(jLabel27, new org.netbeans.lib.awtextra.AbsoluteConstraints(375, 43, 20, 15));
+
+        jLabel34.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
+        jLabel34.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel34.setText("Panos");
+        jPanel1.add(jLabel34, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 23, -1, -1));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 350, 800, 100));
 
@@ -1134,7 +1151,18 @@ public final class Game1 extends javax.swing.JFrame {
                     System.out.println(num8);
                     System.out.println(num9);
                     Tasot();
-                    PlayButton.setEnabled(true);
+                    if (laskuri3 == 50 && laskuri5 == auto) {
+                        PlayButton.setEnabled(true);
+                    } else {
+                        PlayButton.setEnabled(false);
+
+                    }
+                    if (jToggleButton1.isSelected()) {
+                        PlayButton.setEnabled(false);
+                    } else {
+                        PlayButton.setEnabled(true);
+                    }
+
                 }
             }
         });
@@ -1144,13 +1172,18 @@ public final class Game1 extends javax.swing.JFrame {
     }
 
     public void ajastinjuttu5() {
+
         ajastin5 = new javax.swing.Timer(5000, new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 paivitanumero5();
                 ajastinjuttu4();
-
+                Auto2++;
+                jLabel27.setText(Integer.toString(Auto2));
                 if (laskuri5 == auto) {
+                    Auto2 = 0;
+                    
+                    jToggleButton1.doClick();
                     ajastin5.stop();
 
                 }
@@ -1195,7 +1228,7 @@ public final class Game1 extends javax.swing.JFrame {
         number1 = Timer2.num1();
         number3 = Timer2.num1();
         if (kassa > 0 && lopullinenPanos2 <= kassa) {
-            PlayButton.setEnabled(false);
+
             num1 = NumeroidenArvonta.num1();
             num2 = NumeroidenArvonta.num2();
             num3 = NumeroidenArvonta.num3();
@@ -1279,6 +1312,8 @@ public final class Game1 extends javax.swing.JFrame {
         jButton8.setVisible(true);
         jToggleButton1.setVisible(true);
         jLabel26.setVisible(true);
+        jLabel22.setVisible(true);
+        jLabel27.setVisible(true);
     }//GEN-LAST:event_jButton6ActionPerformed
 
     private void jToggleButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton1ActionPerformed
@@ -1286,10 +1321,13 @@ public final class Game1 extends javax.swing.JFrame {
         if (jToggleButton1.isSelected()) {
             ajastinjuttu5();
             jToggleButton1.setText("Stop");
+            PlayButton.setEnabled(false);
         } else {
             jToggleButton1.setText("Start");
             ajastin5.stop();
             laskuri5 = 0;
+            Auto2 = 0;
+            PlayButton.setEnabled(true);
         }
     }//GEN-LAST:event_jToggleButton1ActionPerformed
 
@@ -1370,6 +1408,7 @@ public final class Game1 extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel24;
     private javax.swing.JLabel jLabel25;
     private javax.swing.JLabel jLabel26;
+    private javax.swing.JLabel jLabel27;
     private javax.swing.JLabel jLabel28;
     private javax.swing.JLabel jLabel29;
     private javax.swing.JLabel jLabel3;
@@ -1377,6 +1416,7 @@ public final class Game1 extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel31;
     private javax.swing.JLabel jLabel32;
     private javax.swing.JLabel jLabel33;
+    private javax.swing.JLabel jLabel34;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
