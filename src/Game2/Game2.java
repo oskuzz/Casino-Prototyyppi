@@ -7,6 +7,9 @@ package Game2;
 
 import Casino.CasinoFirstPage;
 import DB.DBBank;
+import Timer_Test.Timer2;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -27,6 +30,36 @@ public class Game2 extends javax.swing.JFrame {
     static double kassa = 1;
     static double loppukassa;
     double loppuKassa;
+    private javax.swing.Timer ajastin;
+    private javax.swing.Timer ajastin2;
+    private javax.swing.Timer ajastin3;
+    private javax.swing.Timer ajastin4;
+    private javax.swing.Timer ajastin5;
+    private int laskuri = 0;
+    private int laskuri2 = 0;
+    private int laskuri3 = 0;
+    private int laskuri4 = 0;
+    private int laskuri5 = 0;
+    private int number1 = 0;
+    private int number2 = 0;
+    private int number3 = 0;
+    private int number4 = 0;
+    private int number5 = 0;
+    private int num1;
+    private int num2;
+    private int num3;
+    private int num4;
+    private int num5;
+    private int num6;
+    private int num7;
+    private int num8;
+    private int num9;
+    private int num10;
+    private int num11;
+    private int num12;
+    private int num13;
+    private int num14;
+    private int num15;
 
     /**
      * Creates new form Game1
@@ -88,10 +121,11 @@ public class Game2 extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jButton2 = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
+        jLabel8 = new javax.swing.JLabel();
         jButton4 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
-        jTextField1 = new javax.swing.JTextField();
         jLabel7 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -512,27 +546,39 @@ public class Game2 extends javax.swing.JFrame {
         jPanel2.setOpaque(false);
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jButton4.setText("Taso +1");
+        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/BackgroundImages/Game2Panosframe.png"))); // NOI18N
+        jPanel2.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 60, -1, -1));
+
+        jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/BackgroundImages/Game2PanosButton+1.png"))); // NOI18N
+        jButton4.setBorder(null);
+        jButton4.setBorderPainted(false);
+        jButton4.setContentAreaFilled(false);
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton4ActionPerformed(evt);
             }
         });
-        jPanel2.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 70, -1, -1));
+        jPanel2.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 60, -1, -1));
 
-        jButton3.setText("Taso -1");
+        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/BackgroundImages/Game2PanosButton-1.png"))); // NOI18N
+        jButton3.setBorder(null);
+        jButton3.setBorderPainted(false);
+        jButton3.setContentAreaFilled(false);
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);
             }
         });
-        jPanel2.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 70, -1, -1));
-
-        jTextField1.setText("1");
-        jPanel2.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 70, 30, -1));
+        jPanel2.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 60, -1, -1));
 
         jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/BackgroundImages/Game2ButtonFrame.png"))); // NOI18N
         jPanel2.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+
+        jLabel9.setFont(new java.awt.Font("Tahoma", 0, 15)); // NOI18N
+        jLabel9.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel9.setText("1");
+        jPanel2.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(85, 62, 70, 25));
 
         getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(235, 610, 900, 150));
 
@@ -553,336 +599,37 @@ public class Game2 extends javax.swing.JFrame {
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
         //kassa = Double.parseDouble(KassaField.getText());
-
+        laskuri = 0;
+        laskuri2 = laskuri;
+        laskuri3 = laskuri2;
+        laskuri4 = laskuri2;
+        laskuri5 = laskuri2;
+        number1 = Timer2.num1();
+        number1 = Timer2.num1();
+        number3 = Timer2.num1();
+        number4 = Timer2.num1();
+        number5 = Timer2.num1();
         if (kassa > 0 && lopullinenPanos2 <= kassa) {
-
-            int num1 = NumeroidenArvonta.num1();
-            int num2 = NumeroidenArvonta.num2();
-            int num3 = NumeroidenArvonta.num3();
-            int num4 = NumeroidenArvonta.num4();
-            int num5 = NumeroidenArvonta.num5();
-            int num6 = NumeroidenArvonta.num6();
-            int num7 = NumeroidenArvonta.num7();
-            int num8 = NumeroidenArvonta.num8();
-            int num9 = NumeroidenArvonta.num9();
-            int num10 = NumeroidenArvonta.num10();
-            int num11 = NumeroidenArvonta.num11();
-            int num12 = NumeroidenArvonta.num12();
-            int num13 = NumeroidenArvonta.num13();
-            int num14 = NumeroidenArvonta.num14();
-            int num15 = NumeroidenArvonta.num15();
-
-            double taso1Voitto = 0;
-            double taso2Voitto = 0;
-            double taso3Voitto = 0;
-            double taso4Voitto = 0;
-            double taso5Voitto = 0;
-            double taso6Voitto = 0;
-            double taso7Voitto = 0;
-            double taso8Voitto = 0;
-            double taso9Voitto = 0;
-            double jackPot = 0;
-
-            if (taso == 1) {
-                taso1Voitto = VoitonJako.Taso1(num2, num5, num8, num11, num14);
-                taso1Voitto = taso1Voitto * lopullinenPanos2;
-                if (taso1Voitto > 0) {
-
-                }
-                voitto = VoitonJako.voitto(taso1Voitto, taso2Voitto, taso3Voitto, taso4Voitto, taso5Voitto, taso6Voitto, taso7Voitto, taso8Voitto, taso9Voitto, taso, jackPot);
-                //VoittoField.setText(Double.toString(voitto));
-            } else if (taso == 2) {
-                taso1Voitto = VoitonJako.Taso1(num2, num5, num8, num11, num14);
-                taso2Voitto = VoitonJako.Taso2(num3, num6, num9, num12, num15);
-
-                if (taso1Voitto > 0) {
-
-                }
-                if (taso2Voitto > 0) {
-
-                }
-                taso1Voitto = taso1Voitto * lopullinenPanos2;
-                taso2Voitto = taso2Voitto * lopullinenPanos2;
-                voitto = VoitonJako.voitto(taso1Voitto, taso2Voitto, taso3Voitto, taso4Voitto, taso5Voitto, taso6Voitto, taso7Voitto, taso8Voitto, taso9Voitto, taso, jackPot);
-                //VoittoField.setText(Double.toString(voitto));
-            } else if (taso == 3) {
-                taso1Voitto = VoitonJako.Taso1(num2, num5, num8, num11, num14);
-                taso2Voitto = VoitonJako.Taso2(num3, num6, num9, num12, num15);
-                taso3Voitto = VoitonJako.Taso3(num1, num4, num7, num10, num13);
-
-                if (taso1Voitto > 0) {
-
-                }
-                if (taso2Voitto > 0) {
-
-                }
-                if (taso3Voitto > 0) {
-
-                }
-
-                taso1Voitto = taso1Voitto * lopullinenPanos2;
-                taso2Voitto = taso2Voitto * lopullinenPanos2;
-                taso3Voitto = taso3Voitto * lopullinenPanos2;
-
-                voitto = VoitonJako.voitto(taso1Voitto, taso2Voitto, taso3Voitto, taso4Voitto, taso5Voitto, taso6Voitto, taso7Voitto, taso8Voitto, taso9Voitto, taso, jackPot);
-                //VoittoField.setText(Double.toString(voitto));
-            } else if (taso == 4) {
-                taso1Voitto = VoitonJako.Taso1(num2, num5, num8, num11, num14);
-                taso2Voitto = VoitonJako.Taso2(num3, num6, num9, num12, num15);
-                taso3Voitto = VoitonJako.Taso3(num1, num4, num7, num10, num13);
-                taso4Voitto = VoitonJako.Taso4(num1, num4, num8, num12, num15);
-
-                if (taso1Voitto > 0) {
-                    // jLabel7.setVisible(true);
-                }
-                if (taso2Voitto > 0) {
-                    // jLabel8.setVisible(true);
-                }
-                if (taso3Voitto > 0) {
-                    // jLabel19.setVisible(true);
-                }
-                if (taso4Voitto > 0) {
-                    // jLabel24.setVisible(true);
-                }
-
-                taso1Voitto = taso1Voitto * lopullinenPanos2;
-                taso2Voitto = taso2Voitto * lopullinenPanos2;
-                taso3Voitto = taso3Voitto * lopullinenPanos2;
-                taso4Voitto = taso4Voitto * lopullinenPanos2;
-
-                voitto = VoitonJako.voitto(taso1Voitto, taso2Voitto, taso3Voitto, taso4Voitto, taso5Voitto, taso6Voitto, taso7Voitto, taso8Voitto, taso9Voitto, taso, jackPot);
-                //VoittoField.setText(Double.toString(voitto));
-            } else if (taso == 5) {
-
-                taso1Voitto = VoitonJako.Taso1(num2, num5, num8, num11, num14);
-                taso2Voitto = VoitonJako.Taso2(num3, num6, num9, num12, num15);
-                taso3Voitto = VoitonJako.Taso3(num1, num4, num7, num10, num13);
-                taso4Voitto = VoitonJako.Taso4(num1, num4, num8, num12, num15);
-                taso5Voitto = VoitonJako.Taso5(num3, num6, num8, num10, num13);
-
-                if (taso1Voitto > 0) {
-                    //jLabel7.setVisible(true);
-                }
-                if (taso2Voitto > 0) {
-                    //jLabel8.setVisible(true);
-                }
-                if (taso3Voitto > 0) {
-                    //jLabel19.setVisible(true);
-                }
-                if (taso4Voitto > 0) {
-                    //jLabel24.setVisible(true);
-                }
-                if (taso5Voitto > 0) {
-                    //jLabel20.setVisible(true);
-                }
-
-                taso1Voitto = taso1Voitto * lopullinenPanos2;
-                taso2Voitto = taso2Voitto * lopullinenPanos2;
-                taso3Voitto = taso3Voitto * lopullinenPanos2;
-                taso4Voitto = taso4Voitto * lopullinenPanos2;
-                taso5Voitto = taso5Voitto * lopullinenPanos2;
-
-                voitto = VoitonJako.voitto(taso1Voitto, taso2Voitto, taso3Voitto, taso4Voitto, taso5Voitto, taso6Voitto, taso7Voitto, taso8Voitto, taso9Voitto, taso, jackPot);
-                //VoittoField.setText(Double.toString(voitto));
-
-            } else if (taso == 6) {
-
-                taso1Voitto = VoitonJako.Taso1(num2, num5, num8, num11, num14);
-                taso2Voitto = VoitonJako.Taso2(num3, num6, num9, num12, num15);
-                taso3Voitto = VoitonJako.Taso3(num1, num4, num7, num10, num13);
-                taso4Voitto = VoitonJako.Taso4(num1, num4, num8, num12, num15);
-                taso5Voitto = VoitonJako.Taso5(num3, num6, num8, num10, num13);
-                taso6Voitto = VoitonJako.Taso6(num1, num4, num8, num10, num13);
-
-                if (taso1Voitto > 0) {
-                    //jLabel7.setVisible(true);
-                }
-                if (taso2Voitto > 0) {
-                    //jLabel8.setVisible(true);
-                }
-                if (taso3Voitto > 0) {
-                    //jLabel19.setVisible(true);
-                }
-                if (taso4Voitto > 0) {
-                    //jLabel24.setVisible(true);
-                }
-                if (taso5Voitto > 0) {
-                    //jLabel20.setVisible(true);
-                }
-                if (taso6Voitto > 0) {
-
-                }
-                taso1Voitto = taso1Voitto * lopullinenPanos2;
-                taso2Voitto = taso2Voitto * lopullinenPanos2;
-                taso3Voitto = taso3Voitto * lopullinenPanos2;
-                taso4Voitto = taso4Voitto * lopullinenPanos2;
-                taso5Voitto = taso5Voitto * lopullinenPanos2;
-                taso6Voitto = taso6Voitto * lopullinenPanos2;
-
-                voitto = VoitonJako.voitto(taso1Voitto, taso2Voitto, taso3Voitto, taso4Voitto, taso5Voitto, taso6Voitto, taso7Voitto, taso8Voitto, taso9Voitto, taso, jackPot);
-                //VoittoField.setText(Double.toString(voitto));
-            } else if (taso == 7) {
-
-                taso1Voitto = VoitonJako.Taso1(num2, num5, num8, num11, num14);
-                taso2Voitto = VoitonJako.Taso2(num3, num6, num9, num12, num15);
-                taso3Voitto = VoitonJako.Taso3(num1, num4, num7, num10, num13);
-                taso4Voitto = VoitonJako.Taso4(num1, num4, num8, num12, num15);
-                taso5Voitto = VoitonJako.Taso5(num3, num6, num8, num10, num13);
-                taso6Voitto = VoitonJako.Taso6(num1, num4, num8, num10, num13);
-                taso7Voitto = VoitonJako.Taso7(num3, num6, num8, num12, num15);
-
-                if (taso1Voitto > 0) {
-                    //jLabel7.setVisible(true);
-                }
-                if (taso2Voitto > 0) {
-                    //jLabel8.setVisible(true);
-                }
-                if (taso3Voitto > 0) {
-                    //jLabel19.setVisible(true);
-                }
-                if (taso4Voitto > 0) {
-                    //jLabel24.setVisible(true);
-                }
-                if (taso5Voitto > 0) {
-                    //jLabel20.setVisible(true);
-                }
-                if (taso6Voitto > 0) {
-
-                }
-                if (taso7Voitto > 0) {
-
-                }
-                taso1Voitto = taso1Voitto * lopullinenPanos2;
-                taso2Voitto = taso2Voitto * lopullinenPanos2;
-                taso3Voitto = taso3Voitto * lopullinenPanos2;
-                taso4Voitto = taso4Voitto * lopullinenPanos2;
-                taso5Voitto = taso5Voitto * lopullinenPanos2;
-                taso6Voitto = taso6Voitto * lopullinenPanos2;
-                taso7Voitto = taso7Voitto * lopullinenPanos2;
-
-                voitto = VoitonJako.voitto(taso1Voitto, taso2Voitto, taso3Voitto, taso4Voitto, taso5Voitto, taso6Voitto, taso7Voitto, taso8Voitto, taso9Voitto, taso, jackPot);
-                //VoittoField.setText(Double.toString(voitto));
-            } else if (taso == 8) {
-
-                taso1Voitto = VoitonJako.Taso1(num2, num5, num8, num11, num14);
-                taso2Voitto = VoitonJako.Taso2(num3, num6, num9, num12, num15);
-                taso3Voitto = VoitonJako.Taso3(num1, num4, num7, num10, num13);
-                taso4Voitto = VoitonJako.Taso4(num1, num4, num8, num12, num15);
-                taso5Voitto = VoitonJako.Taso5(num3, num6, num8, num10, num13);
-                taso6Voitto = VoitonJako.Taso6(num1, num4, num8, num10, num13);
-                taso7Voitto = VoitonJako.Taso7(num3, num6, num8, num12, num15);
-                taso8Voitto = VoitonJako.Taso8(num2, num4, num8, num10, num14);
-
-                if (taso1Voitto > 0) {
-                    //jLabel7.setVisible(true);
-                }
-                if (taso2Voitto > 0) {
-                    //jLabel8.setVisible(true);
-                }
-                if (taso3Voitto > 0) {
-                    //jLabel19.setVisible(true);
-                }
-                if (taso4Voitto > 0) {
-                    //jLabel24.setVisible(true);
-                }
-                if (taso5Voitto > 0) {
-                    //jLabel20.setVisible(true);
-                }
-                if (taso6Voitto > 0) {
-
-                }
-                if (taso7Voitto > 0) {
-
-                }
-                if (taso8Voitto > 0) {
-
-                }
-                taso1Voitto = taso1Voitto * lopullinenPanos2;
-                taso2Voitto = taso2Voitto * lopullinenPanos2;
-                taso3Voitto = taso3Voitto * lopullinenPanos2;
-                taso4Voitto = taso4Voitto * lopullinenPanos2;
-                taso5Voitto = taso5Voitto * lopullinenPanos2;
-                taso6Voitto = taso6Voitto * lopullinenPanos2;
-                taso7Voitto = taso7Voitto * lopullinenPanos2;
-                taso8Voitto = taso8Voitto * lopullinenPanos2;
-                voitto = VoitonJako.voitto(taso1Voitto, taso2Voitto, taso3Voitto, taso4Voitto, taso5Voitto, taso6Voitto, taso7Voitto, taso8Voitto, taso9Voitto, taso, jackPot);
-                //VoittoField.setText(Double.toString(voitto));
-            } else if (taso == 9) {
-
-                taso1Voitto = VoitonJako.Taso1(num2, num5, num8, num11, num14);
-                taso2Voitto = VoitonJako.Taso2(num3, num6, num9, num12, num15);
-                taso3Voitto = VoitonJako.Taso3(num1, num4, num7, num10, num13);
-                taso4Voitto = VoitonJako.Taso4(num1, num4, num8, num12, num15);
-                taso5Voitto = VoitonJako.Taso5(num3, num6, num8, num10, num13);
-                taso6Voitto = VoitonJako.Taso6(num1, num4, num8, num10, num13);
-                taso7Voitto = VoitonJako.Taso7(num3, num6, num8, num12, num15);
-                taso8Voitto = VoitonJako.Taso8(num2, num4, num8, num10, num14);
-                taso9Voitto = VoitonJako.Taso9(num2, num6, num8, num12, num14);
-
-                if (taso1Voitto > 0) {
-                    //jLabel7.setVisible(true);
-                }
-
-                if (taso2Voitto > 0) {
-                    //jLabel8.setVisible(true);
-                }
-
-                if (taso3Voitto > 0) {
-                    //jLabel19.setVisible(true);
-                }
-
-                if (taso4Voitto > 0) {
-                    //jLabel24.setVisible(true);
-                }
-
-                if (taso5Voitto > 0) {
-                    //jLabel20.setVisible(true);
-                }
-
-                if (taso6Voitto > 0) {
-
-                }
-
-                if (taso7Voitto > 0) {
-
-                }
-
-                if (taso8Voitto > 0) {
-
-                }
-
-                if (taso9Voitto > 0) {
-
-                }
-                taso1Voitto = taso1Voitto * lopullinenPanos2;
-                taso2Voitto = taso2Voitto * lopullinenPanos2;
-                taso3Voitto = taso3Voitto * lopullinenPanos2;
-                taso4Voitto = taso4Voitto * lopullinenPanos2;
-                taso5Voitto = taso5Voitto * lopullinenPanos2;
-                taso6Voitto = taso6Voitto * lopullinenPanos2;
-                taso7Voitto = taso7Voitto * lopullinenPanos2;
-                taso8Voitto = taso8Voitto * lopullinenPanos2;
-                taso9Voitto = taso9Voitto * lopullinenPanos2;
-
-                voitto = VoitonJako.voitto(taso1Voitto, taso2Voitto, taso3Voitto, taso4Voitto, taso5Voitto, taso6Voitto, taso7Voitto, taso8Voitto, taso9Voitto, taso, jackPot);
-                //VoittoField.setText(Double.toString(voitto));
-            }
-
-            Num1.setText(Integer.toString(num1));
-            Num2.setText(Integer.toString(num2));
-            Num3.setText(Integer.toString(num3));
-            Num4.setText(Integer.toString(num4));
-            Num5.setText(Integer.toString(num5));
-            Num6.setText(Integer.toString(num6));
-            Num7.setText(Integer.toString(num7));
-            Num8.setText(Integer.toString(num8));
-            Num9.setText(Integer.toString(num9));
-            Num10.setText(Integer.toString(num10));
-            Num11.setText(Integer.toString(num11));
-            Num12.setText(Integer.toString(num12));
-            Num13.setText(Integer.toString(num13));
-            Num14.setText(Integer.toString(num14));
-            Num15.setText(Integer.toString(num15));
+            ajastinjuttu();
+            ajastinjuttu2();
+            ajastinjuttu3();
+            ajastinjuttu4();
+            ajastinjuttu5();
+            num1 = NumeroidenArvonta.num1();
+            num2 = NumeroidenArvonta.num2();
+            num3 = NumeroidenArvonta.num3();
+            num4 = NumeroidenArvonta.num4();
+            num5 = NumeroidenArvonta.num5();
+            num6 = NumeroidenArvonta.num6();
+            num7 = NumeroidenArvonta.num7();
+            num8 = NumeroidenArvonta.num8();
+            num9 = NumeroidenArvonta.num9();
+            num10 = NumeroidenArvonta.num10();
+            num11 = NumeroidenArvonta.num11();
+            num12 = NumeroidenArvonta.num12();
+            num13 = NumeroidenArvonta.num13();
+            num14 = NumeroidenArvonta.num14();
+            num15 = NumeroidenArvonta.num15();
 
             if (voitto == 0) {
                 loppuKassa = kassa - lopullinenPanos2;
@@ -895,12 +642,12 @@ public class Game2 extends javax.swing.JFrame {
             //jTextField3.setVisible(true);
             //jTextField3.setText("Ei tarpeeksi rahaa");
         }
-        DBBank.getGameBank(loppuKassa);
+        /*/DBBank.getGameBank(loppuKassa);
         try {
             DBBank.updateBank(loppuKassa);
         } catch (SQLException ex) {
             Logger.getLogger(Game2.class.getName()).log(Level.SEVERE, null, ex);
-        }
+        }/*/
 
 
     }//GEN-LAST:event_jButton2ActionPerformed
@@ -914,7 +661,7 @@ public class Game2 extends javax.swing.JFrame {
 
         Lines = taso;
 
-        jTextField1.setText(Integer.toString(taso));
+        jLabel9.setText(Integer.toString(taso));
         lopullinenPanos = Panos.panos(panos);
         lopullinenPanos2 = lopullinenPanos * taso;
     }//GEN-LAST:event_jButton4ActionPerformed
@@ -927,10 +674,522 @@ public class Game2 extends javax.swing.JFrame {
         }
 
         Lines = taso;
-        jTextField1.setText(Integer.toString(taso));
+        jLabel9.setText(Integer.toString(taso));
         lopullinenPanos = Panos.panos(panos);
         lopullinenPanos2 = lopullinenPanos * taso;
     }//GEN-LAST:event_jButton3ActionPerformed
+
+    public void ajastinjuttu() {
+        ajastin = new javax.swing.Timer(70, new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                paivitanumero();
+
+                if (number1 == 10) {
+                    number1 = 1;
+                }
+                Num1.setText(Integer.toString(number1));
+                number1++;
+                if (number1 == 10) {
+                    number1 = 1;
+                }
+                Num2.setText(Integer.toString(number1));
+                number1++;
+                if (number1 == 10) {
+                    number1 = 1;
+                }
+                Num3.setText(Integer.toString(number1));
+                number1++;
+                if (laskuri == 30) {
+                    ajastin.stop();
+                    Num1.setText(Integer.toString(num1));
+                    Num2.setText(Integer.toString(num2));
+                    Num3.setText(Integer.toString(num3));
+
+                }
+            }
+        });
+        ajastin.setInitialDelay(0);
+
+        ajastin.start();
+    }
+
+    public void ajastinjuttu2() {
+        ajastin2 = new javax.swing.Timer(70, new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                paivitanumero2();
+
+                if (number2 == 10) {
+                    number2 = 1;
+                }
+                Num4.setText(Integer.toString(number2));
+                number2++;
+                if (number2 == 10) {
+                    number2 = 1;
+                }
+                Num5.setText(Integer.toString(number2));
+                number2++;
+                if (number2 == 10) {
+                    number2 = 1;
+                }
+                Num6.setText(Integer.toString(number2));
+                number2++;
+                if (laskuri2 == 40) {
+                    ajastin2.stop();
+                    Num4.setText(Integer.toString(num4));
+                    Num5.setText(Integer.toString(num5));
+                    Num6.setText(Integer.toString(num6));
+
+                }
+
+            }
+        });
+        ajastin2.setInitialDelay(0);
+
+        ajastin2.start();
+    }
+
+    public void ajastinjuttu3() {
+        ajastin3 = new javax.swing.Timer(70, new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                paivitanumero3();
+
+                if (number3 == 10) {
+                    number3 = 1;
+                }
+                Num7.setText(Integer.toString(number3));
+                number3++;
+                if (number3 == 10) {
+                    number3 = 1;
+                }
+                Num8.setText(Integer.toString(number3));
+                number3++;
+                if (number3 == 10) {
+                    number3 = 1;
+                }
+                Num9.setText(Integer.toString(number3));
+                number3++;
+                if (laskuri3 == 50) {
+                    ajastin3.stop();
+                    Num7.setText(Integer.toString(num7));
+                    Num8.setText(Integer.toString(num8));
+                    Num9.setText(Integer.toString(num9));
+
+                    Tasot();
+                }
+            }
+        });
+        ajastin3.setInitialDelay(0);
+        ajastin3.start();
+
+    }
+
+    public void ajastinjuttu4() {
+        ajastin4 = new javax.swing.Timer(70, new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                paivitanumero4();
+
+                if (number4 == 10) {
+                    number4 = 1;
+                }
+                Num10.setText(Integer.toString(number4));
+                number4++;
+                if (number4 == 10) {
+                    number4 = 1;
+                }
+                Num11.setText(Integer.toString(number4));
+                number4++;
+                if (number4 == 10) {
+                    number4 = 1;
+                }
+                Num12.setText(Integer.toString(number4));
+                number4++;
+                if (laskuri4 == 60) {
+                    ajastin4.stop();
+                    Num10.setText(Integer.toString(num10));
+                    Num11.setText(Integer.toString(num11));
+                    Num12.setText(Integer.toString(num12));
+
+                    Tasot();
+                }
+            }
+        });
+        ajastin4.setInitialDelay(0);
+        ajastin4.start();
+
+    }
+
+    public void ajastinjuttu5() {
+        ajastin5 = new javax.swing.Timer(70, new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                paivitanumero5();
+
+                if (number5 == 10) {
+                    number5 = 1;
+                }
+                Num13.setText(Integer.toString(number5));
+                number5++;
+                if (number5 == 10) {
+                    number5 = 1;
+                }
+                Num14.setText(Integer.toString(number5));
+                number5++;
+                if (number5 == 10) {
+                    number5 = 1;
+                }
+                Num15.setText(Integer.toString(number5));
+                number5++;
+                if (laskuri5 == 70) {
+                    ajastin5.stop();
+                    Num13.setText(Integer.toString(num13));
+                    Num14.setText(Integer.toString(num14));
+                    Num15.setText(Integer.toString(num15));
+                    Tasot();
+                }
+            }
+        });
+        ajastin5.setInitialDelay(0);
+        ajastin5.start();
+
+    }
+
+    public void Tasot() {
+        double taso1Voitto = 0;
+        double taso2Voitto = 0;
+        double taso3Voitto = 0;
+        double taso4Voitto = 0;
+        double taso5Voitto = 0;
+        double taso6Voitto = 0;
+        double taso7Voitto = 0;
+        double taso8Voitto = 0;
+        double taso9Voitto = 0;
+        double jackPot = 0;
+
+        if (taso == 1) {
+            taso1Voitto = VoitonJako.Taso1(num2, num5, num8, num11, num14);
+            taso1Voitto = taso1Voitto * lopullinenPanos2;
+            if (taso1Voitto > 0) {
+
+            }
+
+            voitto = VoitonJako.voitto(taso1Voitto, taso2Voitto, taso3Voitto, taso4Voitto, taso5Voitto, taso6Voitto, taso7Voitto, taso8Voitto, taso9Voitto, taso, jackPot);
+            System.out.println(voitto);
+            //VoittoField.setText(Double.toString(voitto));
+        } else if (taso == 2) {
+            taso1Voitto = VoitonJako.Taso1(num2, num5, num8, num11, num14);
+            taso2Voitto = VoitonJako.Taso2(num3, num6, num9, num12, num15);
+
+            if (taso1Voitto > 0) {
+
+            }
+            if (taso2Voitto > 0) {
+
+            }
+
+            taso1Voitto = taso1Voitto * lopullinenPanos2;
+            taso2Voitto = taso2Voitto * lopullinenPanos2;
+            voitto = VoitonJako.voitto(taso1Voitto, taso2Voitto, taso3Voitto, taso4Voitto, taso5Voitto, taso6Voitto, taso7Voitto, taso8Voitto, taso9Voitto, taso, jackPot);
+            System.out.println(voitto);
+            //VoittoField.setText(Double.toString(voitto));
+        } else if (taso == 3) {
+            taso1Voitto = VoitonJako.Taso1(num2, num5, num8, num11, num14);
+            taso2Voitto = VoitonJako.Taso2(num3, num6, num9, num12, num15);
+            taso3Voitto = VoitonJako.Taso3(num1, num4, num7, num10, num13);
+
+            if (taso1Voitto > 0) {
+
+            }
+            if (taso2Voitto > 0) {
+
+            }
+            if (taso3Voitto > 0) {
+
+            }
+
+            taso1Voitto = taso1Voitto * lopullinenPanos2;
+            taso2Voitto = taso2Voitto * lopullinenPanos2;
+            taso3Voitto = taso3Voitto * lopullinenPanos2;
+
+            voitto = VoitonJako.voitto(taso1Voitto, taso2Voitto, taso3Voitto, taso4Voitto, taso5Voitto, taso6Voitto, taso7Voitto, taso8Voitto, taso9Voitto, taso, jackPot);
+            System.out.println(voitto);
+            //VoittoField.setText(Double.toString(voitto));
+        } else if (taso == 4) {
+            taso1Voitto = VoitonJako.Taso1(num2, num5, num8, num11, num14);
+            taso2Voitto = VoitonJako.Taso2(num3, num6, num9, num12, num15);
+            taso3Voitto = VoitonJako.Taso3(num1, num4, num7, num10, num13);
+            taso4Voitto = VoitonJako.Taso4(num1, num4, num8, num12, num15);
+
+            if (taso1Voitto > 0) {
+                // jLabel7.setVisible(true);
+            }
+            if (taso2Voitto > 0) {
+                // jLabel8.setVisible(true);
+            }
+            if (taso3Voitto > 0) {
+                // jLabel19.setVisible(true);
+            }
+            if (taso4Voitto > 0) {
+                // jLabel24.setVisible(true);
+            }
+
+            taso1Voitto = taso1Voitto * lopullinenPanos2;
+            taso2Voitto = taso2Voitto * lopullinenPanos2;
+            taso3Voitto = taso3Voitto * lopullinenPanos2;
+            taso4Voitto = taso4Voitto * lopullinenPanos2;
+
+            voitto = VoitonJako.voitto(taso1Voitto, taso2Voitto, taso3Voitto, taso4Voitto, taso5Voitto, taso6Voitto, taso7Voitto, taso8Voitto, taso9Voitto, taso, jackPot);
+            System.out.println(voitto);
+            //VoittoField.setText(Double.toString(voitto));
+        } else if (taso == 5) {
+
+            taso1Voitto = VoitonJako.Taso1(num2, num5, num8, num11, num14);
+            taso2Voitto = VoitonJako.Taso2(num3, num6, num9, num12, num15);
+            taso3Voitto = VoitonJako.Taso3(num1, num4, num7, num10, num13);
+            taso4Voitto = VoitonJako.Taso4(num1, num4, num8, num12, num15);
+            taso5Voitto = VoitonJako.Taso5(num3, num6, num8, num10, num13);
+
+            if (taso1Voitto > 0) {
+                //jLabel7.setVisible(true);
+            }
+            if (taso2Voitto > 0) {
+                //jLabel8.setVisible(true);
+            }
+            if (taso3Voitto > 0) {
+                //jLabel19.setVisible(true);
+            }
+            if (taso4Voitto > 0) {
+                //jLabel24.setVisible(true);
+            }
+            if (taso5Voitto > 0) {
+                //jLabel20.setVisible(true);
+            }
+
+            taso1Voitto = taso1Voitto * lopullinenPanos2;
+            taso2Voitto = taso2Voitto * lopullinenPanos2;
+            taso3Voitto = taso3Voitto * lopullinenPanos2;
+            taso4Voitto = taso4Voitto * lopullinenPanos2;
+            taso5Voitto = taso5Voitto * lopullinenPanos2;
+
+            voitto = VoitonJako.voitto(taso1Voitto, taso2Voitto, taso3Voitto, taso4Voitto, taso5Voitto, taso6Voitto, taso7Voitto, taso8Voitto, taso9Voitto, taso, jackPot);
+            System.out.println(voitto);
+            //VoittoField.setText(Double.toString(voitto));
+
+        } else if (taso == 6) {
+
+            taso1Voitto = VoitonJako.Taso1(num2, num5, num8, num11, num14);
+            taso2Voitto = VoitonJako.Taso2(num3, num6, num9, num12, num15);
+            taso3Voitto = VoitonJako.Taso3(num1, num4, num7, num10, num13);
+            taso4Voitto = VoitonJako.Taso4(num1, num4, num8, num12, num15);
+            taso5Voitto = VoitonJako.Taso5(num3, num6, num8, num10, num13);
+            taso6Voitto = VoitonJako.Taso6(num1, num4, num8, num10, num13);
+
+            if (taso1Voitto > 0) {
+                //jLabel7.setVisible(true);
+            }
+            if (taso2Voitto > 0) {
+                //jLabel8.setVisible(true);
+            }
+            if (taso3Voitto > 0) {
+                //jLabel19.setVisible(true);
+            }
+            if (taso4Voitto > 0) {
+                //jLabel24.setVisible(true);
+            }
+            if (taso5Voitto > 0) {
+                //jLabel20.setVisible(true);
+            }
+            if (taso6Voitto > 0) {
+
+            }
+            taso1Voitto = taso1Voitto * lopullinenPanos2;
+            taso2Voitto = taso2Voitto * lopullinenPanos2;
+            taso3Voitto = taso3Voitto * lopullinenPanos2;
+            taso4Voitto = taso4Voitto * lopullinenPanos2;
+            taso5Voitto = taso5Voitto * lopullinenPanos2;
+            taso6Voitto = taso6Voitto * lopullinenPanos2;
+
+            voitto = VoitonJako.voitto(taso1Voitto, taso2Voitto, taso3Voitto, taso4Voitto, taso5Voitto, taso6Voitto, taso7Voitto, taso8Voitto, taso9Voitto, taso, jackPot);
+            System.out.println(voitto);
+            //VoittoField.setText(Double.toString(voitto));
+        } else if (taso == 7) {
+
+            taso1Voitto = VoitonJako.Taso1(num2, num5, num8, num11, num14);
+            taso2Voitto = VoitonJako.Taso2(num3, num6, num9, num12, num15);
+            taso3Voitto = VoitonJako.Taso3(num1, num4, num7, num10, num13);
+            taso4Voitto = VoitonJako.Taso4(num1, num4, num8, num12, num15);
+            taso5Voitto = VoitonJako.Taso5(num3, num6, num8, num10, num13);
+            taso6Voitto = VoitonJako.Taso6(num1, num4, num8, num10, num13);
+            taso7Voitto = VoitonJako.Taso7(num3, num6, num8, num12, num15);
+
+            if (taso1Voitto > 0) {
+                //jLabel7.setVisible(true);
+            }
+            if (taso2Voitto > 0) {
+                //jLabel8.setVisible(true);
+            }
+            if (taso3Voitto > 0) {
+                //jLabel19.setVisible(true);
+            }
+            if (taso4Voitto > 0) {
+                //jLabel24.setVisible(true);
+            }
+            if (taso5Voitto > 0) {
+                //jLabel20.setVisible(true);
+            }
+            if (taso6Voitto > 0) {
+
+            }
+            if (taso7Voitto > 0) {
+
+            }
+            taso1Voitto = taso1Voitto * lopullinenPanos2;
+            taso2Voitto = taso2Voitto * lopullinenPanos2;
+            taso3Voitto = taso3Voitto * lopullinenPanos2;
+            taso4Voitto = taso4Voitto * lopullinenPanos2;
+            taso5Voitto = taso5Voitto * lopullinenPanos2;
+            taso6Voitto = taso6Voitto * lopullinenPanos2;
+            taso7Voitto = taso7Voitto * lopullinenPanos2;
+
+            voitto = VoitonJako.voitto(taso1Voitto, taso2Voitto, taso3Voitto, taso4Voitto, taso5Voitto, taso6Voitto, taso7Voitto, taso8Voitto, taso9Voitto, taso, jackPot);
+            System.out.println(voitto);
+            //VoittoField.setText(Double.toString(voitto));
+        } else if (taso == 8) {
+
+            taso1Voitto = VoitonJako.Taso1(num2, num5, num8, num11, num14);
+            taso2Voitto = VoitonJako.Taso2(num3, num6, num9, num12, num15);
+            taso3Voitto = VoitonJako.Taso3(num1, num4, num7, num10, num13);
+            taso4Voitto = VoitonJako.Taso4(num1, num4, num8, num12, num15);
+            taso5Voitto = VoitonJako.Taso5(num3, num6, num8, num10, num13);
+            taso6Voitto = VoitonJako.Taso6(num1, num4, num8, num10, num13);
+            taso7Voitto = VoitonJako.Taso7(num3, num6, num8, num12, num15);
+            taso8Voitto = VoitonJako.Taso8(num2, num4, num8, num10, num14);
+
+            if (taso1Voitto > 0) {
+                //jLabel7.setVisible(true);
+            }
+            if (taso2Voitto > 0) {
+                //jLabel8.setVisible(true);
+            }
+            if (taso3Voitto > 0) {
+                //jLabel19.setVisible(true);
+            }
+            if (taso4Voitto > 0) {
+                //jLabel24.setVisible(true);
+            }
+            if (taso5Voitto > 0) {
+                //jLabel20.setVisible(true);
+            }
+            if (taso6Voitto > 0) {
+
+            }
+            if (taso7Voitto > 0) {
+
+            }
+            if (taso8Voitto > 0) {
+
+            }
+            taso1Voitto = taso1Voitto * lopullinenPanos2;
+            taso2Voitto = taso2Voitto * lopullinenPanos2;
+            taso3Voitto = taso3Voitto * lopullinenPanos2;
+            taso4Voitto = taso4Voitto * lopullinenPanos2;
+            taso5Voitto = taso5Voitto * lopullinenPanos2;
+            taso6Voitto = taso6Voitto * lopullinenPanos2;
+            taso7Voitto = taso7Voitto * lopullinenPanos2;
+            taso8Voitto = taso8Voitto * lopullinenPanos2;
+            voitto = VoitonJako.voitto(taso1Voitto, taso2Voitto, taso3Voitto, taso4Voitto, taso5Voitto, taso6Voitto, taso7Voitto, taso8Voitto, taso9Voitto, taso, jackPot);
+            System.out.println(voitto);
+            //VoittoField.setText(Double.toString(voitto));
+        } else if (taso == 9) {
+
+            taso1Voitto = VoitonJako.Taso1(num2, num5, num8, num11, num14);
+            taso2Voitto = VoitonJako.Taso2(num3, num6, num9, num12, num15);
+            taso3Voitto = VoitonJako.Taso3(num1, num4, num7, num10, num13);
+            taso4Voitto = VoitonJako.Taso4(num1, num4, num8, num12, num15);
+            taso5Voitto = VoitonJako.Taso5(num3, num6, num8, num10, num13);
+            taso6Voitto = VoitonJako.Taso6(num1, num4, num8, num10, num13);
+            taso7Voitto = VoitonJako.Taso7(num3, num6, num8, num12, num15);
+            taso8Voitto = VoitonJako.Taso8(num2, num4, num8, num10, num14);
+            taso9Voitto = VoitonJako.Taso9(num2, num6, num8, num12, num14);
+
+            if (taso1Voitto > 0) {
+                //jLabel7.setVisible(true);
+            }
+
+            if (taso2Voitto > 0) {
+                //jLabel8.setVisible(true);
+            }
+
+            if (taso3Voitto > 0) {
+                //jLabel19.setVisible(true);
+            }
+
+            if (taso4Voitto > 0) {
+                //jLabel24.setVisible(true);
+            }
+
+            if (taso5Voitto > 0) {
+                //jLabel20.setVisible(true);
+            }
+
+            if (taso6Voitto > 0) {
+
+            }
+
+            if (taso7Voitto > 0) {
+
+            }
+
+            if (taso8Voitto > 0) {
+
+            }
+
+            if (taso9Voitto > 0) {
+
+            }
+            taso1Voitto = taso1Voitto * lopullinenPanos2;
+            taso2Voitto = taso2Voitto * lopullinenPanos2;
+            taso3Voitto = taso3Voitto * lopullinenPanos2;
+            taso4Voitto = taso4Voitto * lopullinenPanos2;
+            taso5Voitto = taso5Voitto * lopullinenPanos2;
+            taso6Voitto = taso6Voitto * lopullinenPanos2;
+            taso7Voitto = taso7Voitto * lopullinenPanos2;
+            taso8Voitto = taso8Voitto * lopullinenPanos2;
+            taso9Voitto = taso9Voitto * lopullinenPanos2;
+
+            voitto = VoitonJako.voitto(taso1Voitto, taso2Voitto, taso3Voitto, taso4Voitto, taso5Voitto, taso6Voitto, taso7Voitto, taso8Voitto, taso9Voitto, taso, jackPot);
+            System.out.println(voitto);
+            //VoittoField.setText(Double.toString(voitto));
+        }
+    }
+
+    private void paivitanumero() {
+        laskuri++;
+
+    }
+
+    private void paivitanumero2() {
+        laskuri2++;
+
+    }
+
+    private void paivitanumero3() {
+        laskuri3++;
+
+    }
+
+    private void paivitanumero4() {
+        laskuri4++;
+
+    }
+
+    private void paivitanumero5() {
+        laskuri5++;
+
+    }
 
     public static void kassa(double Kassa2) {
         kassa = Kassa2;
@@ -1018,8 +1277,9 @@ public class Game2 extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JTextField jTextField1;
     // End of variables declaration//GEN-END:variables
 }

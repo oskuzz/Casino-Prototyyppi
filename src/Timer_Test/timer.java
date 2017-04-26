@@ -14,7 +14,7 @@ import java.awt.event.ActionListener;
  */
 public class timer extends javax.swing.JFrame {
 
-    int moi = 0;
+    
     private javax.swing.Timer ajastin;
     private javax.swing.Timer ajastin2;
     private javax.swing.Timer ajastin3;
@@ -22,14 +22,19 @@ public class timer extends javax.swing.JFrame {
     private int laskuri2 = 0;
     private int laskuri3 = 0;
     private int num = 0;
+    
     private int num2 = 0;
+    
     private int num3 = 0;
+    
+    
 
     /**
      * Creates new form timer
      */
     public timer() {
         initComponents();
+        
     }
 
     /**
@@ -46,6 +51,14 @@ public class timer extends javax.swing.JFrame {
         Num2 = new javax.swing.JLabel();
         Num3 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
+        jPanel2 = new javax.swing.JPanel();
+        Num4 = new javax.swing.JLabel();
+        Num5 = new javax.swing.JLabel();
+        Num6 = new javax.swing.JLabel();
+        jPanel3 = new javax.swing.JPanel();
+        Num7 = new javax.swing.JLabel();
+        Num8 = new javax.swing.JLabel();
+        Num9 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -71,7 +84,39 @@ public class timer extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 100, 30, 30));
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 100, 30, 30));
+
+        jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        Num4.setFont(new java.awt.Font("Tahoma", 0, 50)); // NOI18N
+        Num4.setText("0");
+        jPanel2.add(Num4, new org.netbeans.lib.awtextra.AbsoluteConstraints(25, 25, 50, 50));
+
+        Num5.setFont(new java.awt.Font("Tahoma", 0, 50)); // NOI18N
+        Num5.setText("0");
+        jPanel2.add(Num5, new org.netbeans.lib.awtextra.AbsoluteConstraints(25, 90, 50, 50));
+
+        Num6.setFont(new java.awt.Font("Tahoma", 0, 50)); // NOI18N
+        Num6.setText("0");
+        jPanel2.add(Num6, new org.netbeans.lib.awtextra.AbsoluteConstraints(25, 160, 50, 50));
+
+        getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 0, 100, 220));
+
+        jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        Num7.setFont(new java.awt.Font("Tahoma", 0, 50)); // NOI18N
+        Num7.setText("0");
+        jPanel3.add(Num7, new org.netbeans.lib.awtextra.AbsoluteConstraints(25, 25, 50, 50));
+
+        Num8.setFont(new java.awt.Font("Tahoma", 0, 50)); // NOI18N
+        Num8.setText("0");
+        jPanel3.add(Num8, new org.netbeans.lib.awtextra.AbsoluteConstraints(25, 90, 50, 50));
+
+        Num9.setFont(new java.awt.Font("Tahoma", 0, 50)); // NOI18N
+        Num9.setText("0");
+        jPanel3.add(Num9, new org.netbeans.lib.awtextra.AbsoluteConstraints(25, 160, 50, 50));
+
+        getContentPane().add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 0, 100, 220));
 
         pack();
         setLocationRelativeTo(null);
@@ -83,13 +128,32 @@ public class timer extends javax.swing.JFrame {
         laskuri = 0;
         laskuri2 = laskuri;
         laskuri3 = laskuri2;
-        ajastin = new javax.swing.Timer(100, new ActionListener() {
+        num = Timer2.num1();
+        num2 = Timer2.num1();
+        num3 = Timer2.num1();
+        
+        
+        ajastin = new javax.swing.Timer(70, new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 paivitanumero();
 
-                num = Timer2.num1();
+                
+                if(num == 10){
+                    num = 1;
+                }
                 Num1.setText(Integer.toString(num));
+                num++;
+                if(num == 10){
+                    num = 1;
+                }
+                Num2.setText(Integer.toString(num));
+                num++;
+                if(num == 10){
+                    num = 1;
+                }
+                Num3.setText(Integer.toString(num));
+                num++;
                
             }
         });
@@ -98,37 +162,75 @@ public class timer extends javax.swing.JFrame {
         ajastin.start();
         
         
-        ajastin2 = new javax.swing.Timer(100, new ActionListener() {
+        ajastin2 = new javax.swing.Timer(70, new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 paivitanumero2();
-                if (laskuri2 >= 29) {
-                    num = Timer2.num1();
+                
+                    
+                if(num2 == 10){
+                    num2 = 1;
                 }
+                Num4.setText(Integer.toString(num2));
+                num2++;
+                if(num2 == 10){
+                    num2 = 1;
+                }
+                Num5.setText(Integer.toString(num2));
+                num2++;
+                if(num2 == 10){
+                    num2 = 1;
+                }
+                Num6.setText(Integer.toString(num2));
+                num2++;
 
-                Num2.setText(Integer.toString(num));
+                
 
             }
         });
-        ajastin2.setInitialDelay(200);
+        ajastin2.setInitialDelay(0);
 
         ajastin2.start();
 
-        ajastin3 = new javax.swing.Timer(100, new ActionListener() {
+        ajastin3 = new javax.swing.Timer(70, new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 paivitanumero3();
-                if (laskuri3 >= 38) {
-                    num = Timer2.num1();
+                
+                if(num3 == 10){
+                    num3 = 1;
                 }
-
-                Num3.setText(Integer.toString(num));
+                Num7.setText(Integer.toString(num3));
+                num3++;
+                if(num3 == 10){
+                    num3 = 1;
+                }
+                Num8.setText(Integer.toString(num3));
+                num3++;
+                if(num3 == 10){
+                    num3 = 1;
+                }
+                Num9.setText(Integer.toString(num3));
+                num3++;
+                
 
             }
         });
-        ajastin3.setInitialDelay(500);
+        ajastin3.setInitialDelay(0);
         ajastin3.start();
-
+        
+        num = Timer2.num1();
+        num2 = Timer2.num1();
+        num3 = Timer2.num1();
+        Num1.setText(Integer.toString(num));
+        Num2.setText(Integer.toString(num));
+        Num3.setText(Integer.toString(num));
+        Num4.setText(Integer.toString(num2));
+        Num5.setText(Integer.toString(num2));
+        Num6.setText(Integer.toString(num2));
+        Num7.setText(Integer.toString(num3));
+        Num8.setText(Integer.toString(num3));
+        Num9.setText(Integer.toString(num3));
 
     }//GEN-LAST:event_jButton1ActionPerformed
 
@@ -195,7 +297,15 @@ public class timer extends javax.swing.JFrame {
     public javax.swing.JLabel Num1;
     private javax.swing.JLabel Num2;
     private javax.swing.JLabel Num3;
+    public javax.swing.JLabel Num4;
+    private javax.swing.JLabel Num5;
+    private javax.swing.JLabel Num6;
+    public javax.swing.JLabel Num7;
+    private javax.swing.JLabel Num8;
+    private javax.swing.JLabel Num9;
     private javax.swing.JButton jButton1;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
     // End of variables declaration//GEN-END:variables
 }
