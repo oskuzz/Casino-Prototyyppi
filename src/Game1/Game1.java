@@ -72,10 +72,11 @@ public final class Game1 extends javax.swing.JFrame {
         jTextField3.setVisible(false);
         jButton7.setVisible(false);
         jButton8.setVisible(false);
-        jToggleButton1.setVisible(false);
+        jToggleButton3.setVisible(false);
         jLabel26.setVisible(false);
         jLabel22.setVisible(false);
         jLabel27.setVisible(false);
+        jLabel35.setVisible(false);
 
         Kassa = kassa;
 
@@ -121,13 +122,14 @@ public final class Game1 extends javax.swing.JFrame {
         jLabel10 = new javax.swing.JLabel();
         jLabel22 = new javax.swing.JLabel();
         jLabel23 = new javax.swing.JLabel();
-        jButton6 = new javax.swing.JButton();
         jLabel26 = new javax.swing.JLabel();
         jButton7 = new javax.swing.JButton();
         jButton8 = new javax.swing.JButton();
-        jToggleButton1 = new javax.swing.JToggleButton();
         jLabel27 = new javax.swing.JLabel();
         jLabel34 = new javax.swing.JLabel();
+        jToggleButton2 = new javax.swing.JToggleButton();
+        jLabel35 = new javax.swing.JLabel();
+        jToggleButton3 = new javax.swing.JToggleButton();
         jLabel1 = new javax.swing.JLabel();
         jButton5 = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
@@ -337,64 +339,75 @@ public final class Game1 extends javax.swing.JFrame {
         jLabel22.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
         jLabel22.setForeground(new java.awt.Color(255, 255, 255));
         jLabel22.setText("Pyöräytykset");
-        jPanel1.add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(285, 43, -1, -1));
+        jPanel1.add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(289, 43, -1, -1));
 
         jLabel23.setForeground(new java.awt.Color(255, 255, 255));
         jLabel23.setText("€");
         jPanel1.add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(693, 49, 10, 10));
 
-        jButton6.setText("Auto");
-        jButton6.setBorder(null);
-        jButton6.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton6ActionPerformed(evt);
-            }
-        });
-        jPanel1.add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 20, 25, 20));
-
         jLabel26.setFont(new java.awt.Font("Tahoma", 0, 15)); // NOI18N
         jLabel26.setForeground(new java.awt.Color(255, 255, 255));
         jLabel26.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel26.setText("5");
-        jPanel1.add(jLabel26, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 20, -1, -1));
+        jPanel1.add(jLabel26, new org.netbeans.lib.awtextra.AbsoluteConstraints(353, 21, 30, 13));
 
-        jButton7.setText("<");
+        jButton7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/BackgroundImages/Panos-1.png"))); // NOI18N
         jButton7.setBorder(null);
         jButton7.setBorderPainted(false);
+        jButton7.setContentAreaFilled(false);
         jButton7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton7ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 20, 10, 20));
+        jPanel1.add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 15, 25, 25));
 
-        jButton8.setText(">");
+        jButton8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/BackgroundImages/Panos+1.png"))); // NOI18N
         jButton8.setBorder(null);
+        jButton8.setBorderPainted(false);
+        jButton8.setContentAreaFilled(false);
         jButton8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton8ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton8, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 20, 10, 20));
-
-        jToggleButton1.setText("Start");
-        jToggleButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jToggleButton1ActionPerformed(evt);
-            }
-        });
-        jPanel1.add(jToggleButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 20, -1, -1));
+        jPanel1.add(jButton8, new org.netbeans.lib.awtextra.AbsoluteConstraints(391, 15, 25, 25));
 
         jLabel27.setFont(new java.awt.Font("Tahoma", 0, 15)); // NOI18N
         jLabel27.setForeground(new java.awt.Color(255, 255, 255));
         jLabel27.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel27.setText("0");
-        jPanel1.add(jLabel27, new org.netbeans.lib.awtextra.AbsoluteConstraints(375, 43, 20, 15));
+        jPanel1.add(jLabel27, new org.netbeans.lib.awtextra.AbsoluteConstraints(379, 43, 20, 15));
 
         jLabel34.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
         jLabel34.setForeground(new java.awt.Color(255, 255, 255));
         jLabel34.setText("Panos");
         jPanel1.add(jLabel34, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 23, -1, -1));
+
+        jToggleButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/BackgroundImages/Game1autoAutoButton.png"))); // NOI18N
+        jToggleButton2.setBorder(null);
+        jToggleButton2.setBorderPainted(false);
+        jToggleButton2.setContentAreaFilled(false);
+        jToggleButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jToggleButton2ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jToggleButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(265, 11, 50, 30));
+
+        jLabel35.setIcon(new javax.swing.ImageIcon(getClass().getResource("/BackgroundImages/Game1AutoNumberFrame.png"))); // NOI18N
+        jPanel1.add(jLabel35, new org.netbeans.lib.awtextra.AbsoluteConstraints(348, 15, -1, -1));
+
+        jToggleButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/BackgroundImages/Game1autoStartButton.png"))); // NOI18N
+        jToggleButton3.setBorder(null);
+        jToggleButton3.setBorderPainted(false);
+        jToggleButton3.setContentAreaFilled(false);
+        jToggleButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jToggleButton3ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jToggleButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(425, 11, -1, -1));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 350, 800, 100));
 
@@ -1157,7 +1170,7 @@ public final class Game1 extends javax.swing.JFrame {
                         PlayButton.setEnabled(false);
 
                     }
-                    if (jToggleButton1.isSelected()) {
+                    if (jToggleButton3.isSelected()) {
                         PlayButton.setEnabled(false);
                     } else {
                         PlayButton.setEnabled(true);
@@ -1182,8 +1195,8 @@ public final class Game1 extends javax.swing.JFrame {
                 jLabel27.setText(Integer.toString(Auto2));
                 if (laskuri5 == auto) {
                     Auto2 = 0;
-                    
-                    jToggleButton1.doClick();
+
+                    jToggleButton3.doClick();
                     ajastin5.stop();
 
                 }
@@ -1306,30 +1319,44 @@ public final class Game1 extends javax.swing.JFrame {
         jLabel26.setText(Integer.toString(auto));
     }//GEN-LAST:event_jButton8ActionPerformed
 
-    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+    private void jToggleButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton2ActionPerformed
         // TODO add your handling code here:
-        jButton7.setVisible(true);
-        jButton8.setVisible(true);
-        jToggleButton1.setVisible(true);
-        jLabel26.setVisible(true);
-        jLabel22.setVisible(true);
-        jLabel27.setVisible(true);
-    }//GEN-LAST:event_jButton6ActionPerformed
-
-    private void jToggleButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton1ActionPerformed
-        // TODO add your handling code here:
-        if (jToggleButton1.isSelected()) {
-            ajastinjuttu5();
-            jToggleButton1.setText("Stop");
-            PlayButton.setEnabled(false);
+        if (jToggleButton2.isSelected()) {
+            jLabel35.setVisible(true);
+            jButton7.setVisible(true);
+            jButton8.setVisible(true);
+            jToggleButton3.setVisible(true);
+            jLabel26.setVisible(true);
+            jLabel22.setVisible(true);
+            jLabel27.setVisible(true);
         } else {
-            jToggleButton1.setText("Start");
-            ajastin5.stop();
+            jLabel35.setVisible(false);
+            jButton7.setVisible(false);
+            jButton8.setVisible(false);
+            jToggleButton3.setVisible(false);
+            jLabel26.setVisible(false);
+            jLabel22.setVisible(false);
+            jLabel27.setVisible(false);
+        }
+
+    }//GEN-LAST:event_jToggleButton2ActionPerformed
+
+    private void jToggleButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton3ActionPerformed
+        // TODO add your handling code here:
+        if (jToggleButton3.isSelected()) {
+            PlayButton.setEnabled(false);
+            ajastinjuttu5();
             laskuri5 = 0;
             Auto2 = 0;
+            jLabel27.setText("0");
+            jToggleButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/BackgroundImages/Game1autoStopButton.png")));
+        }else{
+            ajastin5.stop();
+            jToggleButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/BackgroundImages/Game1autoStartButton.png")));
             PlayButton.setEnabled(true);
+            laskuri5 = 0;
         }
-    }//GEN-LAST:event_jToggleButton1ActionPerformed
+    }//GEN-LAST:event_jToggleButton3ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -1386,7 +1413,6 @@ public final class Game1 extends javax.swing.JFrame {
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
     private javax.swing.JButton jButton7;
     private javax.swing.JButton jButton8;
     private javax.swing.JLabel jLabel1;
@@ -1417,6 +1443,7 @@ public final class Game1 extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel32;
     private javax.swing.JLabel jLabel33;
     private javax.swing.JLabel jLabel34;
+    private javax.swing.JLabel jLabel35;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
@@ -1438,6 +1465,7 @@ public final class Game1 extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField3;
     private javax.swing.JTextField jTextField4;
-    private javax.swing.JToggleButton jToggleButton1;
+    private javax.swing.JToggleButton jToggleButton2;
+    private javax.swing.JToggleButton jToggleButton3;
     // End of variables declaration//GEN-END:variables
 }
