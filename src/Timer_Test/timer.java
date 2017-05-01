@@ -14,27 +14,33 @@ import java.awt.event.ActionListener;
  */
 public class timer extends javax.swing.JFrame {
 
-    
     private javax.swing.Timer ajastin;
     private javax.swing.Timer ajastin2;
     private javax.swing.Timer ajastin3;
     private int laskuri = 0;
     private int laskuri2 = 0;
     private int laskuri3 = 0;
+    
     private int num = 0;
-    
     private int num2 = 0;
-    
     private int num3 = 0;
     
-    
+    private int luku = 9;
+    private int luku2 = 8;
+    private int luku3 = 7;
+    private int luku4 = 4;
+    private int luku5 = 5;
+    private int luku6 = 4;
+    private int luku7 = 3;
+    private int luku8 = 2;
+    private int luku9 = 1;
 
     /**
      * Creates new form timer
      */
     public timer() {
         initComponents();
-        
+
     }
 
     /**
@@ -124,67 +130,58 @@ public class timer extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        
+
         laskuri = 0;
         laskuri2 = laskuri;
         laskuri3 = laskuri2;
-        num = Timer2.num1();
-        num2 = Timer2.num1();
-        num3 = Timer2.num1();
-        
-        
+
         ajastin = new javax.swing.Timer(70, new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 paivitanumero();
 
-                
-                if(num == 10){
-                    num = 1;
+                if (luku == 10) {
+                    luku = 1;
                 }
-                Num1.setText(Integer.toString(num));
-                num++;
-                if(num == 10){
-                    num = 1;
+                Num1.setText(Integer.toString(luku));
+                luku++;
+                if (luku2 == 10) {
+                    luku2 = 1;
                 }
-                Num2.setText(Integer.toString(num));
-                num++;
-                if(num == 10){
-                    num = 1;
+                Num2.setText(Integer.toString(luku2));
+                luku2++;
+                if (luku3 == 10) {
+                    luku3 = 1;
                 }
-                Num3.setText(Integer.toString(num));
-                num++;
-               
+                Num3.setText(Integer.toString(luku3));
+                luku3++;
+
             }
         });
         ajastin.setInitialDelay(0);
 
         ajastin.start();
-        
-        
+
         ajastin2 = new javax.swing.Timer(70, new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 paivitanumero2();
-                
-                    
-                if(num2 == 10){
-                    num2 = 1;
-                }
-                Num4.setText(Integer.toString(num2));
-                num2++;
-                if(num2 == 10){
-                    num2 = 1;
-                }
-                Num5.setText(Integer.toString(num2));
-                num2++;
-                if(num2 == 10){
-                    num2 = 1;
-                }
-                Num6.setText(Integer.toString(num2));
-                num2++;
 
-                
+                if (luku4 == 10) {
+                    luku4 = 1;
+                }
+                Num4.setText(Integer.toString(luku4));
+                luku4++;
+                if (luku5 == 10) {
+                    luku5 = 1;
+                }
+                Num5.setText(Integer.toString(luku5));
+                luku5++;
+                if (luku6 == 10) {
+                    luku6 = 1;
+                }
+                Num6.setText(Integer.toString(luku6));
+                luku6++;
 
             }
         });
@@ -196,29 +193,28 @@ public class timer extends javax.swing.JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 paivitanumero3();
-                
-                if(num3 == 10){
-                    num3 = 1;
+
+                if (luku7 == 10) {
+                    luku7 = 1;
                 }
-                Num7.setText(Integer.toString(num3));
-                num3++;
-                if(num3 == 10){
-                    num3 = 1;
+                Num7.setText(Integer.toString(luku7));
+                luku7++;
+                if (luku8 == 10) {
+                    luku8 = 1;
                 }
-                Num8.setText(Integer.toString(num3));
-                num3++;
-                if(num3 == 10){
-                    num3 = 1;
+                Num8.setText(Integer.toString(luku8));
+                luku8++;
+                if (luku9 == 10) {
+                    luku9 = 1;
                 }
-                Num9.setText(Integer.toString(num3));
-                num3++;
-                
+                Num9.setText(Integer.toString(luku9));
+                luku9++;
 
             }
         });
         ajastin3.setInitialDelay(0);
         ajastin3.start();
-        
+
         num = Timer2.num1();
         num2 = Timer2.num1();
         num3 = Timer2.num1();
