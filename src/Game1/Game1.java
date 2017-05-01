@@ -40,9 +40,6 @@ public final class Game1 extends javax.swing.JFrame {
     private int laskuri3 = 0;
     private int laskuri4 = 0;
     private int laskuri5 = 0;
-    private int number1 = 0;
-    private int number2 = 0;
-    private int number3 = 0;
     private int num1;
     private int num2;
     private int num3;
@@ -52,6 +49,15 @@ public final class Game1 extends javax.swing.JFrame {
     private int num7;
     private int num8;
     private int num9;
+    private int luku = 9;
+    private int luku2 = 8;
+    private int luku3 = 7;
+    private int luku4 = 4;
+    private int luku5 = 5;
+    private int luku6 = 4;
+    private int luku7 = 3;
+    private int luku8 = 2;
+    private int luku9 = 1;
 
     int Auto = 1;
     int auto = 5;
@@ -467,7 +473,7 @@ public final class Game1 extends javax.swing.JFrame {
         jPanel12.setOpaque(false);
         jPanel12.setPreferredSize(new java.awt.Dimension(125, 100));
 
-        Num9.setFont(new java.awt.Font("Tahoma", 0, 60)); // NOI18N
+        Num9.setFont(new java.awt.Font("Tahoma", 0, 70)); // NOI18N
         Num9.setForeground(new java.awt.Color(255, 255, 255));
         Num9.setText("0");
 
@@ -497,7 +503,7 @@ public final class Game1 extends javax.swing.JFrame {
         jPanel11.setOpaque(false);
         jPanel11.setPreferredSize(new java.awt.Dimension(125, 100));
 
-        Num7.setFont(new java.awt.Font("Tahoma", 0, 60)); // NOI18N
+        Num7.setFont(new java.awt.Font("Tahoma", 0, 70)); // NOI18N
         Num7.setForeground(new java.awt.Color(255, 255, 255));
         Num7.setText("0");
 
@@ -527,7 +533,7 @@ public final class Game1 extends javax.swing.JFrame {
         jPanel10.setOpaque(false);
         jPanel10.setPreferredSize(new java.awt.Dimension(125, 100));
 
-        Num8.setFont(new java.awt.Font("Tahoma", 0, 60)); // NOI18N
+        Num8.setFont(new java.awt.Font("Tahoma", 0, 70)); // NOI18N
         Num8.setForeground(new java.awt.Color(255, 255, 255));
         Num8.setText("0");
         Num8.setRequestFocusEnabled(false);
@@ -558,7 +564,7 @@ public final class Game1 extends javax.swing.JFrame {
         jPanel9.setOpaque(false);
         jPanel9.setPreferredSize(new java.awt.Dimension(125, 100));
 
-        Num6.setFont(new java.awt.Font("Tahoma", 0, 60)); // NOI18N
+        Num6.setFont(new java.awt.Font("Tahoma", 0, 70)); // NOI18N
         Num6.setForeground(new java.awt.Color(255, 255, 255));
         Num6.setText("0");
 
@@ -588,7 +594,7 @@ public final class Game1 extends javax.swing.JFrame {
         jPanel8.setOpaque(false);
         jPanel8.setPreferredSize(new java.awt.Dimension(125, 100));
 
-        Num4.setFont(new java.awt.Font("Tahoma", 0, 60)); // NOI18N
+        Num4.setFont(new java.awt.Font("Tahoma", 0, 70)); // NOI18N
         Num4.setForeground(new java.awt.Color(255, 255, 255));
         Num4.setText("0");
 
@@ -614,7 +620,7 @@ public final class Game1 extends javax.swing.JFrame {
         jPanel7.setOpaque(false);
         jPanel7.setPreferredSize(new java.awt.Dimension(125, 100));
 
-        Num5.setFont(new java.awt.Font("Tahoma", 0, 60)); // NOI18N
+        Num5.setFont(new java.awt.Font("Tahoma", 0, 70)); // NOI18N
         Num5.setForeground(new java.awt.Color(255, 255, 255));
         Num5.setText("0");
 
@@ -644,7 +650,7 @@ public final class Game1 extends javax.swing.JFrame {
         jPanel6.setOpaque(false);
         jPanel6.setPreferredSize(new java.awt.Dimension(125, 100));
 
-        Num1.setFont(new java.awt.Font("Tahoma", 0, 60)); // NOI18N
+        Num1.setFont(new java.awt.Font("Tahoma", 0, 70)); // NOI18N
         Num1.setForeground(new java.awt.Color(255, 255, 255));
         Num1.setText("0");
 
@@ -670,7 +676,7 @@ public final class Game1 extends javax.swing.JFrame {
         jPanel5.setOpaque(false);
         jPanel5.setPreferredSize(new java.awt.Dimension(125, 100));
 
-        Num2.setFont(new java.awt.Font("Tahoma", 0, 60)); // NOI18N
+        Num2.setFont(new java.awt.Font("Tahoma", 0, 70)); // NOI18N
         Num2.setForeground(new java.awt.Color(255, 255, 255));
         Num2.setText("0");
 
@@ -696,7 +702,7 @@ public final class Game1 extends javax.swing.JFrame {
         jPanel4.setOpaque(false);
         jPanel4.setPreferredSize(new java.awt.Dimension(125, 100));
 
-        Num3.setFont(new java.awt.Font("Tahoma", 0, 60)); // NOI18N
+        Num3.setFont(new java.awt.Font("Tahoma", 0, 70)); // NOI18N
         Num3.setForeground(new java.awt.Color(255, 255, 255));
         Num3.setText("0");
 
@@ -895,9 +901,6 @@ public final class Game1 extends javax.swing.JFrame {
         laskuri = 0;
         laskuri2 = laskuri;
         laskuri3 = laskuri2;
-        number1 = Timer2.num1();
-        number1 = Timer2.num1();
-        number3 = Timer2.num1();
         if (kassa > 0 && lopullinenPanos2 <= kassa) {
             PlayButton.setEnabled(false);
             num1 = NumeroidenArvonta.num1();
@@ -1059,26 +1062,26 @@ public final class Game1 extends javax.swing.JFrame {
     }
 
     public void ajastinjuttu() {
-        ajastin = new javax.swing.Timer(70, new ActionListener() {
+        ajastin = new javax.swing.Timer(85, new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 paivitanumero();
 
-                if (number1 == 10) {
-                    number1 = 1;
+                if (luku == 10) {
+                    luku = 1;
                 }
-                Num1.setText(Integer.toString(number1));
-                number1++;
-                if (number1 == 10) {
-                    number1 = 1;
+                Num1.setText(Integer.toString(luku));
+                luku++;
+                if (luku2 == 10) {
+                    luku2 = 1;
                 }
-                Num2.setText(Integer.toString(number1));
-                number1++;
-                if (number1 == 10) {
-                    number1 = 1;
+                Num2.setText(Integer.toString(luku2));
+                luku2++;
+                if (luku3 == 10) {
+                    luku3 = 1;
                 }
-                Num3.setText(Integer.toString(number1));
-                number1++;
+                Num3.setText(Integer.toString(luku3));
+                luku3++;
                 if (laskuri == 30) {
                     ajastin.stop();
                     Num1.setText(Integer.toString(num1));
@@ -1090,32 +1093,32 @@ public final class Game1 extends javax.swing.JFrame {
                 }
             }
         });
-        ajastin.setInitialDelay(100);
+        ajastin.setInitialDelay(0);
 
         ajastin.start();
     }
 
     public void ajastinjuttu2() {
-        ajastin2 = new javax.swing.Timer(70, new ActionListener() {
+        ajastin2 = new javax.swing.Timer(85, new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 paivitanumero2();
 
-                if (number2 == 10) {
-                    number2 = 1;
+                if (luku4 == 10) {
+                    luku4 = 1;
                 }
-                Num4.setText(Integer.toString(number2));
-                number2++;
-                if (number2 == 10) {
-                    number2 = 1;
+                Num4.setText(Integer.toString(luku4));
+                luku4++;
+                if (luku5 == 10) {
+                    luku5 = 1;
                 }
-                Num5.setText(Integer.toString(number2));
-                number2++;
-                if (number2 == 10) {
-                    number2 = 1;
+                Num5.setText(Integer.toString(luku5));
+                luku5++;
+                if (luku6 == 10) {
+                    luku6 = 1;
                 }
-                Num6.setText(Integer.toString(number2));
-                number2++;
+                Num6.setText(Integer.toString(luku6));
+                luku6++;
                 if (laskuri2 == 40) {
                     ajastin2.stop();
                     Num4.setText(Integer.toString(num4));
@@ -1135,26 +1138,26 @@ public final class Game1 extends javax.swing.JFrame {
     }
 
     public void ajastinjuttu3() {
-        ajastin3 = new javax.swing.Timer(70, new ActionListener() {
+        ajastin3 = new javax.swing.Timer(85, new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 paivitanumero3();
 
-                if (number3 == 10) {
-                    number3 = 1;
+                if (luku7 == 10) {
+                    luku7 = 1;
                 }
-                Num7.setText(Integer.toString(number3));
-                number3++;
-                if (number3 == 10) {
-                    number3 = 1;
+                Num7.setText(Integer.toString(luku7));
+                luku7++;
+                if (luku8 == 10) {
+                    luku8 = 1;
                 }
-                Num8.setText(Integer.toString(number3));
-                number3++;
-                if (number3 == 10) {
-                    number3 = 1;
+                Num8.setText(Integer.toString(luku8));
+                luku8++;
+                if (luku9 == 10) {
+                    luku9 = 1;
                 }
-                Num9.setText(Integer.toString(number3));
-                number3++;
+                Num9.setText(Integer.toString(luku9));
+                luku9++;
                 if (laskuri3 == 50) {
                     ajastin3.stop();
                     Num7.setText(Integer.toString(num7));
@@ -1237,9 +1240,7 @@ public final class Game1 extends javax.swing.JFrame {
         jLabel24.setVisible(false);
         jLabel25.setVisible(false);
 
-        number1 = Timer2.num1();
-        number1 = Timer2.num1();
-        number3 = Timer2.num1();
+        
         if (kassa > 0 && lopullinenPanos2 <= kassa) {
 
             num1 = NumeroidenArvonta.num1();

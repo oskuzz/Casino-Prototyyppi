@@ -20,11 +20,11 @@ public class timer extends javax.swing.JFrame {
     private int laskuri = 0;
     private int laskuri2 = 0;
     private int laskuri3 = 0;
-    
+
     private int num = 0;
     private int num2 = 0;
     private int num3 = 0;
-    
+
     private int luku = 9;
     private int luku2 = 8;
     private int luku3 = 7;
@@ -135,7 +135,7 @@ public class timer extends javax.swing.JFrame {
         laskuri2 = laskuri;
         laskuri3 = laskuri2;
 
-        ajastin = new javax.swing.Timer(70, new ActionListener() {
+        ajastin = new javax.swing.Timer(85, new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 paivitanumero();
@@ -162,7 +162,7 @@ public class timer extends javax.swing.JFrame {
 
         ajastin.start();
 
-        ajastin2 = new javax.swing.Timer(70, new ActionListener() {
+        ajastin2 = new javax.swing.Timer(85, new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 paivitanumero2();
@@ -189,7 +189,7 @@ public class timer extends javax.swing.JFrame {
 
         ajastin2.start();
 
-        ajastin3 = new javax.swing.Timer(70, new ActionListener() {
+        ajastin3 = new javax.swing.Timer(85, new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 paivitanumero3();
