@@ -58,7 +58,7 @@ public final class Game1 extends javax.swing.JFrame {
 
     int Auto = 1;
     int auto = 5;
-    int Auto2 = 0;
+    int Auto2 = 5;
 
     /**
      * Creates new form Game1
@@ -73,8 +73,8 @@ public final class Game1 extends javax.swing.JFrame {
         jLabel24.setVisible(false);
         jLabel25.setVisible(false);
         jTextField3.setVisible(false);
-        jButton7.setVisible(false);
-        jButton8.setVisible(false);
+        Auto1.setVisible(false);
+        auto2.setVisible(false);
         jToggleButton3.setVisible(false);
         jLabel26.setVisible(false);
         jLabel35.setVisible(false);
@@ -101,14 +101,14 @@ public final class Game1 extends javax.swing.JFrame {
         jLabel29 = new javax.swing.JLabel();
         jLabel28 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
-        jButton1 = new javax.swing.JButton();
+        Panos1 = new javax.swing.JButton();
         jLabel21 = new javax.swing.JLabel();
         jTextField1 = new javax.swing.JTextField();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
+        Panos2 = new javax.swing.JButton();
+        Taso1 = new javax.swing.JButton();
         jLabel5 = new javax.swing.JLabel();
         jTextField2 = new javax.swing.JTextField();
-        jButton4 = new javax.swing.JButton();
+        Taso2 = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         PlayButton = new javax.swing.JButton();
@@ -123,8 +123,8 @@ public final class Game1 extends javax.swing.JFrame {
         jLabel10 = new javax.swing.JLabel();
         jLabel23 = new javax.swing.JLabel();
         jLabel26 = new javax.swing.JLabel();
-        jButton7 = new javax.swing.JButton();
-        jButton8 = new javax.swing.JButton();
+        Auto1 = new javax.swing.JButton();
+        auto2 = new javax.swing.JButton();
         jLabel34 = new javax.swing.JLabel();
         jToggleButton2 = new javax.swing.JToggleButton();
         jLabel35 = new javax.swing.JLabel();
@@ -186,17 +186,17 @@ public final class Game1 extends javax.swing.JFrame {
         jPanel1.setOpaque(false);
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/BackgroundImages/Panos-1.png"))); // NOI18N
-        jButton1.setBorder(null);
-        jButton1.setBorderPainted(false);
-        jButton1.setContentAreaFilled(false);
-        jButton1.setFocusCycleRoot(true);
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        Panos1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/BackgroundImages/Panos-1.png"))); // NOI18N
+        Panos1.setBorder(null);
+        Panos1.setBorderPainted(false);
+        Panos1.setContentAreaFilled(false);
+        Panos1.setFocusCycleRoot(true);
+        Panos1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                Panos1ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 43, -1, -1));
+        jPanel1.add(Panos1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 43, -1, -1));
 
         jLabel21.setIcon(new javax.swing.ImageIcon(getClass().getResource("/BackgroundImages/PanosBar.png"))); // NOI18N
         jPanel1.add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 43, -1, -1));
@@ -210,28 +210,28 @@ public final class Game1 extends javax.swing.JFrame {
         jTextField1.setOpaque(false);
         jPanel1.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 44, 54, 25));
 
-        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/BackgroundImages/Panos+1.png"))); // NOI18N
-        jButton2.setBorder(null);
-        jButton2.setBorderPainted(false);
-        jButton2.setContentAreaFilled(false);
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        Panos2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/BackgroundImages/Panos+1.png"))); // NOI18N
+        Panos2.setBorder(null);
+        Panos2.setBorderPainted(false);
+        Panos2.setContentAreaFilled(false);
+        Panos2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                Panos2ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 43, -1, -1));
+        jPanel1.add(Panos2, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 43, -1, -1));
 
-        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/BackgroundImages/Panos-1.png"))); // NOI18N
-        jButton3.setBorder(null);
-        jButton3.setBorderPainted(false);
-        jButton3.setContentAreaFilled(false);
-        jButton3.setFocusCycleRoot(true);
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        Taso1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/BackgroundImages/Panos-1.png"))); // NOI18N
+        Taso1.setBorder(null);
+        Taso1.setBorderPainted(false);
+        Taso1.setContentAreaFilled(false);
+        Taso1.setFocusCycleRoot(true);
+        Taso1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                Taso1ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 43, -1, -1));
+        jPanel1.add(Taso1, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 43, -1, -1));
 
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/BackgroundImages/PanosBar.png"))); // NOI18N
         jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 43, -1, -1));
@@ -245,16 +245,16 @@ public final class Game1 extends javax.swing.JFrame {
         jTextField2.setOpaque(false);
         jPanel1.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 43, 54, 25));
 
-        jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/BackgroundImages/Panos+1.png"))); // NOI18N
-        jButton4.setBorder(null);
-        jButton4.setBorderPainted(false);
-        jButton4.setContentAreaFilled(false);
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
+        Taso2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/BackgroundImages/Panos+1.png"))); // NOI18N
+        Taso2.setBorder(null);
+        Taso2.setBorderPainted(false);
+        Taso2.setContentAreaFilled(false);
+        Taso2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
+                Taso2ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 43, -1, -1));
+        jPanel1.add(Taso2, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 43, -1, -1));
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
@@ -345,27 +345,27 @@ public final class Game1 extends javax.swing.JFrame {
         jLabel26.setText("5");
         jPanel1.add(jLabel26, new org.netbeans.lib.awtextra.AbsoluteConstraints(353, 21, 30, 13));
 
-        jButton7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/BackgroundImages/Panos-1.png"))); // NOI18N
-        jButton7.setBorder(null);
-        jButton7.setBorderPainted(false);
-        jButton7.setContentAreaFilled(false);
-        jButton7.addActionListener(new java.awt.event.ActionListener() {
+        Auto1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/BackgroundImages/Panos-1.png"))); // NOI18N
+        Auto1.setBorder(null);
+        Auto1.setBorderPainted(false);
+        Auto1.setContentAreaFilled(false);
+        Auto1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton7ActionPerformed(evt);
+                Auto1ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 15, 25, 25));
+        jPanel1.add(Auto1, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 15, 25, 25));
 
-        jButton8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/BackgroundImages/Panos+1.png"))); // NOI18N
-        jButton8.setBorder(null);
-        jButton8.setBorderPainted(false);
-        jButton8.setContentAreaFilled(false);
-        jButton8.addActionListener(new java.awt.event.ActionListener() {
+        auto2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/BackgroundImages/Panos+1.png"))); // NOI18N
+        auto2.setBorder(null);
+        auto2.setBorderPainted(false);
+        auto2.setContentAreaFilled(false);
+        auto2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton8ActionPerformed(evt);
+                auto2ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton8, new org.netbeans.lib.awtextra.AbsoluteConstraints(391, 15, 25, 25));
+        jPanel1.add(auto2, new org.netbeans.lib.awtextra.AbsoluteConstraints(391, 15, 25, 25));
 
         jLabel34.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
         jLabel34.setForeground(new java.awt.Color(255, 255, 255));
@@ -725,7 +725,7 @@ public final class Game1 extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void Panos2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Panos2ActionPerformed
         // TODO add your handling code here:
 
         panos = panos + 1;
@@ -738,9 +738,9 @@ public final class Game1 extends javax.swing.JFrame {
         lopullinenPanos2 = lopullinenPanos * taso;
 
         jTextField4.setText(Double.toString(lopullinenPanos2) + "0 €");
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_Panos2ActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void Panos1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Panos1ActionPerformed
         // TODO add your handling code here:
         panos = panos - 1;
         if (panos == 0) {
@@ -752,9 +752,9 @@ public final class Game1 extends javax.swing.JFrame {
         lopullinenPanos2 = lopullinenPanos * taso;
 
         jTextField4.setText(Double.toString(lopullinenPanos2) + "0 €");
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_Panos1ActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    private void Taso1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Taso1ActionPerformed
         // TODO add your handling code here:
 
         taso = taso - 1;
@@ -809,9 +809,9 @@ public final class Game1 extends javax.swing.JFrame {
         lopullinenPanos2 = lopullinenPanos * taso;
 
         jTextField4.setText(Double.toString(lopullinenPanos2) + "0 €");
-    }//GEN-LAST:event_jButton3ActionPerformed
+    }//GEN-LAST:event_Taso1ActionPerformed
 
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+    private void Taso2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Taso2ActionPerformed
         // TODO add your handling code here:
 
         taso = taso + 1;
@@ -856,7 +856,7 @@ public final class Game1 extends javax.swing.JFrame {
         lopullinenPanos2 = lopullinenPanos * taso;
 
         jTextField4.setText(Double.toString(lopullinenPanos2) + "0 €");
-    }//GEN-LAST:event_jButton4ActionPerformed
+    }//GEN-LAST:event_Taso2ActionPerformed
 
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
@@ -871,6 +871,7 @@ public final class Game1 extends javax.swing.JFrame {
         // TODO add your handling code here:
 
         kassa = Double.parseDouble(KassaField.getText());
+
         VoittoField.setText("0.0");
         jTextField3.setVisible(false);
         jLabel7.setVisible(false);
@@ -884,6 +885,8 @@ public final class Game1 extends javax.swing.JFrame {
         laskuri2 = laskuri;
         laskuri3 = laskuri2;
         if (kassa > 0 && lopullinenPanos2 <= kassa) {
+            loppuKassa = kassa - lopullinenPanos2;
+            KassaField.setText(Double.toString(loppuKassa));
             PlayButton.setEnabled(false);
             num1 = NumeroidenArvonta.num1();
             num2 = NumeroidenArvonta.num2();
@@ -898,23 +901,9 @@ public final class Game1 extends javax.swing.JFrame {
             ajastinjuttu2();
             ajastinjuttu3();
 
-            if (voitto == 0) {
-                loppuKassa = kassa - lopullinenPanos2;
-                KassaField.setText(Double.toString(loppuKassa));
-            } else {
-                loppuKassa = (kassa - lopullinenPanos2) + voitto;
-                KassaField.setText(Double.toString(loppuKassa));
-            }
-
         } else {
             jTextField3.setVisible(true);
             jTextField3.setText("Ei tarpeeksi rahaa");
-        }
-        DBBank.getGameBank(loppuKassa);
-        try {
-            DBBank.updateBank(loppuKassa);
-        } catch (SQLException ex) {
-            Logger.getLogger(Game1.class.getName()).log(Level.SEVERE, null, ex);
         }
 
     }//GEN-LAST:event_PlayButtonActionPerformed
@@ -938,6 +927,18 @@ public final class Game1 extends javax.swing.JFrame {
 
             voitto = VoitonJako.voitto(taso1Voitto, taso2Voitto, taso3Voitto, taso4Voitto, taso5Voitto, taso, jackPot);
             VoittoField.setText(Double.toString(voitto));
+            if (voitto > 0) {
+                loppuKassa = loppuKassa + voitto;
+
+            }
+            DBBank.getGameBank(loppuKassa);
+            try {
+                DBBank.updateBank(loppuKassa);
+            } catch (SQLException ex) {
+                Logger.getLogger(Game1.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            KassaField.setText(Double.toString(loppuKassa));
+
         } else if (taso == 2) {
             taso1Voitto = VoitonJako.Taso1(num2, num5, num8);
             taso2Voitto = VoitonJako.Taso2(num3, num6, num9);
@@ -954,6 +955,17 @@ public final class Game1 extends javax.swing.JFrame {
 
             voitto = VoitonJako.voitto(taso1Voitto, taso2Voitto, taso3Voitto, taso4Voitto, taso5Voitto, taso, jackPot);
             VoittoField.setText(Double.toString(voitto));
+            if (voitto > 0) {
+                loppuKassa = loppuKassa + voitto;
+
+            }
+            DBBank.getGameBank(loppuKassa);
+            try {
+                DBBank.updateBank(loppuKassa);
+            } catch (SQLException ex) {
+                Logger.getLogger(Game1.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            KassaField.setText(Double.toString(loppuKassa));
         } else if (taso == 3) {
             taso1Voitto = VoitonJako.Taso1(num2, num5, num8);
             taso2Voitto = VoitonJako.Taso2(num3, num6, num9);
@@ -975,6 +987,17 @@ public final class Game1 extends javax.swing.JFrame {
 
             voitto = VoitonJako.voitto(taso1Voitto, taso2Voitto, taso3Voitto, taso4Voitto, taso5Voitto, taso, jackPot);
             VoittoField.setText(Double.toString(voitto));
+            if (voitto > 0) {
+                loppuKassa = loppuKassa + voitto;
+
+            }
+            DBBank.getGameBank(loppuKassa);
+            try {
+                DBBank.updateBank(loppuKassa);
+            } catch (SQLException ex) {
+                Logger.getLogger(Game1.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            KassaField.setText(Double.toString(loppuKassa));
         } else if (taso == 4) {
 
             taso1Voitto = VoitonJako.Taso1(num2, num5, num8);
@@ -1002,6 +1025,17 @@ public final class Game1 extends javax.swing.JFrame {
 
             voitto = VoitonJako.voitto(taso1Voitto, taso2Voitto, taso3Voitto, taso4Voitto, taso5Voitto, taso, jackPot);
             VoittoField.setText(Double.toString(voitto));
+            if (voitto > 0) {
+                loppuKassa = loppuKassa + voitto;
+
+            }
+            DBBank.getGameBank(loppuKassa);
+            try {
+                DBBank.updateBank(loppuKassa);
+            } catch (SQLException ex) {
+                Logger.getLogger(Game1.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            KassaField.setText(Double.toString(loppuKassa));
         } else if (taso == 5) {
 
             taso1Voitto = VoitonJako.Taso1(num2, num5, num8);
@@ -1039,6 +1073,17 @@ public final class Game1 extends javax.swing.JFrame {
 
             voitto = VoitonJako.voitto(taso1Voitto, taso2Voitto, taso3Voitto, taso4Voitto, taso5Voitto, taso, jackPot);
             VoittoField.setText(Double.toString(voitto));
+            if (voitto > 0) {
+                loppuKassa = loppuKassa + voitto;
+
+            }
+            DBBank.getGameBank(loppuKassa);
+            try {
+                DBBank.updateBank(loppuKassa);
+            } catch (SQLException ex) {
+                Logger.getLogger(Game1.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            KassaField.setText(Double.toString(loppuKassa));
 
         }
     }
@@ -1141,6 +1186,9 @@ public final class Game1 extends javax.swing.JFrame {
                 Num9.setText(Integer.toString(luku9));
                 luku9++;
                 if (laskuri3 == 50) {
+                    if(laskuri4 == auto){
+                        jToggleButton3.doClick();
+                    }
                     ajastin3.stop();
                     Num7.setText(Integer.toString(num7));
                     Num8.setText(Integer.toString(num8));
@@ -1176,19 +1224,15 @@ public final class Game1 extends javax.swing.JFrame {
             public void actionPerformed(ActionEvent e) {
                 paivitanumero5();
                 ajastinjuttu4();
-                
-                Auto2--;
-                jLabel26.setText(Integer.toString(Auto2));
+
                 if (laskuri4 == auto) {
                     Auto2 = 0;
-
-                    jToggleButton3.doClick();
                     ajastin4.stop();
 
                 }
             }
         });
-        ajastin4.setInitialDelay(1000);
+        ajastin4.setInitialDelay(0);
         ajastin4.start();
 
     }
@@ -1214,7 +1258,8 @@ public final class Game1 extends javax.swing.JFrame {
         laskuri3 = laskuri2;
         System.out.println("Ajastin go");
         kassa = Double.parseDouble(KassaField.getText());
-        VoittoField.setText("0");
+
+        VoittoField.setText("0.0");
         jTextField3.setVisible(false);
         jLabel7.setVisible(false);
         jLabel8.setVisible(false);
@@ -1224,6 +1269,11 @@ public final class Game1 extends javax.swing.JFrame {
         jLabel25.setVisible(false);
 
         if (kassa > 0 && lopullinenPanos2 <= kassa) {
+            Auto2--;
+            jLabel26.setText(Integer.toString(Auto2));
+
+            loppuKassa = kassa - lopullinenPanos2;
+            KassaField.setText(Double.toString(loppuKassa));
 
             num1 = NumeroidenArvonta.num1();
             num2 = NumeroidenArvonta.num2();
@@ -1234,34 +1284,26 @@ public final class Game1 extends javax.swing.JFrame {
             num7 = NumeroidenArvonta.num7();
             num8 = NumeroidenArvonta.num8();
             num9 = NumeroidenArvonta.num9();
+
             ajastinjuttu();
             ajastinjuttu2();
             ajastinjuttu3();
 
-            if (voitto == 0) {
-                loppuKassa = kassa - lopullinenPanos2;
-                KassaField.setText(Double.toString(loppuKassa));
-            } else {
-                loppuKassa = (kassa - lopullinenPanos2) + voitto;
-                KassaField.setText(Double.toString(loppuKassa));
-            }
-
         } else {
-
+            jToggleButton3.doClick();
             jTextField3.setVisible(true);
             jTextField3.setText("Ei tarpeeksi rahaa");
+            Auto2 = 5;
+            Auto = 1;
+            auto = 5;
+            jLabel26.setText(Integer.toString(Auto2));
 
-        }
-        DBBank.getGameBank(loppuKassa);
-        try {
-            DBBank.updateBank(loppuKassa);
-        } catch (SQLException ex) {
-            Logger.getLogger(Game1.class.getName()).log(Level.SEVERE, null, ex);
         }
 
     }
 
     private void paivitanumero5() {
+
         laskuri4++;
 
     }
@@ -1279,7 +1321,7 @@ public final class Game1 extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_KassaFieldActionPerformed
 
-    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
+    private void Auto1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Auto1ActionPerformed
         // TODO add your handling code here:
         Auto = Auto - 1;
         if (Auto <= 0) {
@@ -1289,9 +1331,9 @@ public final class Game1 extends javax.swing.JFrame {
         Auto2 = auto;
         System.out.println(auto + " = auto");
         jLabel26.setText(Integer.toString(auto));
-    }//GEN-LAST:event_jButton7ActionPerformed
+    }//GEN-LAST:event_Auto1ActionPerformed
 
-    private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
+    private void auto2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_auto2ActionPerformed
         // TODO add your handling code here:
         Auto = Auto + 1;
         if (Auto == 6) {
@@ -1302,21 +1344,21 @@ public final class Game1 extends javax.swing.JFrame {
         Auto2 = auto;
         System.out.println(auto + " = auto");
         jLabel26.setText(Integer.toString(auto));
-    }//GEN-LAST:event_jButton8ActionPerformed
+    }//GEN-LAST:event_auto2ActionPerformed
 
     private void jToggleButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton2ActionPerformed
         // TODO add your handling code here:
         if (jToggleButton2.isSelected()) {
             jLabel35.setVisible(true);
-            jButton7.setVisible(true);
-            jButton8.setVisible(true);
+            Auto1.setVisible(true);
+            auto2.setVisible(true);
             jToggleButton3.setVisible(true);
             jLabel26.setVisible(true);
 
         } else {
             jLabel35.setVisible(false);
-            jButton7.setVisible(false);
-            jButton8.setVisible(false);
+            Auto1.setVisible(false);
+            auto2.setVisible(false);
             jToggleButton3.setVisible(false);
             jLabel26.setVisible(false);
 
@@ -1328,18 +1370,32 @@ public final class Game1 extends javax.swing.JFrame {
         // TODO add your handling code here:
         if (jToggleButton3.isSelected()) {
             PlayButton.setEnabled(false);
+            Panos1.setEnabled(false);
+            Panos2.setEnabled(false);
+            Taso1.setEnabled(false);
+            Taso2.setEnabled(false);
+            Auto1.setEnabled(false);
+            auto2.setEnabled(false);
             ajastinjuttu5();
             laskuri4 = 0;
-            
+
             jToggleButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/BackgroundImages/Game1autoStopButton.png")));
         } else {
+            Auto2 = 5;
             ajastin4.stop();
-            jLabel26.setText("0");
+            jLabel26.setText(Integer.toString(Auto2));
             jToggleButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/BackgroundImages/Game1autoStartButton.png")));
             PlayButton.setEnabled(true);
+            Panos1.setEnabled(true);
+            Panos2.setEnabled(true);
+            Taso1.setEnabled(true);
+            Taso2.setEnabled(true);
+            Auto1.setEnabled(true);
+            auto2.setEnabled(true);
             laskuri4 = 0;
-            auto = 0;
-            Auto2 = 0;
+            Auto = 1;
+            auto = 5;
+
         }
     }//GEN-LAST:event_jToggleButton3ActionPerformed
 
@@ -1379,6 +1435,7 @@ public final class Game1 extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton Auto1;
     private javax.swing.JTextField KassaField;
     private javax.swing.JLabel KassaLabel;
     private javax.swing.JLabel Num1;
@@ -1390,16 +1447,15 @@ public final class Game1 extends javax.swing.JFrame {
     private javax.swing.JLabel Num7;
     private javax.swing.JLabel Num8;
     private javax.swing.JLabel Num9;
+    private javax.swing.JButton Panos1;
+    private javax.swing.JButton Panos2;
     private javax.swing.JButton PlayButton;
+    private javax.swing.JButton Taso1;
+    private javax.swing.JButton Taso2;
     private javax.swing.JTextField VoittoField;
     private javax.swing.JLabel VoittoLabel;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
+    private javax.swing.JButton auto2;
     private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton7;
-    private javax.swing.JButton jButton8;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
