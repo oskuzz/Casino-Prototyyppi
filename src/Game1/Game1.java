@@ -888,6 +888,13 @@ public final class Game1 extends javax.swing.JFrame {
             loppuKassa = kassa - lopullinenPanos2;
             KassaField.setText(Double.toString(loppuKassa));
             PlayButton.setEnabled(false);
+            if (jToggleButton2.isSelected()) {
+                jToggleButton2.doClick();
+            }
+            Panos1.setEnabled(false);
+            Panos2.setEnabled(false);
+            Taso1.setEnabled(false);
+            Taso2.setEnabled(false);
             num1 = NumeroidenArvonta.num1();
             num2 = NumeroidenArvonta.num2();
             num3 = NumeroidenArvonta.num3();
@@ -1186,7 +1193,7 @@ public final class Game1 extends javax.swing.JFrame {
                 Num9.setText(Integer.toString(luku9));
                 luku9++;
                 if (laskuri3 == 50) {
-                    if(laskuri4 == auto){
+                    if (laskuri4 == auto) {
                         jToggleButton3.doClick();
                     }
                     ajastin3.stop();
@@ -1199,6 +1206,10 @@ public final class Game1 extends javax.swing.JFrame {
                     Tasot();
                     if (laskuri3 == 50 && laskuri4 == auto) {
                         PlayButton.setEnabled(true);
+                        Panos1.setEnabled(true);
+                        Panos2.setEnabled(true);
+                        Taso1.setEnabled(true);
+                        Taso2.setEnabled(true);
                     } else {
                         PlayButton.setEnabled(false);
 
@@ -1207,6 +1218,10 @@ public final class Game1 extends javax.swing.JFrame {
                         PlayButton.setEnabled(false);
                     } else {
                         PlayButton.setEnabled(true);
+                        Panos1.setEnabled(true);
+                        Panos2.setEnabled(true);
+                        Taso1.setEnabled(true);
+                        Taso2.setEnabled(true);
                     }
 
                 }
