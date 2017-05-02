@@ -40,11 +40,6 @@ public class Game2 extends javax.swing.JFrame {
     private int laskuri3 = 0;
     private int laskuri4 = 0;
     private int laskuri5 = 0;
-    private int number1 = 0;
-    private int number2 = 0;
-    private int number3 = 0;
-    private int number4 = 0;
-    private int number5 = 0;
     private int num1;
     private int num2;
     private int num3;
@@ -60,6 +55,21 @@ public class Game2 extends javax.swing.JFrame {
     private int num13;
     private int num14;
     private int num15;
+    private int luku = 6;
+    private int luku2 = 5;
+    private int luku3 = 4;
+    private int luku4 = 3;
+    private int luku5 = 2;
+    private int luku6 = 1;
+    private int luku7 = 9;
+    private int luku8 = 8;
+    private int luku9 = 7;
+    private int luku10 = 6;
+    private int luku11 = 5;
+    private int luku12 = 4;
+    private int luku13 = 3;
+    private int luku14 = 2;
+    private int luku15 = 1;
 
     /**
      * Creates new form Game1
@@ -604,11 +614,6 @@ public class Game2 extends javax.swing.JFrame {
         laskuri3 = laskuri2;
         laskuri4 = laskuri2;
         laskuri5 = laskuri2;
-        number1 = Timer2.num1();
-        number1 = Timer2.num1();
-        number3 = Timer2.num1();
-        number4 = Timer2.num1();
-        number5 = Timer2.num1();
         if (kassa > 0 && lopullinenPanos2 <= kassa) {
             ajastinjuttu();
             ajastinjuttu2();
@@ -685,21 +690,21 @@ public class Game2 extends javax.swing.JFrame {
             public void actionPerformed(ActionEvent e) {
                 paivitanumero();
 
-                if (number1 == 10) {
-                    number1 = 1;
+                if (luku == 10) {
+                    luku = 1;
                 }
-                Num1.setText(Integer.toString(number1));
-                number1++;
-                if (number1 == 10) {
-                    number1 = 1;
+                Num1.setText(Integer.toString(luku));
+                luku++;
+                if (luku2 == 10) {
+                    luku2 = 1;
                 }
-                Num2.setText(Integer.toString(number1));
-                number1++;
-                if (number1 == 10) {
-                    number1 = 1;
+                Num2.setText(Integer.toString(luku2));
+                luku2++;
+                if (luku3 == 10) {
+                    luku3 = 1;
                 }
-                Num3.setText(Integer.toString(number1));
-                number1++;
+                Num3.setText(Integer.toString(luku3));
+                luku3++;
                 if (laskuri == 30) {
                     ajastin.stop();
                     Num1.setText(Integer.toString(num1));
@@ -720,21 +725,21 @@ public class Game2 extends javax.swing.JFrame {
             public void actionPerformed(ActionEvent e) {
                 paivitanumero2();
 
-                if (number2 == 10) {
-                    number2 = 1;
+                if (luku4 == 10) {
+                    luku4 = 1;
                 }
-                Num4.setText(Integer.toString(number2));
-                number2++;
-                if (number2 == 10) {
-                    number2 = 1;
+                Num4.setText(Integer.toString(luku4));
+                luku4++;
+                if (luku5 == 10) {
+                    luku5 = 1;
                 }
-                Num5.setText(Integer.toString(number2));
-                number2++;
-                if (number2 == 10) {
-                    number2 = 1;
+                Num5.setText(Integer.toString(luku5));
+                luku5++;
+                if (luku6 == 10) {
+                    luku6 = 1;
                 }
-                Num6.setText(Integer.toString(number2));
-                number2++;
+                Num6.setText(Integer.toString(luku6));
+                luku6++;
                 if (laskuri2 == 40) {
                     ajastin2.stop();
                     Num4.setText(Integer.toString(num4));
@@ -756,21 +761,21 @@ public class Game2 extends javax.swing.JFrame {
             public void actionPerformed(ActionEvent e) {
                 paivitanumero3();
 
-                if (number3 == 10) {
-                    number3 = 1;
+                if (luku7 == 10) {
+                    luku7 = 1;
                 }
-                Num7.setText(Integer.toString(number3));
-                number3++;
-                if (number3 == 10) {
-                    number3 = 1;
+                Num7.setText(Integer.toString(luku7));
+                luku7++;
+                if (luku8 == 10) {
+                    luku8 = 1;
                 }
-                Num8.setText(Integer.toString(number3));
-                number3++;
-                if (number3 == 10) {
-                    number3 = 1;
+                Num8.setText(Integer.toString(luku8));
+                luku8++;
+                if (luku9 == 10) {
+                    luku9 = 1;
                 }
-                Num9.setText(Integer.toString(number3));
-                number3++;
+                Num9.setText(Integer.toString(luku9));
+                luku9++;
                 if (laskuri3 == 50) {
                     ajastin3.stop();
                     Num7.setText(Integer.toString(num7));
@@ -792,21 +797,21 @@ public class Game2 extends javax.swing.JFrame {
             public void actionPerformed(ActionEvent e) {
                 paivitanumero4();
 
-                if (number4 == 10) {
-                    number4 = 1;
+                if (luku10 == 10) {
+                    luku10 = 1;
                 }
-                Num10.setText(Integer.toString(number4));
-                number4++;
-                if (number4 == 10) {
-                    number4 = 1;
+                Num10.setText(Integer.toString(luku10));
+                luku10++;
+                if (luku11 == 10) {
+                    luku11 = 1;
                 }
-                Num11.setText(Integer.toString(number4));
-                number4++;
-                if (number4 == 10) {
-                    number4 = 1;
+                Num11.setText(Integer.toString(luku11));
+                luku11++;
+                if (luku12 == 10) {
+                    luku12 = 1;
                 }
-                Num12.setText(Integer.toString(number4));
-                number4++;
+                Num12.setText(Integer.toString(luku12));
+                luku12++;
                 if (laskuri4 == 60) {
                     ajastin4.stop();
                     Num10.setText(Integer.toString(num10));
@@ -828,21 +833,21 @@ public class Game2 extends javax.swing.JFrame {
             public void actionPerformed(ActionEvent e) {
                 paivitanumero5();
 
-                if (number5 == 10) {
-                    number5 = 1;
+                if (luku13 == 10) {
+                    luku13 = 1;
                 }
-                Num13.setText(Integer.toString(number5));
-                number5++;
-                if (number5 == 10) {
-                    number5 = 1;
+                Num13.setText(Integer.toString(luku13));
+                luku13++;
+                if (luku14 == 10) {
+                    luku14 = 1;
                 }
-                Num14.setText(Integer.toString(number5));
-                number5++;
-                if (number5 == 10) {
-                    number5 = 1;
+                Num14.setText(Integer.toString(luku14));
+                luku14++;
+                if (luku15 == 10) {
+                    luku15 = 1;
                 }
-                Num15.setText(Integer.toString(number5));
-                number5++;
+                Num15.setText(Integer.toString(luku15));
+                luku15++;
                 if (laskuri5 == 70) {
                     ajastin5.stop();
                     Num13.setText(Integer.toString(num13));

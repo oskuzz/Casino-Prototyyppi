@@ -135,7 +135,7 @@ public class timer extends javax.swing.JFrame {
         laskuri2 = laskuri;
         laskuri3 = laskuri2;
 
-        ajastin = new javax.swing.Timer(85, new ActionListener() {
+        ajastin = new javax.swing.Timer(80, new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 paivitanumero();
@@ -162,7 +162,7 @@ public class timer extends javax.swing.JFrame {
 
         ajastin.start();
 
-        ajastin2 = new javax.swing.Timer(85, new ActionListener() {
+        ajastin2 = new javax.swing.Timer(70, new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 paivitanumero2();
@@ -189,7 +189,7 @@ public class timer extends javax.swing.JFrame {
 
         ajastin2.start();
 
-        ajastin3 = new javax.swing.Timer(85, new ActionListener() {
+        ajastin3 = new javax.swing.Timer(60, new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 paivitanumero3();
@@ -232,24 +232,21 @@ public class timer extends javax.swing.JFrame {
 
     private void paivitanumero() {
         laskuri++;
-        System.out.println(laskuri);
-        if (laskuri == 30) {
+        if (laskuri == 300) {
             ajastin.stop();
         }
     }
 
     private void paivitanumero2() {
         laskuri2++;
-        System.out.println(laskuri2);
-        if (laskuri2 == 40) {
+        if (laskuri2 == 400) {
             ajastin2.stop();
         }
     }
 
     private void paivitanumero3() {
         laskuri3++;
-        System.out.println(laskuri3);
-        if (laskuri3 == 50) {
+        if (laskuri3 == 500) {
             ajastin3.stop();
         }
     }

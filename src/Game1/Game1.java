@@ -7,7 +7,6 @@ package Game1;
 
 import Casino.CasinoFirstPage;
 import DB.DBBank;
-import Timer_Test.Timer2;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.sql.SQLException;
@@ -34,12 +33,10 @@ public final class Game1 extends javax.swing.JFrame {
     private javax.swing.Timer ajastin2;
     private javax.swing.Timer ajastin3;
     private javax.swing.Timer ajastin4;
-    private javax.swing.Timer ajastin5;
     private int laskuri = 0;
     private int laskuri2 = 0;
     private int laskuri3 = 0;
     private int laskuri4 = 0;
-    private int laskuri5 = 0;
     private int num1;
     private int num2;
     private int num3;
@@ -80,8 +77,6 @@ public final class Game1 extends javax.swing.JFrame {
         jButton8.setVisible(false);
         jToggleButton3.setVisible(false);
         jLabel26.setVisible(false);
-        jLabel22.setVisible(false);
-        jLabel27.setVisible(false);
         jLabel35.setVisible(false);
 
         Kassa = kassa;
@@ -126,12 +121,10 @@ public final class Game1 extends javax.swing.JFrame {
         jLabel6 = new javax.swing.JLabel();
         jTextField4 = new javax.swing.JTextField();
         jLabel10 = new javax.swing.JLabel();
-        jLabel22 = new javax.swing.JLabel();
         jLabel23 = new javax.swing.JLabel();
         jLabel26 = new javax.swing.JLabel();
         jButton7 = new javax.swing.JButton();
         jButton8 = new javax.swing.JButton();
-        jLabel27 = new javax.swing.JLabel();
         jLabel34 = new javax.swing.JLabel();
         jToggleButton2 = new javax.swing.JToggleButton();
         jLabel35 = new javax.swing.JLabel();
@@ -342,11 +335,6 @@ public final class Game1 extends javax.swing.JFrame {
         jLabel10.setText("LopullinenPanos:");
         jPanel1.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 59, -1, -1));
 
-        jLabel22.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
-        jLabel22.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel22.setText("Pyöräytykset");
-        jPanel1.add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(289, 43, -1, -1));
-
         jLabel23.setForeground(new java.awt.Color(255, 255, 255));
         jLabel23.setText("€");
         jPanel1.add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(693, 49, 10, 10));
@@ -378,12 +366,6 @@ public final class Game1 extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jButton8, new org.netbeans.lib.awtextra.AbsoluteConstraints(391, 15, 25, 25));
-
-        jLabel27.setFont(new java.awt.Font("Tahoma", 0, 15)); // NOI18N
-        jLabel27.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel27.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel27.setText("0");
-        jPanel1.add(jLabel27, new org.netbeans.lib.awtextra.AbsoluteConstraints(379, 43, 20, 15));
 
         jLabel34.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
         jLabel34.setForeground(new java.awt.Color(255, 255, 255));
@@ -889,7 +871,7 @@ public final class Game1 extends javax.swing.JFrame {
         // TODO add your handling code here:
 
         kassa = Double.parseDouble(KassaField.getText());
-        VoittoField.setText("0");
+        VoittoField.setText("0.0");
         jTextField3.setVisible(false);
         jLabel7.setVisible(false);
         jLabel8.setVisible(false);
@@ -1062,7 +1044,7 @@ public final class Game1 extends javax.swing.JFrame {
     }
 
     public void ajastinjuttu() {
-        ajastin = new javax.swing.Timer(85, new ActionListener() {
+        ajastin = new javax.swing.Timer(70, new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 paivitanumero();
@@ -1099,7 +1081,7 @@ public final class Game1 extends javax.swing.JFrame {
     }
 
     public void ajastinjuttu2() {
-        ajastin2 = new javax.swing.Timer(85, new ActionListener() {
+        ajastin2 = new javax.swing.Timer(70, new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 paivitanumero2();
@@ -1138,7 +1120,7 @@ public final class Game1 extends javax.swing.JFrame {
     }
 
     public void ajastinjuttu3() {
-        ajastin3 = new javax.swing.Timer(85, new ActionListener() {
+        ajastin3 = new javax.swing.Timer(70, new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 paivitanumero3();
@@ -1167,7 +1149,7 @@ public final class Game1 extends javax.swing.JFrame {
                     System.out.println(num8);
                     System.out.println(num9);
                     Tasot();
-                    if (laskuri3 == 50 && laskuri5 == auto) {
+                    if (laskuri3 == 50 && laskuri4 == auto) {
                         PlayButton.setEnabled(true);
                     } else {
                         PlayButton.setEnabled(false);
@@ -1189,24 +1171,25 @@ public final class Game1 extends javax.swing.JFrame {
 
     public void ajastinjuttu5() {
 
-        ajastin5 = new javax.swing.Timer(5000, new ActionListener() {
+        ajastin4 = new javax.swing.Timer(5000, new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 paivitanumero5();
                 ajastinjuttu4();
-                Auto2++;
-                jLabel27.setText(Integer.toString(Auto2));
-                if (laskuri5 == auto) {
+                
+                Auto2--;
+                jLabel26.setText(Integer.toString(Auto2));
+                if (laskuri4 == auto) {
                     Auto2 = 0;
 
                     jToggleButton3.doClick();
-                    ajastin5.stop();
+                    ajastin4.stop();
 
                 }
             }
         });
-        ajastin5.setInitialDelay(1000);
-        ajastin5.start();
+        ajastin4.setInitialDelay(1000);
+        ajastin4.start();
 
     }
 
@@ -1240,7 +1223,6 @@ public final class Game1 extends javax.swing.JFrame {
         jLabel24.setVisible(false);
         jLabel25.setVisible(false);
 
-        
         if (kassa > 0 && lopullinenPanos2 <= kassa) {
 
             num1 = NumeroidenArvonta.num1();
@@ -1280,7 +1262,7 @@ public final class Game1 extends javax.swing.JFrame {
     }
 
     private void paivitanumero5() {
-        laskuri5++;
+        laskuri4++;
 
     }
 
@@ -1304,6 +1286,7 @@ public final class Game1 extends javax.swing.JFrame {
             Auto = 1;
         }
         auto = AutoGame.Auto(Auto);
+        Auto2 = auto;
         System.out.println(auto + " = auto");
         jLabel26.setText(Integer.toString(auto));
     }//GEN-LAST:event_jButton7ActionPerformed
@@ -1316,6 +1299,7 @@ public final class Game1 extends javax.swing.JFrame {
         }
 
         auto = AutoGame.Auto(Auto);
+        Auto2 = auto;
         System.out.println(auto + " = auto");
         jLabel26.setText(Integer.toString(auto));
     }//GEN-LAST:event_jButton8ActionPerformed
@@ -1328,16 +1312,14 @@ public final class Game1 extends javax.swing.JFrame {
             jButton8.setVisible(true);
             jToggleButton3.setVisible(true);
             jLabel26.setVisible(true);
-            jLabel22.setVisible(true);
-            jLabel27.setVisible(true);
+
         } else {
             jLabel35.setVisible(false);
             jButton7.setVisible(false);
             jButton8.setVisible(false);
             jToggleButton3.setVisible(false);
             jLabel26.setVisible(false);
-            jLabel22.setVisible(false);
-            jLabel27.setVisible(false);
+
         }
 
     }//GEN-LAST:event_jToggleButton2ActionPerformed
@@ -1347,15 +1329,17 @@ public final class Game1 extends javax.swing.JFrame {
         if (jToggleButton3.isSelected()) {
             PlayButton.setEnabled(false);
             ajastinjuttu5();
-            laskuri5 = 0;
-            Auto2 = 0;
-            jLabel27.setText("0");
+            laskuri4 = 0;
+            
             jToggleButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/BackgroundImages/Game1autoStopButton.png")));
-        }else{
-            ajastin5.stop();
+        } else {
+            ajastin4.stop();
+            jLabel26.setText("0");
             jToggleButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/BackgroundImages/Game1autoStartButton.png")));
             PlayButton.setEnabled(true);
-            laskuri5 = 0;
+            laskuri4 = 0;
+            auto = 0;
+            Auto2 = 0;
         }
     }//GEN-LAST:event_jToggleButton3ActionPerformed
 
@@ -1430,12 +1414,10 @@ public final class Game1 extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel21;
-    private javax.swing.JLabel jLabel22;
     private javax.swing.JLabel jLabel23;
     private javax.swing.JLabel jLabel24;
     private javax.swing.JLabel jLabel25;
     private javax.swing.JLabel jLabel26;
-    private javax.swing.JLabel jLabel27;
     private javax.swing.JLabel jLabel28;
     private javax.swing.JLabel jLabel29;
     private javax.swing.JLabel jLabel3;
