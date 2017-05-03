@@ -20,17 +20,18 @@ public final class CasinoFirstPage extends javax.swing.JFrame {
 
     static double kassa;
     double Kassa;
-    String uname;
-    static String uName;
+    String uName;
+    String eName;
+    String sName;
 
     public CasinoFirstPage() {
 
         initComponents();
         jPanel2.setVisible(false);
+        
         Kassa = kassa;
         DBtoKassa();
-        uName = uname;
-        DBtoProfile();
+        System.out.println(uName);
 
     }
 
@@ -45,11 +46,17 @@ public final class CasinoFirstPage extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jToggleButton1 = new javax.swing.JToggleButton();
-        jTextField2 = new javax.swing.JTextField();
         jTextField1 = new javax.swing.JTextField();
         jButton2 = new javax.swing.JButton();
+        jLabel4 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
         try {
@@ -73,6 +80,7 @@ public final class CasinoFirstPage extends javax.swing.JFrame {
         jPanel1.setOpaque(false);
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jToggleButton1.setForeground(new java.awt.Color(255, 255, 255));
         jToggleButton1.setBorder(null);
         jToggleButton1.setBorderPainted(false);
         jToggleButton1.setContentAreaFilled(false);
@@ -82,11 +90,6 @@ public final class CasinoFirstPage extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jToggleButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 15, 250, 20));
-
-        jTextField2.setBackground(new java.awt.Color(72, 74, 82));
-        jTextField2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
-        jTextField2.setOpaque(false);
-        jPanel1.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 15, 250, 20));
 
         jTextField1.setEditable(false);
         jTextField1.setBackground(new java.awt.Color(72, 74, 82));
@@ -114,6 +117,12 @@ public final class CasinoFirstPage extends javax.swing.JFrame {
         });
         jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1250, 8, -1, -1));
 
+        jLabel4.setFont(new java.awt.Font("Tahoma", 0, 15)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel4.setText("Profile");
+        jLabel4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 15, 250, 20));
+
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/BackgroundImages/Bar2.png"))); // NOI18N
         jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
@@ -130,6 +139,36 @@ public final class CasinoFirstPage extends javax.swing.JFrame {
             }
         });
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel5.setFont(new java.awt.Font("Tahoma", 0, 15)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
+        jPanel2.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 50, 250, 20));
+
+        jLabel8.setFont(new java.awt.Font("Tahoma", 0, 15)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel8.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
+        jPanel2.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 100, 250, 20));
+
+        jLabel9.setFont(new java.awt.Font("Tahoma", 0, 15)); // NOI18N
+        jLabel9.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel9.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
+        jPanel2.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 150, 250, 20));
+
+        jLabel6.setFont(new java.awt.Font("Tahoma", 0, 15)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel6.setText("UserName");
+        jPanel2.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(15, 30, -1, -1));
+
+        jLabel7.setFont(new java.awt.Font("Tahoma", 0, 15)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel7.setText("FirtsName");
+        jPanel2.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(15, 80, -1, -1));
+
+        jLabel10.setFont(new java.awt.Font("Tahoma", 0, 15)); // NOI18N
+        jLabel10.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel10.setText("LastName");
+        jPanel2.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(15, 130, -1, -1));
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/BackgroundImages/CFPProfileFrame.png"))); // NOI18N
         jLabel3.addAncestorListener(new javax.swing.event.AncestorListener() {
@@ -218,18 +257,29 @@ public final class CasinoFirstPage extends javax.swing.JFrame {
 
     }
 
-    public static void Profile(String uname2) {
-        uName = uname2;
+    public static void Profile(String uName, String eName, String sName, double bank) {
         CasinoFirstPage CFP = new CasinoFirstPage();
-        CFP.toProfile(uname2);
-    }
-    public void DBtoProfile(){
-        toProfile(uname);
+        CFP.DBtoProfile(uName, eName, sName, bank);
     }
 
-    public void toProfile(String uname) {
-        
-        jTextField2.setText(uname);
+    public void DBtoProfile(String uname, String ename, String sname, double bank) {
+        uName = uname;
+        eName = ename;
+        sName = sname;
+        toProfile(uname, ename, sname, bank);
+        System.out.println(uName + " Joo");
+        System.out.println(eName + " Joo2");
+        System.out.println(sName + " Joo3");
+        toProfile(uname, ename, sname, bank);
+    }
+
+    public void toProfile(String uname, String ename, String sname, double bank) {
+        uName = uname;
+        eName = ename;
+        sName = sname;
+        jToggleButton1.setText(uname);
+
+        CasinoFirstPage CFP = new CasinoFirstPage();
 
     }
 
@@ -275,6 +325,7 @@ public final class CasinoFirstPage extends javax.swing.JFrame {
     private void jToggleButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton1ActionPerformed
         // TODO add your handling code here:
         if (jToggleButton1.isSelected()) {
+            
             jPanel2.setVisible(true);
         } else {
             jPanel2.setVisible(false);
@@ -314,7 +365,6 @@ public final class CasinoFirstPage extends javax.swing.JFrame {
             public void run() {
                 CasinoFirstPage CFP = new CasinoFirstPage();
                 bankBalance(kassa);
-                Profile(uName);
                 //DBConnections DB = new DBConnections();
                 //String uName = DB.getProfile("");
                 //new CasinoFirstPage().jTextField1.setText("moi");
@@ -329,13 +379,19 @@ public final class CasinoFirstPage extends javax.swing.JFrame {
     private javax.swing.JButton jButton6;
     private javax.swing.JButton jButton7;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
     private javax.swing.JToggleButton jToggleButton1;
     // End of variables declaration//GEN-END:variables
 }

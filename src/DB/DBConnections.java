@@ -53,7 +53,8 @@ public class DBConnections {
         try {
             Statement sta = conn.createStatement();
 
-            sta.executeUpdate("INSERT INTO Login (ID, uNimi, eNimi, sNimi, Salasana) VALUES ('" + id + "',' " + ID + " ',' " + eName + " ',' " + sName + " ', ' " + password + " ');");
+            sta.executeUpdate("INSERT INTO Login (ID, uNimi, eNimi, sNimi, Salasana) VALUES ('" + id + "','" + ID + "','" + eName + "','" + sName + "', '" + password + "');");
+            getProfile();
             System.out.println("Inserted into database");
         } catch (SQLException e) {
             System.out.println(e);
@@ -62,20 +63,21 @@ public class DBConnections {
 
     public String getDatabase(String uName, String Password) throws ClassNotFoundException, SQLException {
 
-        String userName, Salasana;
 
-        String query = "SELECT uNimi, Salasana FROM Login";
+        String query = "SELECT ID, uNimi, Salasana FROM Login";
+
         try {
             Statement sta = conn.createStatement();
             ResultSet rs = sta.executeQuery(query);
             while (rs.next()) {
-                String UserName = rs.getString(1);
-                String password = rs.getString(2);
+                String ID = rs.getString(1);
+                String UserName = rs.getString(2);
+                String password = rs.getString(3);
+                id = Integer.parseInt(ID);
+                
 
-                userName = " " + uName + " ";
-                Salasana = " " + Password + " ";
-
-                if (userName.equals(UserName) && (Salasana.equals(password))) {
+                if (uName.equals(UserName) && (Password.equals(password))) {
+                    getProfile();
                     Login = "Jeah";
                     System.out.println("Jeah");
                     break;
@@ -100,7 +102,7 @@ public class DBConnections {
 
     public String getMoneyBalanse(String uName) throws SQLException {
 
-        String query = "SELECT Kassa FROM Login WHERE uNimi = (' " + uName + " ')";
+        String query = "SELECT Kassa FROM Login WHERE uNimi = ('" + uName + "')";
         Statement sta = null;
         try {
             sta = conn.createStatement();
@@ -112,10 +114,8 @@ public class DBConnections {
             int kassa = rs.getInt(1);
             Kassa = kassa;
             DBBank.bank(uName, Kassa);
-            DBBank.getProfile();
             CasinoFirstPage.bankBalance(kassa);
             new CasinoFirstPage().setVisible(true);
-            //new StartInstructions().setVisible(true);
         }
 
         return "";
@@ -125,23 +125,37 @@ public class DBConnections {
         try {
             Statement sta = con.createStatement();
 
-            sta.executeUpdate("UPDATE Login SET Kassa = ('" + kassa + "') WHERE uNimi = (' " + uName + " ');");
+            sta.executeUpdate("UPDATE Login SET Kassa = ('" + kassa + "') WHERE uNimi = ('" + uName + "');");
             System.out.println("Inserted into database");
         } catch (SQLException e) {
             System.out.println(e);
         }
 
     }
-    
-    public void getID() throws SQLException{
+
+    public void getID() throws SQLException {
         String query = "SELECT ID FROM Login ORDER BY ID DESC";
-        
+
         Statement sta = con.createStatement();
         ResultSet rs = sta.executeQuery(query);
-            while (rs.next()) {
-                String ID = rs.getString(1);
-                id = Integer.parseInt(ID);
-                id++;
-            }
+        while (rs.next()) {
+            String ID = rs.getString(1);
+            id = Integer.parseInt(ID);
+            id++;
+        }
+    }
+
+    public void getProfile() throws SQLException {
+        String query = "SELECT * FROM Login WHERE ID = '" + id + "'";
+        Statement sta = con.createStatement();
+        ResultSet rs = sta.executeQuery(query);
+        while (rs.next()) {
+            String uName = rs.getString(1);
+            String eName = rs.getString(2);
+            String sName = rs.getString(3);
+            String Kassa3 = rs.getString(5);
+
+            DBBank.getProfile(uName, eName, sName, Double.parseDouble(Kassa3));
+        }
     }
 }

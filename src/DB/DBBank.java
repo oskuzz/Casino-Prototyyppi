@@ -20,7 +20,6 @@ public class DBBank {
     public static void bank(String uName, double kassa) {
         uname = uName;
         Kassa = kassa;
-        getProfile();
     }
 
     public static void GameBank() {
@@ -49,7 +48,8 @@ public class DBBank {
         DBConnections.updateMoneyBalance(uname, kassa);
     }
 
-    public static void getProfile() {
-        CasinoFirstPage.Profile(uname);
+    public static void getProfile(String uName,String eName,String sName, double bank) {
+        CasinoFirstPage.Profile(uName, eName, sName, bank);
+        
     }
 }
