@@ -17,7 +17,8 @@ public class DBConnections {
     private Connection conn;
     private double Kassa = 0;
     static private Connection con;
-    private int id = 0;
+    private static int id;
+    private static String Salasana;
 
     public DBConnections(String urlToDataBase) throws ClassNotFoundException, SQLException {
 
@@ -51,7 +52,10 @@ public class DBConnections {
 
     public void writeToDataBase(String ID, String eName, String sName, String password) throws ClassNotFoundException, SQLException {
         try {
+            Salasana = password;
             Statement sta = conn.createStatement();
+            id = id + 1;
+            System.out.println(id);
 
             sta.executeUpdate("INSERT INTO Login (ID, uNimi, eNimi, sNimi, Salasana) VALUES ('" + id + "','" + ID + "','" + eName + "','" + sName + "', '" + password + "');");
             getProfile();
@@ -63,9 +67,8 @@ public class DBConnections {
 
     public String getDatabase(String uName, String Password) throws ClassNotFoundException, SQLException {
 
-
         String query = "SELECT ID, uNimi, Salasana FROM Login";
-
+        Salasana = Password;
         try {
             Statement sta = conn.createStatement();
             ResultSet rs = sta.executeQuery(query);
@@ -74,7 +77,6 @@ public class DBConnections {
                 String UserName = rs.getString(2);
                 String password = rs.getString(3);
                 id = Integer.parseInt(ID);
-                
 
                 if (uName.equals(UserName) && (Password.equals(password))) {
                     getProfile();
@@ -145,7 +147,7 @@ public class DBConnections {
         }
     }
 
-    public void getProfile() throws SQLException {
+    public static void getProfile() throws SQLException {
         String query = "SELECT * FROM Login WHERE ID = '" + id + "'";
         Statement sta = con.createStatement();
         ResultSet rs = sta.executeQuery(query);
@@ -155,7 +157,18 @@ public class DBConnections {
             String sName = rs.getString(3);
             String Kassa3 = rs.getString(5);
 
-            DBBank.getProfile(uName, eName, sName, Double.parseDouble(Kassa3));
+            DBBank.getProfile(uName, eName, sName, Salasana, Double.parseDouble(Kassa3));
+        }
+    }
+
+    public void toProfile(String eName, String sName, String Password) {
+        try {
+            Statement sta = con.createStatement();
+
+            sta.executeUpdate("UPDATE Login SET eNimi = ('" + eName + "'), sNimi = ('" + sName + "'), Salasana = ('" + Password + "') WHERE ID = ('" + id + "');");
+            System.out.println("Inserted into database");
+        } catch (SQLException e) {
+            System.out.println(e);
         }
     }
 }

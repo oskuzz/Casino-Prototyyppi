@@ -6,11 +6,15 @@
 package Casino;
 
 import DB.DBBank;
+import DB.DBConnections;
 import Game1.Game1;
 import Game2.Game2;
 import Game3.Game3;
 import Game4.Game4;
 import Menu.Menu;
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -20,18 +24,18 @@ public final class CasinoFirstPage extends javax.swing.JFrame {
 
     static double kassa;
     double Kassa;
-    String uName;
-    String eName;
-    String sName;
+    static String uName;
+    static String eName;
+    static String sName;
+    static String Salasana;
 
     public CasinoFirstPage() {
 
         initComponents();
         jPanel2.setVisible(false);
-        
+
         Kassa = kassa;
         DBtoKassa();
-        System.out.println(uName);
 
     }
 
@@ -57,6 +61,7 @@ public final class CasinoFirstPage extends javax.swing.JFrame {
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
         try {
@@ -170,6 +175,18 @@ public final class CasinoFirstPage extends javax.swing.JFrame {
         jLabel10.setText("LastName");
         jPanel2.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(15, 130, -1, -1));
 
+        jButton1.setFont(new java.awt.Font("Tahoma", 0, 15)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(255, 255, 255));
+        jButton1.setText("Muokkaa");
+        jButton1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
+        jButton1.setContentAreaFilled(false);
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        jPanel2.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(15, 200, 80, 20));
+
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/BackgroundImages/CFPProfileFrame.png"))); // NOI18N
         jLabel3.addAncestorListener(new javax.swing.event.AncestorListener() {
             public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
@@ -257,7 +274,8 @@ public final class CasinoFirstPage extends javax.swing.JFrame {
 
     }
 
-    public static void Profile(String uName, String eName, String sName, double bank) {
+    public static void Profile(String uName, String eName, String sName,String Password, double bank) {
+        Salasana = Password;
         CasinoFirstPage CFP = new CasinoFirstPage();
         CFP.DBtoProfile(uName, eName, sName, bank);
     }
@@ -325,12 +343,24 @@ public final class CasinoFirstPage extends javax.swing.JFrame {
     private void jToggleButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton1ActionPerformed
         // TODO add your handling code here:
         if (jToggleButton1.isSelected()) {
-            
-            jPanel2.setVisible(true);
+            try {
+                DBConnections.getProfile();
+                jLabel5.setText(uName);
+                jLabel8.setText(sName);
+                jLabel9.setText(eName);
+                jPanel2.setVisible(true);
+            } catch (SQLException ex) {
+                Logger.getLogger(CasinoFirstPage.class.getName()).log(Level.SEVERE, null, ex);
+            }
         } else {
             jPanel2.setVisible(false);
         }
     }//GEN-LAST:event_jToggleButton1ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        this.setVisible(false);
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -373,6 +403,7 @@ public final class CasinoFirstPage extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton5;

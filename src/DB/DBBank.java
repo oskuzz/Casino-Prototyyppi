@@ -48,8 +48,8 @@ public class DBBank {
         DBConnections.updateMoneyBalance(uname, kassa);
     }
 
-    public static void getProfile(String uName,String eName,String sName, double bank) {
-        CasinoFirstPage.Profile(uName, eName, sName, bank);
-        
+    public static void getProfile(String uName, String eName, String sName, String Password, double bank) {
+        CasinoFirstPage.Profile(uName, eName, sName, Password, bank);
+
     }
 }
