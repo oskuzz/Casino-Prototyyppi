@@ -17,6 +17,7 @@ public class DBConnections {
     private Connection conn;
     private double Kassa = 0;
     static private Connection con;
+    private int id = 0;
 
     public DBConnections(String urlToDataBase) throws ClassNotFoundException, SQLException {
 
@@ -52,7 +53,7 @@ public class DBConnections {
         try {
             Statement sta = conn.createStatement();
 
-            sta.executeUpdate("INSERT INTO Login (ID, eNimi, sNimi, Salasana) VALUES (' " + ID + " ',' " + eName + " ',' " + sName + " ', ' " + password + " ');");
+            sta.executeUpdate("INSERT INTO Login (ID, uNimi, eNimi, sNimi, Salasana) VALUES ('" + id + "',' " + ID + " ',' " + eName + " ',' " + sName + " ', ' " + password + " ');");
             System.out.println("Inserted into database");
         } catch (SQLException e) {
             System.out.println(e);
@@ -63,7 +64,7 @@ public class DBConnections {
 
         String userName, Salasana;
 
-        String query = "SELECT ID, Salasana FROM Login";
+        String query = "SELECT uNimi, Salasana FROM Login";
         try {
             Statement sta = conn.createStatement();
             ResultSet rs = sta.executeQuery(query);
@@ -99,7 +100,7 @@ public class DBConnections {
 
     public String getMoneyBalanse(String uName) throws SQLException {
 
-        String query = "SELECT Kassa FROM Login WHERE ID = (' " + uName + " ')";
+        String query = "SELECT Kassa FROM Login WHERE uNimi = (' " + uName + " ')";
         Statement sta = null;
         try {
             sta = conn.createStatement();
@@ -124,11 +125,23 @@ public class DBConnections {
         try {
             Statement sta = con.createStatement();
 
-            sta.executeUpdate("UPDATE Login SET Kassa = ('" + kassa + "') WHERE ID = (' " + uName + " ');");
+            sta.executeUpdate("UPDATE Login SET Kassa = ('" + kassa + "') WHERE uNimi = (' " + uName + " ');");
             System.out.println("Inserted into database");
         } catch (SQLException e) {
             System.out.println(e);
         }
 
+    }
+    
+    public void getID() throws SQLException{
+        String query = "SELECT ID FROM Login ORDER BY ID DESC";
+        
+        Statement sta = con.createStatement();
+        ResultSet rs = sta.executeQuery(query);
+            while (rs.next()) {
+                String ID = rs.getString(1);
+                id = Integer.parseInt(ID);
+                id++;
+            }
     }
 }

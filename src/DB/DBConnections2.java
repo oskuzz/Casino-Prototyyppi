@@ -11,7 +11,7 @@ public class DBConnections2 {
     private DBConnections stMan;
 
     public DBConnections2() throws ClassNotFoundException, SQLException {
-        stMan = new DBConnections("Database2.mdb");
+        stMan = new DBConnections("Prototyyppi.accdb");
     }
 
     public DBConnections getStorageManager() {
