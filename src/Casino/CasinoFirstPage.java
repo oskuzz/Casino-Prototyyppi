@@ -32,6 +32,18 @@ public final class CasinoFirstPage extends javax.swing.JFrame {
     public CasinoFirstPage() {
 
         initComponents();
+        jToggleButton3.setVisible(false);
+        jToggleButton4.setVisible(false);
+        FirstName.setVisible(false);
+        FirstNameField.setVisible(false);
+        LastName.setVisible(false);
+        LastNameField.setVisible(false);
+        SaveButton1.setVisible(false);
+        SaveButton2.setVisible(false);
+        NewPassword.setVisible(false);
+        RepeatPassword.setVisible(false);
+        PasswordField.setVisible(false);
+        PasswordField2.setVisible(false);
         jPanel2.setVisible(false);
 
         Kassa = kassa;
@@ -61,7 +73,19 @@ public final class CasinoFirstPage extends javax.swing.JFrame {
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        jToggleButton2 = new javax.swing.JToggleButton();
+        FirstNameField = new javax.swing.JTextField();
+        FirstName = new javax.swing.JLabel();
+        LastName = new javax.swing.JLabel();
+        LastNameField = new javax.swing.JTextField();
+        SaveButton1 = new javax.swing.JButton();
+        NewPassword = new javax.swing.JLabel();
+        RepeatPassword = new javax.swing.JLabel();
+        PasswordField = new javax.swing.JTextField();
+        PasswordField2 = new javax.swing.JTextField();
+        SaveButton2 = new javax.swing.JButton();
+        jToggleButton3 = new javax.swing.JToggleButton();
+        jToggleButton4 = new javax.swing.JToggleButton();
         jLabel3 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
         try {
@@ -175,17 +199,105 @@ public final class CasinoFirstPage extends javax.swing.JFrame {
         jLabel10.setText("LastName");
         jPanel2.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(15, 130, -1, -1));
 
-        jButton1.setFont(new java.awt.Font("Tahoma", 0, 15)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(255, 255, 255));
-        jButton1.setText("Muokkaa");
-        jButton1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
-        jButton1.setContentAreaFilled(false);
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        jToggleButton2.setFont(new java.awt.Font("Tahoma", 0, 15)); // NOI18N
+        jToggleButton2.setForeground(new java.awt.Color(255, 255, 255));
+        jToggleButton2.setText("Edit");
+        jToggleButton2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
+        jToggleButton2.setContentAreaFilled(false);
+        jToggleButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                jToggleButton2ActionPerformed(evt);
             }
         });
-        jPanel2.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(15, 200, 80, 20));
+        jPanel2.add(jToggleButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 200, 100, 20));
+
+        FirstNameField.setFont(new java.awt.Font("Tahoma", 0, 15)); // NOI18N
+        FirstNameField.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
+        FirstNameField.setOpaque(false);
+        jPanel2.add(FirstNameField, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 200, 250, 20));
+
+        FirstName.setFont(new java.awt.Font("Tahoma", 0, 15)); // NOI18N
+        FirstName.setForeground(new java.awt.Color(255, 255, 255));
+        FirstName.setText("FirstName");
+        jPanel2.add(FirstName, new org.netbeans.lib.awtextra.AbsoluteConstraints(185, 180, -1, -1));
+
+        LastName.setFont(new java.awt.Font("Tahoma", 0, 15)); // NOI18N
+        LastName.setForeground(new java.awt.Color(255, 255, 255));
+        LastName.setText("LastName");
+        jPanel2.add(LastName, new org.netbeans.lib.awtextra.AbsoluteConstraints(185, 230, -1, -1));
+
+        LastNameField.setFont(new java.awt.Font("Tahoma", 0, 15)); // NOI18N
+        LastNameField.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
+        LastNameField.setOpaque(false);
+        jPanel2.add(LastNameField, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 250, 250, 20));
+
+        SaveButton1.setFont(new java.awt.Font("Tahoma", 0, 15)); // NOI18N
+        SaveButton1.setForeground(new java.awt.Color(255, 255, 255));
+        SaveButton1.setText("Save");
+        SaveButton1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
+        SaveButton1.setContentAreaFilled(false);
+        SaveButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                SaveButton1ActionPerformed(evt);
+            }
+        });
+        jPanel2.add(SaveButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 300, 100, 20));
+
+        NewPassword.setFont(new java.awt.Font("Tahoma", 0, 15)); // NOI18N
+        NewPassword.setForeground(new java.awt.Color(255, 255, 255));
+        NewPassword.setText("New Password");
+        jPanel2.add(NewPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(185, 180, -1, -1));
+
+        RepeatPassword.setFont(new java.awt.Font("Tahoma", 0, 15)); // NOI18N
+        RepeatPassword.setForeground(new java.awt.Color(255, 255, 255));
+        RepeatPassword.setText("Repeat Password");
+        jPanel2.add(RepeatPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(185, 230, -1, -1));
+
+        PasswordField.setFont(new java.awt.Font("Tahoma", 0, 15)); // NOI18N
+        PasswordField.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
+        PasswordField.setOpaque(false);
+        jPanel2.add(PasswordField, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 200, 250, 20));
+
+        PasswordField2.setFont(new java.awt.Font("Tahoma", 0, 15)); // NOI18N
+        PasswordField2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
+        PasswordField2.setOpaque(false);
+        jPanel2.add(PasswordField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 250, 250, 20));
+
+        SaveButton2.setFont(new java.awt.Font("Tahoma", 0, 15)); // NOI18N
+        SaveButton2.setForeground(new java.awt.Color(255, 255, 255));
+        SaveButton2.setText("Save");
+        SaveButton2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
+        SaveButton2.setContentAreaFilled(false);
+        SaveButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                SaveButton2ActionPerformed(evt);
+            }
+        });
+        jPanel2.add(SaveButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 300, 100, 20));
+
+        jToggleButton3.setFont(new java.awt.Font("Tahoma", 0, 15)); // NOI18N
+        jToggleButton3.setForeground(new java.awt.Color(255, 255, 255));
+        jToggleButton3.setText("Profile");
+        jToggleButton3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
+        jToggleButton3.setContentAreaFilled(false);
+        jToggleButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jToggleButton3ActionPerformed(evt);
+            }
+        });
+        jPanel2.add(jToggleButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 250, 100, 20));
+
+        jToggleButton4.setFont(new java.awt.Font("Tahoma", 0, 15)); // NOI18N
+        jToggleButton4.setForeground(new java.awt.Color(255, 255, 255));
+        jToggleButton4.setText("Password");
+        jToggleButton4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
+        jToggleButton4.setContentAreaFilled(false);
+        jToggleButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jToggleButton4ActionPerformed(evt);
+            }
+        });
+        jPanel2.add(jToggleButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 300, 100, 20));
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/BackgroundImages/CFPProfileFrame.png"))); // NOI18N
         jLabel3.addAncestorListener(new javax.swing.event.AncestorListener() {
@@ -274,7 +386,7 @@ public final class CasinoFirstPage extends javax.swing.JFrame {
 
     }
 
-    public static void Profile(String uName, String eName, String sName,String Password, double bank) {
+    public static void Profile(String uName, String eName, String sName, String Password, double bank) {
         Salasana = Password;
         CasinoFirstPage CFP = new CasinoFirstPage();
         CFP.DBtoProfile(uName, eName, sName, bank);
@@ -343,11 +455,14 @@ public final class CasinoFirstPage extends javax.swing.JFrame {
     private void jToggleButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton1ActionPerformed
         // TODO add your handling code here:
         if (jToggleButton1.isSelected()) {
+            if(jToggleButton2.isSelected()){
+                jToggleButton2.doClick();
+            }
             try {
                 DBConnections.getProfile();
                 jLabel5.setText(uName);
-                jLabel8.setText(sName);
-                jLabel9.setText(eName);
+                jLabel8.setText(eName);
+                jLabel9.setText(sName);
                 jPanel2.setVisible(true);
             } catch (SQLException ex) {
                 Logger.getLogger(CasinoFirstPage.class.getName()).log(Level.SEVERE, null, ex);
@@ -357,11 +472,71 @@ public final class CasinoFirstPage extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jToggleButton1ActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void jToggleButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton2ActionPerformed
         // TODO add your handling code here:
-        this.setVisible(false);
-        new ProfileChange().setVisible(true);
-    }//GEN-LAST:event_jButton1ActionPerformed
+        if (jToggleButton2.isSelected()) {
+
+            jToggleButton3.setVisible(true);
+            jToggleButton4.setVisible(true);
+        } else {
+            jToggleButton3.setVisible(false);
+            jToggleButton4.setVisible(false);
+            if (jToggleButton3.isSelected()) {
+                jToggleButton3.doClick();
+            }
+            if (jToggleButton4.isSelected()) {
+                jToggleButton4.doClick();
+            }
+        }
+    }//GEN-LAST:event_jToggleButton2ActionPerformed
+
+    private void SaveButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SaveButton1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_SaveButton1ActionPerformed
+
+    private void SaveButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SaveButton2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_SaveButton2ActionPerformed
+
+    private void jToggleButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton3ActionPerformed
+        // TODO add your handling code here:
+        if (jToggleButton3.isSelected()) {
+            if (jToggleButton4.isSelected()) {
+                jToggleButton4.doClick();
+            }
+            FirstName.setVisible(true);
+            FirstNameField.setVisible(true);
+            LastName.setVisible(true);
+            LastNameField.setVisible(true);
+            SaveButton1.setVisible(true);
+        } else {
+            FirstName.setVisible(false);
+            FirstNameField.setVisible(false);
+            LastName.setVisible(false);
+            LastNameField.setVisible(false);
+            SaveButton1.setVisible(false);
+        }
+    }//GEN-LAST:event_jToggleButton3ActionPerformed
+
+    private void jToggleButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton4ActionPerformed
+        // TODO add your handling code here:
+        if (jToggleButton4.isSelected()) {
+            if (jToggleButton3.isSelected()) {
+                jToggleButton3.doClick();
+            }
+            SaveButton2.setVisible(true);
+            NewPassword.setVisible(true);
+            RepeatPassword.setVisible(true);
+            PasswordField.setVisible(true);
+            PasswordField2.setVisible(true);
+        } else {
+            SaveButton2.setVisible(false);
+            NewPassword.setVisible(false);
+            RepeatPassword.setVisible(false);
+            PasswordField.setVisible(false);
+            PasswordField2.setVisible(false);
+        }
+    }//GEN-LAST:event_jToggleButton4ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -404,7 +579,16 @@ public final class CasinoFirstPage extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
+    private javax.swing.JLabel FirstName;
+    private javax.swing.JTextField FirstNameField;
+    private javax.swing.JLabel LastName;
+    private javax.swing.JTextField LastNameField;
+    private javax.swing.JLabel NewPassword;
+    private javax.swing.JTextField PasswordField;
+    private javax.swing.JTextField PasswordField2;
+    private javax.swing.JLabel RepeatPassword;
+    private javax.swing.JButton SaveButton1;
+    private javax.swing.JButton SaveButton2;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton5;
@@ -425,5 +609,8 @@ public final class CasinoFirstPage extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel3;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JToggleButton jToggleButton1;
+    private javax.swing.JToggleButton jToggleButton2;
+    private javax.swing.JToggleButton jToggleButton3;
+    private javax.swing.JToggleButton jToggleButton4;
     // End of variables declaration//GEN-END:variables
 }
