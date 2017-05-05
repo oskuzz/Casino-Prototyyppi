@@ -161,7 +161,7 @@ public class DBConnections {
         }
     }
 
-    public void toProfile(String eName, String sName, String Password) {
+    public static void toProfile(String eName, String sName, String Password) {
         try {
             Statement sta = con.createStatement();
 

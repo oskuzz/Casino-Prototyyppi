@@ -455,7 +455,7 @@ public final class CasinoFirstPage extends javax.swing.JFrame {
     private void jToggleButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton1ActionPerformed
         // TODO add your handling code here:
         if (jToggleButton1.isSelected()) {
-            if(jToggleButton2.isSelected()){
+            if (jToggleButton2.isSelected()) {
                 jToggleButton2.doClick();
             }
             try {
@@ -492,10 +492,32 @@ public final class CasinoFirstPage extends javax.swing.JFrame {
 
     private void SaveButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SaveButton1ActionPerformed
         // TODO add your handling code here:
+        if (FirstNameField.equals("")) {
+        } else {
+            eName = FirstNameField.getText();
+            if (LastNameField.equals("")) {
+            } else {
+                sName = LastNameField.getText();
+            }
+            DBConnections.toProfile(eName, sName, Salasana);
+            FirstNameField.setText(eName);
+            LastNameField.setText(sName);
+            jToggleButton1.doClick();
+        }
+
     }//GEN-LAST:event_SaveButton1ActionPerformed
 
     private void SaveButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SaveButton2ActionPerformed
         // TODO add your handling code here:
+        if (PasswordField.equals("")) {
+            if (PasswordField2.equals("")) {
+                if (PasswordField.equals(PasswordField2)) {
+                    Salasana = PasswordField2.getText();
+                    DBConnections.toProfile(eName, sName, Salasana);
+                    jToggleButton1.doClick();
+                }
+            }
+        }
     }//GEN-LAST:event_SaveButton2ActionPerformed
 
     private void jToggleButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton3ActionPerformed
