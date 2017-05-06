@@ -7,7 +7,6 @@ package LoginAndRegister;
 
 import Casino.CasinoFirstPage;
 import Casino.RegisterMoneyPage;
-import DB.DBBank;
 import DB.DBConnections;
 import DB.DBConnections2;
 import java.sql.SQLException;
@@ -126,6 +125,7 @@ public class Register extends javax.swing.JFrame {
         DBConnections DB = bMan.getStorageManager();
         CasinoFirstPage CFP = new CasinoFirstPage();
         try {
+            DB.getID();
             DB.writeToDataBase(ID.getText(), eName.getText(), sName.getText(), password.getText());
             this.setVisible(false);
             new RegisterMoneyPage().setVisible(true);
