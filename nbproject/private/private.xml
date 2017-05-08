@@ -3,10 +3,16 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+<<<<<<< HEAD
             <file>file:/C:/Users/osku0/Desktop/Casino-Prototyyppi/src/Casino/CasinoFirstPage.java</file>
             <file>file:/C:/Users/osku0/Desktop/Casino-Prototyyppi/src/Game2/Game2.java</file>
             <file>file:/C:/Users/osku0/Desktop/Casino-Prototyyppi/src/Game1/VoitonJako.java</file>
             <file>file:/C:/Users/osku0/Desktop/Casino-Prototyyppi/src/Game1/Game1.java</file>
+=======
+            <file>file:/C:/Users/s1601396/Desktop/Casino-Prototyyppi/src/Casino/CasinoFirstPage.java</file>
+            <file>file:/C:/Users/s1601396/Desktop/Casino-Prototyyppi/src/Timer_Test/timer.java</file>
+            <file>file:/C:/Users/s1601396/Desktop/Casino-Prototyyppi/src/Game1/Game1.java</file>
+>>>>>>> d072aba775a76c1050b8d3dc87ea42057564c5d2
         </group>
     </open-files>
 </project-private>
