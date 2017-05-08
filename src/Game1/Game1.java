@@ -12,7 +12,6 @@ import java.awt.event.ActionListener;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import javax.swing.*;
 
 /**
  *
@@ -20,12 +19,11 @@ import javax.swing.*;
  */
 public final class Game1 extends javax.swing.JFrame {
 
-    ImageIcon Pictures;
     double panos = 1;
     int taso = 1;
     int Lines;
     double lopullinenPanos;
-    double lopullinenPanos2;
+    double lopullinenPanos2 = 0.1;
     double voitto;
     double Kassa;
     static double kassa;
@@ -39,30 +37,20 @@ public final class Game1 extends javax.swing.JFrame {
     private int laskuri2 = 0;
     private int laskuri3 = 0;
     private int laskuri4 = 0;
-    private int num1;
-    private int num2;
-    private int num3;
-    private int num4;
-    private int num5;
-    private int num6;
-    private int num7;
-    private int num8;
-    private int num9;
-    private int luku = 9;
-    private int luku2 = 8;
-    private int luku3 = 7;
-    private int luku4 = 6;
-    private int luku5 = 5;
-    private int luku6 = 4;
-    private int luku7 = 3;
-    private int luku8 = 2;
-    private int luku9 = 1;
+
+    private int luku = NumeroidenArvonta.num1();
+    private int luku2 = NumeroidenArvonta.num2();
+    private int luku3 = NumeroidenArvonta.num3();
+    private int luku4 = NumeroidenArvonta.num4();
+    private int luku5 = NumeroidenArvonta.num5();
+    private int luku6 = NumeroidenArvonta.num6();
+    private int luku7 = NumeroidenArvonta.num7();
+    private int luku8 = NumeroidenArvonta.num8();
+    private int luku9 = NumeroidenArvonta.num9();
 
     int Auto = 1;
     int auto = 5;
     int Auto2 = 5;
-
-    String fileLocation = new String();
 
     /**
      * Creates new form Game1
@@ -82,6 +70,15 @@ public final class Game1 extends javax.swing.JFrame {
         jToggleButton3.setVisible(false);
         jLabel26.setVisible(false);
         jLabel35.setVisible(false);
+        Num1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Game1Pic/Pic" + luku + ".png")));
+        Num2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Game1Pic/Pic" + luku2 + ".png")));
+        Num3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Game1Pic/Pic" + luku3 + ".png")));
+        Num4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Game1Pic/Pic" + luku4 + ".png")));
+        Num5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Game1Pic/Pic" + luku5 + ".png")));
+        Num6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Game1Pic/Pic" + luku6 + ".png")));
+        Num7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Game1Pic/Pic" + luku7 + ".png")));
+        Num8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Game1Pic/Pic" + luku8 + ".png")));
+        Num9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Game1Pic/Pic" + luku9 + ".png")));
 
         Kassa = kassa;
 
@@ -461,7 +458,7 @@ public final class Game1 extends javax.swing.JFrame {
 
         Num9.setFont(new java.awt.Font("Tahoma", 0, 70)); // NOI18N
         Num9.setForeground(new java.awt.Color(255, 255, 255));
-        Num9.setText("0");
+        Num9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Game1Pic/Pic1.png"))); // NOI18N
 
         javax.swing.GroupLayout jPanel12Layout = new javax.swing.GroupLayout(jPanel12);
         jPanel12.setLayout(jPanel12Layout);
@@ -491,7 +488,7 @@ public final class Game1 extends javax.swing.JFrame {
 
         Num7.setFont(new java.awt.Font("Tahoma", 0, 70)); // NOI18N
         Num7.setForeground(new java.awt.Color(255, 255, 255));
-        Num7.setText("0");
+        Num7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Game1Pic/Pic1.png"))); // NOI18N
 
         javax.swing.GroupLayout jPanel11Layout = new javax.swing.GroupLayout(jPanel11);
         jPanel11.setLayout(jPanel11Layout);
@@ -521,7 +518,7 @@ public final class Game1 extends javax.swing.JFrame {
 
         Num8.setFont(new java.awt.Font("Tahoma", 0, 70)); // NOI18N
         Num8.setForeground(new java.awt.Color(255, 255, 255));
-        Num8.setText("0");
+        Num8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Game1Pic/Pic1.png"))); // NOI18N
         Num8.setRequestFocusEnabled(false);
 
         javax.swing.GroupLayout jPanel10Layout = new javax.swing.GroupLayout(jPanel10);
@@ -552,7 +549,7 @@ public final class Game1 extends javax.swing.JFrame {
 
         Num6.setFont(new java.awt.Font("Tahoma", 0, 70)); // NOI18N
         Num6.setForeground(new java.awt.Color(255, 255, 255));
-        Num6.setText("0");
+        Num6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Game1Pic/Pic1.png"))); // NOI18N
 
         javax.swing.GroupLayout jPanel9Layout = new javax.swing.GroupLayout(jPanel9);
         jPanel9.setLayout(jPanel9Layout);
@@ -582,7 +579,7 @@ public final class Game1 extends javax.swing.JFrame {
 
         Num4.setFont(new java.awt.Font("Tahoma", 0, 70)); // NOI18N
         Num4.setForeground(new java.awt.Color(255, 255, 255));
-        Num4.setText("0");
+        Num4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Game1Pic/Pic1.png"))); // NOI18N
 
         javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
         jPanel8.setLayout(jPanel8Layout);
@@ -608,7 +605,7 @@ public final class Game1 extends javax.swing.JFrame {
 
         Num5.setFont(new java.awt.Font("Tahoma", 0, 70)); // NOI18N
         Num5.setForeground(new java.awt.Color(255, 255, 255));
-        Num5.setText("0");
+        Num5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Game1Pic/Pic1.png"))); // NOI18N
 
         javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
         jPanel7.setLayout(jPanel7Layout);
@@ -899,15 +896,17 @@ public final class Game1 extends javax.swing.JFrame {
             Panos2.setEnabled(false);
             Taso1.setEnabled(false);
             Taso2.setEnabled(false);
-            num1 = NumeroidenArvonta.num1();
-            num2 = NumeroidenArvonta.num2();
-            num3 = NumeroidenArvonta.num3();
-            num4 = NumeroidenArvonta.num4();
-            num5 = NumeroidenArvonta.num5();
-            num6 = NumeroidenArvonta.num6();
-            num7 = NumeroidenArvonta.num7();
-            num8 = NumeroidenArvonta.num8();
-            num9 = NumeroidenArvonta.num9();
+
+            luku = NumeroidenArvonta.num1();
+            luku2 = NumeroidenArvonta.num2();
+            luku3 = NumeroidenArvonta.num3();
+            luku4 = NumeroidenArvonta.num4();
+            luku5 = NumeroidenArvonta.num5();
+            luku6 = NumeroidenArvonta.num6();
+            luku7 = NumeroidenArvonta.num7();
+            luku8 = NumeroidenArvonta.num8();
+            luku9 = NumeroidenArvonta.num9();
+
             ajastinjuttu();
             ajastinjuttu2();
             ajastinjuttu3();
@@ -928,7 +927,7 @@ public final class Game1 extends javax.swing.JFrame {
         double jackPot = 0;
 
         if (taso == 1) {
-            taso1Voitto = VoitonJako.Taso1(num2, num5, num8);
+            taso1Voitto = VoitonJako.Taso1(luku2, luku5, luku8);
 
             taso1Voitto = taso1Voitto * lopullinenPanos2;
 
@@ -951,8 +950,8 @@ public final class Game1 extends javax.swing.JFrame {
             KassaField.setText(Double.toString(loppuKassa));
 
         } else if (taso == 2) {
-            taso1Voitto = VoitonJako.Taso1(num2, num5, num8);
-            taso2Voitto = VoitonJako.Taso2(num3, num6, num9);
+            taso1Voitto = VoitonJako.Taso1(luku2, luku5, luku8);
+            taso2Voitto = VoitonJako.Taso2(luku3, luku6, luku9);
 
             if (taso1Voitto > 0) {
                 jLabel7.setVisible(true);
@@ -978,9 +977,9 @@ public final class Game1 extends javax.swing.JFrame {
             }
             KassaField.setText(Double.toString(loppuKassa));
         } else if (taso == 3) {
-            taso1Voitto = VoitonJako.Taso1(num2, num5, num8);
-            taso2Voitto = VoitonJako.Taso2(num3, num6, num9);
-            taso3Voitto = VoitonJako.Taso3(num1, num4, num7);
+            taso1Voitto = VoitonJako.Taso1(luku2, luku5, luku8);
+            taso2Voitto = VoitonJako.Taso2(luku3, luku6, luku9);
+            taso3Voitto = VoitonJako.Taso3(luku, luku4, luku7);
 
             if (taso1Voitto > 0) {
                 jLabel7.setVisible(true);
@@ -1011,10 +1010,10 @@ public final class Game1 extends javax.swing.JFrame {
             KassaField.setText(Double.toString(loppuKassa));
         } else if (taso == 4) {
 
-            taso1Voitto = VoitonJako.Taso1(num2, num5, num8);
-            taso2Voitto = VoitonJako.Taso2(num3, num6, num9);
-            taso3Voitto = VoitonJako.Taso3(num1, num4, num7);
-            taso4Voitto = VoitonJako.Taso4(num1, num5, num9);
+            taso1Voitto = VoitonJako.Taso1(luku2, luku5, luku8);
+            taso2Voitto = VoitonJako.Taso2(luku3, luku6, luku9);
+            taso3Voitto = VoitonJako.Taso3(luku, luku4, luku7);
+            taso4Voitto = VoitonJako.Taso4(luku, luku5, luku9);
 
             if (taso1Voitto > 0) {
                 jLabel7.setVisible(true);
@@ -1049,12 +1048,12 @@ public final class Game1 extends javax.swing.JFrame {
             KassaField.setText(Double.toString(loppuKassa));
         } else if (taso == 5) {
 
-            taso1Voitto = VoitonJako.Taso1(num2, num5, num8);
-            taso2Voitto = VoitonJako.Taso2(num3, num6, num9);
-            taso3Voitto = VoitonJako.Taso3(num1, num4, num7);
-            taso4Voitto = VoitonJako.Taso4(num1, num5, num9);
-            taso5Voitto = VoitonJako.Taso5(num3, num5, num7);
-            jackPot = VoitonJako.JackPot(num1, num2, num3, num4, num5, num6, num7, num8, num9);
+            taso1Voitto = VoitonJako.Taso1(luku2, luku5, luku8);
+            taso2Voitto = VoitonJako.Taso2(luku3, luku6, luku9);
+            taso3Voitto = VoitonJako.Taso3(luku, luku4, luku7);
+            taso4Voitto = VoitonJako.Taso4(luku, luku5, luku9);
+            taso5Voitto = VoitonJako.Taso5(luku3, luku5, luku7);
+            jackPot = VoitonJako.JackPot(luku, luku2, luku3, luku4, luku5, luku6, luku7, luku8, luku9);
 
             if (taso1Voitto > 0) {
                 jLabel7.setVisible(true);
@@ -1100,83 +1099,39 @@ public final class Game1 extends javax.swing.JFrame {
     }
 
     public void ajastinjuttu() {
-        ajastin = new javax.swing.Timer(70, new ActionListener() {
+        ajastin = new javax.swing.Timer(60, new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 paivitanumero();
+                luku++;
 
                 if (luku == 10) {
                     luku = 1;
                 }
-                if (luku < 6) {
-                    Num1.setText("");
-                    fileLocation = "C:\\Users\\s1601396\\Desktop\\Casino-Prototyyppi\\src\\Game1Pic\\Pic" + luku + ".png";
-                    Pictures = new ImageIcon(fileLocation);
-                    Num1.setIcon(Pictures);
-                } else {
-                    Num1.setIcon(null);
-                    Num1.setText(Integer.toString(luku));
-                }
 
-                luku++;
+                Num1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Game1Pic/Pic" + luku + ".png")));
+
+                luku2++;
+
                 if (luku2 == 10) {
                     luku2 = 1;
                 }
-                if (luku2 < 6) {
-                    Num2.setText("");
-                    fileLocation = "C:\\Users\\s1601396\\Desktop\\Casino-Prototyyppi\\src\\Game1Pic\\Pic" + luku2 + ".png";
-                    Pictures = new ImageIcon(fileLocation);
-                    Num2.setIcon(Pictures);
-                } else {
-                    Num2.setIcon(null);
-                    Num2.setText(Integer.toString(luku2));
-                }
-                luku2++;
+
+                Num2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Game1Pic/Pic" + luku2 + ".png")));
+
+                luku3++;
+
                 if (luku3 == 10) {
                     luku3 = 1;
                 }
-                if (luku3 < 6) {
-                    Num3.setText("");
-                    fileLocation = "C:\\Users\\s1601396\\Desktop\\Casino-Prototyyppi\\src\\Game1Pic\\Pic" + luku3 + ".png";
-                    Pictures = new ImageIcon(fileLocation);
-                    Num3.setIcon(Pictures);
-                } else {
-                    Num3.setIcon(null);
-                    Num3.setText(Integer.toString(luku3));
-                }
-                luku3++;
-                if (laskuri == 30) {
+
+                Num3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Game1Pic/Pic" + luku3 + ".png")));
+
+                if (laskuri == 50) {
                     ajastin.stop();
-                    if (num1 < 6) {
-                        Num1.setText("");
-                        fileLocation = "C:\\Users\\s1601396\\Desktop\\Casino-Prototyyppi\\src\\Game1Pic\\Pic" + num1 + ".png";
-                        Pictures = new ImageIcon(fileLocation);
-                        Num1.setIcon(Pictures);
-                    } else {
-                        Num1.setIcon(null);
-                        Num1.setText(Integer.toString(num1));
-                    }
-                    if (num2 < 6) {
-                        Num2.setText("");
-                        fileLocation = "C:\\Users\\s1601396\\Desktop\\Casino-Prototyyppi\\src\\Game1Pic\\Pic" + num2 + ".png";
-                        Pictures = new ImageIcon(fileLocation);
-                        Num2.setIcon(Pictures);
-                    } else {
-                        Num2.setIcon(null);
-                        Num2.setText(Integer.toString(num2));
-                    }
-                    if (num3 < 6) {
-                        Num3.setText("");
-                        fileLocation = "C:\\Users\\s1601396\\Desktop\\Casino-Prototyyppi\\src\\Game1Pic\\Pic" + num3 + ".png";
-                        Pictures = new ImageIcon(fileLocation);
-                        Num3.setIcon(Pictures);
-                    }else{
-                        Num3.setIcon(null);
-                        Num3.setText(Integer.toString(num3));
-                    }
-                    System.out.println(num1);
-                    System.out.println(num2);
-                    System.out.println(num3);
+                    System.out.println(luku);
+                    System.out.println(luku2);
+                    System.out.println(luku3);
                 }
             }
         });
@@ -1186,84 +1141,37 @@ public final class Game1 extends javax.swing.JFrame {
     }
 
     public void ajastinjuttu2() {
-        ajastin2 = new javax.swing.Timer(70, new ActionListener() {
+        ajastin2 = new javax.swing.Timer(60, new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 paivitanumero2();
+                luku4++;
 
                 if (luku4 == 10) {
                     luku4 = 1;
                 }
-                if (luku4 < 6) {
-                    Num4.setText("");
-                    fileLocation = "C:\\Users\\s1601396\\Desktop\\Casino-Prototyyppi\\src\\Game1Pic\\Pic" + luku4 + ".png";
-                    Pictures = new ImageIcon(fileLocation);
-                    Num4.setIcon(Pictures);
-                } else {
-                    Num4.setIcon(null);
-                    Num4.setText(Integer.toString(luku4));
-                }
 
-                luku4++;
+                Num4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Game1Pic/Pic" + luku4 + ".png")));
+
+                luku5++;
+
                 if (luku5 == 10) {
                     luku5 = 1;
                 }
-                if (luku5 < 6) {
-                    Num5.setText("");
-                    fileLocation = "C:\\Users\\s1601396\\Desktop\\Casino-Prototyyppi\\src\\Game1Pic\\Pic" + luku5 + ".png";
-                    Pictures = new ImageIcon(fileLocation);
-                    Num5.setIcon(Pictures);
-                } else {
-                    Num5.setIcon(null);
-                    Num5.setText(Integer.toString(luku5));
-                }
-                luku5++;
+
+                Num5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Game1Pic/Pic" + luku5 + ".png")));
+                luku6++;
+
                 if (luku6 == 10) {
                     luku6 = 1;
                 }
-                if (luku6 < 6) {
-                    Num6.setText("");
-                    fileLocation = "C:\\Users\\s1601396\\Desktop\\Casino-Prototyyppi\\src\\Game1Pic\\Pic" + luku6 + ".png";
-                    Pictures = new ImageIcon(fileLocation);
-                    Num6.setIcon(Pictures);
-                } else {
-                    Num6.setIcon(null);
-                    Num6.setText(Integer.toString(luku6));
-                }
-                luku6++;
-                if (laskuri2 == 40) {
-                    ajastin2.stop();
-                    if (num4 < 6) {
-                        Num4.setText("");
-                        fileLocation = "C:\\Users\\s1601396\\Desktop\\Casino-Prototyyppi\\src\\Game1Pic\\Pic" + num4 + ".png";
-                        Pictures = new ImageIcon(fileLocation);
-                        Num4.setIcon(Pictures);
-                    } else {
-                        Num4.setIcon(null);
-                        Num4.setText(Integer.toString(num4));
-                    }
-                    if (num5 < 6) {
-                        Num5.setText("");
-                        fileLocation = "C:\\Users\\s1601396\\Desktop\\Casino-Prototyyppi\\src\\Game1Pic\\Pic" + num5 + ".png";
-                        Pictures = new ImageIcon(fileLocation);
-                        Num5.setIcon(Pictures);
-                    } else {
-                        Num5.setIcon(null);
-                        Num5.setText(Integer.toString(num5));
-                    }
-                    if (num6 < 6) {
-                        Num6.setText("");
-                        fileLocation = "C:\\Users\\s1601396\\Desktop\\Casino-Prototyyppi\\src\\Game1Pic\\Pic" + num6 + ".png";
-                        Pictures = new ImageIcon(fileLocation);
-                        Num6.setIcon(Pictures);
-                    }else{
-                        Num6.setIcon(null);
-                        Num6.setText(Integer.toString(num6));
-                    }
-                    System.out.println(num4);
-                    System.out.println(num5);
-                    System.out.println(num6);
+                Num6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Game1Pic/Pic" + luku6 + ".png")));
 
+                if (laskuri2 == 65) {
+                    ajastin2.stop();
+                    System.out.println(luku4);
+                    System.out.println(luku5);
+                    System.out.println(luku6);
                 }
 
             }
@@ -1274,83 +1182,36 @@ public final class Game1 extends javax.swing.JFrame {
     }
 
     public void ajastinjuttu3() {
-        ajastin3 = new javax.swing.Timer(70, new ActionListener() {
+        ajastin3 = new javax.swing.Timer(60, new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 paivitanumero3();
-
+                luku7++;
                 if (luku7 == 10) {
                     luku7 = 1;
                 }
-                if (luku7 < 6) {
-                    Num7.setText("");
-                    fileLocation = "C:\\Users\\s1601396\\Desktop\\Casino-Prototyyppi\\src\\Game1Pic\\Pic" + luku7 + ".png";
-                    Pictures = new ImageIcon(fileLocation);
-                    Num7.setIcon(Pictures);
-                } else {
-                    Num7.setIcon(null);
-                    Num7.setText(Integer.toString(luku7));
-                }
 
-                luku7++;
+                Num7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Game1Pic/Pic" + luku7 + ".png")));
+
+                luku8++;
                 if (luku8 == 10) {
                     luku8 = 1;
                 }
-                if (luku8 < 6) {
-                    Num8.setText("");
-                    fileLocation = "C:\\Users\\s1601396\\Desktop\\Casino-Prototyyppi\\src\\Game1Pic\\Pic" + luku8 + ".png";
-                    Pictures = new ImageIcon(fileLocation);
-                    Num8.setIcon(Pictures);
-                } else {
-                    Num8.setIcon(null);
-                    Num8.setText(Integer.toString(luku8));
-                }
-                luku8++;
+
+                Num8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Game1Pic/Pic" + luku8 + ".png")));
+
+                luku9++;
                 if (luku9 == 10) {
                     luku9 = 1;
                 }
-                if (luku9 < 6) {
-                    Num9.setText("");
-                    fileLocation = "C:\\Users\\s1601396\\Desktop\\Casino-Prototyyppi\\src\\Game1Pic\\Pic" + luku9 + ".png";
-                    Pictures = new ImageIcon(fileLocation);
-                    Num9.setIcon(Pictures);
-                } else {
-                    Num9.setIcon(null);
-                    Num9.setText(Integer.toString(luku9));
-                }
-                luku9++;
-                if (laskuri3 == 50) {
+
+                Num9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Game1Pic/Pic" + luku9 + ".png")));
+
+                if (laskuri3 == 80) {
                     ajastin3.stop();
-                    if (num7 < 6) {
-                        Num7.setText("");
-                        fileLocation = "C:\\Users\\s1601396\\Desktop\\Casino-Prototyyppi\\src\\Game1Pic\\Pic" + num7 + ".png";
-                        Pictures = new ImageIcon(fileLocation);
-                        Num7.setIcon(Pictures);
-                    } else {
-                        Num7.setIcon(null);
-                        Num7.setText(Integer.toString(num7));
-                    }
-                    if (num8 < 6) {
-                        Num8.setText("");
-                        fileLocation = "C:\\Users\\s1601396\\Desktop\\Casino-Prototyyppi\\src\\Game1Pic\\Pic" + num8 + ".png";
-                        Pictures = new ImageIcon(fileLocation);
-                        Num8.setIcon(Pictures);
-                    } else {
-                        Num8.setIcon(null);
-                        Num8.setText(Integer.toString(num8));
-                    }
-                    if (num9 < 6) {
-                        Num9.setText("");
-                        fileLocation = "C:\\Users\\s1601396\\Desktop\\Casino-Prototyyppi\\src\\Game1Pic\\Pic" + num9 + ".png";
-                        Pictures = new ImageIcon(fileLocation);
-                        Num9.setIcon(Pictures);
-                    }else{
-                        Num9.setIcon(null);
-                        Num9.setText(Integer.toString(num9));
-                    }
-                    System.out.println(num7);
-                    System.out.println(num8);
-                    System.out.println(num9);
+                    System.out.println(luku7);
+                    System.out.println(luku8);
+                    System.out.println(luku9);
                     Tasot();
                     if (laskuri3 == 50 && laskuri4 == auto) {
                         PlayButton.setEnabled(true);
@@ -1437,16 +1298,6 @@ public final class Game1 extends javax.swing.JFrame {
 
             loppuKassa = kassa - lopullinenPanos2;
             KassaField.setText(Double.toString(loppuKassa));
-
-            num1 = NumeroidenArvonta.num1();
-            num2 = NumeroidenArvonta.num2();
-            num3 = NumeroidenArvonta.num3();
-            num4 = NumeroidenArvonta.num4();
-            num5 = NumeroidenArvonta.num5();
-            num6 = NumeroidenArvonta.num6();
-            num7 = NumeroidenArvonta.num7();
-            num8 = NumeroidenArvonta.num8();
-            num9 = NumeroidenArvonta.num9();
 
             ajastinjuttu();
             ajastinjuttu2();
