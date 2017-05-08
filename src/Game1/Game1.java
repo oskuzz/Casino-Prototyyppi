@@ -1213,7 +1213,10 @@ public final class Game1 extends javax.swing.JFrame {
                     System.out.println(luku8);
                     System.out.println(luku9);
                     Tasot();
-                    if (laskuri3 == 50 && laskuri4 == auto) {
+                    if (laskuri3 == 80 && laskuri4 == auto) {
+                        if(jToggleButton3.isSelected()){
+                            jToggleButton3.doClick();
+                        }
                         PlayButton.setEnabled(true);
                         Panos1.setEnabled(true);
                         Panos2.setEnabled(true);
@@ -1225,6 +1228,7 @@ public final class Game1 extends javax.swing.JFrame {
                     }
                     if (jToggleButton3.isSelected()) {
                         PlayButton.setEnabled(false);
+                        
                     } else {
                         PlayButton.setEnabled(true);
                         Panos1.setEnabled(true);
@@ -1243,7 +1247,7 @@ public final class Game1 extends javax.swing.JFrame {
 
     public void ajastinjuttu5() {
 
-        ajastin4 = new javax.swing.Timer(5000, new ActionListener() {
+        ajastin4 = new javax.swing.Timer(6500, new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 paivitanumero5();

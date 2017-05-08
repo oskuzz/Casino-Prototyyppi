@@ -54,10 +54,10 @@ public class DBConnections {
         try {
             Salasana = password;
             Statement sta = conn.createStatement();
-            id = id + 1;
+            
             System.out.println(id);
 
-            sta.executeUpdate("INSERT INTO Login (ID, uNimi, eNimi, sNimi, Salasana) VALUES ('" + id + "','" + ID + "','" + eName + "','" + sName + "', '" + password + "');");
+            sta.executeUpdate("INSERT INTO Login (ID, uNimi, eNimi, sNimi, Salasana) VALUES ('" + (id = getID()) + "','" + ID + "','" + eName + "','" + sName + "', '" + password + "');");
             getProfile();
             System.out.println("Inserted into database");
         } catch (SQLException e) {
@@ -135,16 +135,17 @@ public class DBConnections {
 
     }
 
-    public void getID() throws SQLException {
+    public int getID() throws SQLException {
         String query = "SELECT ID FROM Login ORDER BY ID DESC";
 
         Statement sta = con.createStatement();
         ResultSet rs = sta.executeQuery(query);
         while (rs.next()) {
             String ID = rs.getString(1);
-            id = Integer.parseInt(ID);
-            id++;
+            return Integer.parseInt(ID);
+            
         }
+        return 0;
     }
 
     public static void getProfile() throws SQLException {
