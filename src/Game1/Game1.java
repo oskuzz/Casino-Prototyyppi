@@ -634,7 +634,7 @@ public final class Game1 extends javax.swing.JFrame {
 
         Num1.setFont(new java.awt.Font("Tahoma", 0, 70)); // NOI18N
         Num1.setForeground(new java.awt.Color(255, 255, 255));
-        Num1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/BackgroundImages/Game1Pic1.png"))); // NOI18N
+        Num1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Game1Pic/Game1Pic1.png"))); // NOI18N
 
         javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
         jPanel6.setLayout(jPanel6Layout);
@@ -660,7 +660,7 @@ public final class Game1 extends javax.swing.JFrame {
 
         Num2.setFont(new java.awt.Font("Tahoma", 0, 70)); // NOI18N
         Num2.setForeground(new java.awt.Color(255, 255, 255));
-        Num2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/BackgroundImages/Game1Pic1.png"))); // NOI18N
+        Num2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Game1Pic/Game1Pic1.png"))); // NOI18N
 
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
@@ -686,7 +686,7 @@ public final class Game1 extends javax.swing.JFrame {
 
         Num3.setFont(new java.awt.Font("Tahoma", 0, 70)); // NOI18N
         Num3.setForeground(new java.awt.Color(255, 255, 255));
-        Num3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/BackgroundImages/Game1Pic1.png"))); // NOI18N
+        Num3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Game1Pic/Game1Pic1.png"))); // NOI18N
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
