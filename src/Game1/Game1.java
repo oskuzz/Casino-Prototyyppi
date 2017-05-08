@@ -12,6 +12,7 @@ import java.awt.event.ActionListener;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.*;
 
 /**
  *
@@ -19,6 +20,7 @@ import java.util.logging.Logger;
  */
 public final class Game1 extends javax.swing.JFrame {
 
+    ImageIcon Pictures;
     double panos = 1;
     int taso = 1;
     int Lines;
@@ -49,7 +51,7 @@ public final class Game1 extends javax.swing.JFrame {
     private int luku = 9;
     private int luku2 = 8;
     private int luku3 = 7;
-    private int luku4 = 4;
+    private int luku4 = 6;
     private int luku5 = 5;
     private int luku6 = 4;
     private int luku7 = 3;
@@ -59,6 +61,8 @@ public final class Game1 extends javax.swing.JFrame {
     int Auto = 1;
     int auto = 5;
     int Auto2 = 5;
+
+    String fileLocation = new String();
 
     /**
      * Creates new form Game1
@@ -634,7 +638,7 @@ public final class Game1 extends javax.swing.JFrame {
 
         Num1.setFont(new java.awt.Font("Tahoma", 0, 70)); // NOI18N
         Num1.setForeground(new java.awt.Color(255, 255, 255));
-        Num1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Game1Pic/Game1Pic1.png"))); // NOI18N
+        Num1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Game1Pic/Pic1.png"))); // NOI18N
 
         javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
         jPanel6.setLayout(jPanel6Layout);
@@ -660,7 +664,7 @@ public final class Game1 extends javax.swing.JFrame {
 
         Num2.setFont(new java.awt.Font("Tahoma", 0, 70)); // NOI18N
         Num2.setForeground(new java.awt.Color(255, 255, 255));
-        Num2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Game1Pic/Game1Pic1.png"))); // NOI18N
+        Num2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Game1Pic/Pic1.png"))); // NOI18N
 
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
@@ -686,7 +690,7 @@ public final class Game1 extends javax.swing.JFrame {
 
         Num3.setFont(new java.awt.Font("Tahoma", 0, 70)); // NOI18N
         Num3.setForeground(new java.awt.Color(255, 255, 255));
-        Num3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Game1Pic/Game1Pic1.png"))); // NOI18N
+        Num3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Game1Pic/Pic1.png"))); // NOI18N
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
@@ -1104,23 +1108,72 @@ public final class Game1 extends javax.swing.JFrame {
                 if (luku == 10) {
                     luku = 1;
                 }
-                Num1.setText(Integer.toString(luku));
+                if (luku < 6) {
+                    Num1.setText("");
+                    fileLocation = "C:\\Users\\s1601396\\Desktop\\Casino-Prototyyppi\\src\\Game1Pic\\Pic" + luku + ".png";
+                    Pictures = new ImageIcon(fileLocation);
+                    Num1.setIcon(Pictures);
+                } else {
+                    Num1.setIcon(null);
+                    Num1.setText(Integer.toString(luku));
+                }
+
                 luku++;
                 if (luku2 == 10) {
                     luku2 = 1;
                 }
-                Num2.setText(Integer.toString(luku2));
+                if (luku2 < 6) {
+                    Num2.setText("");
+                    fileLocation = "C:\\Users\\s1601396\\Desktop\\Casino-Prototyyppi\\src\\Game1Pic\\Pic" + luku2 + ".png";
+                    Pictures = new ImageIcon(fileLocation);
+                    Num2.setIcon(Pictures);
+                } else {
+                    Num2.setIcon(null);
+                    Num2.setText(Integer.toString(luku2));
+                }
                 luku2++;
                 if (luku3 == 10) {
                     luku3 = 1;
                 }
-                Num3.setText(Integer.toString(luku3));
+                if (luku3 < 6) {
+                    Num3.setText("");
+                    fileLocation = "C:\\Users\\s1601396\\Desktop\\Casino-Prototyyppi\\src\\Game1Pic\\Pic" + luku3 + ".png";
+                    Pictures = new ImageIcon(fileLocation);
+                    Num3.setIcon(Pictures);
+                } else {
+                    Num3.setIcon(null);
+                    Num3.setText(Integer.toString(luku3));
+                }
                 luku3++;
                 if (laskuri == 30) {
                     ajastin.stop();
-                    Num1.setText(Integer.toString(num1));
-                    Num2.setText(Integer.toString(num2));
-                    Num3.setText(Integer.toString(num3));
+                    if (num1 < 6) {
+                        Num1.setText("");
+                        fileLocation = "C:\\Users\\s1601396\\Desktop\\Casino-Prototyyppi\\src\\Game1Pic\\Pic" + num1 + ".png";
+                        Pictures = new ImageIcon(fileLocation);
+                        Num1.setIcon(Pictures);
+                    } else {
+                        Num1.setIcon(null);
+                        Num1.setText(Integer.toString(num1));
+                    }
+                    if (num2 < 6) {
+                        Num2.setText("");
+                        fileLocation = "C:\\Users\\s1601396\\Desktop\\Casino-Prototyyppi\\src\\Game1Pic\\Pic" + num2 + ".png";
+                        Pictures = new ImageIcon(fileLocation);
+                        Num2.setIcon(Pictures);
+                    } else {
+                        Num2.setIcon(null);
+                        Num2.setText(Integer.toString(num2));
+                    }
+                    if (num3 < 6) {
+                        Num3.setText("");
+                        fileLocation = "C:\\Users\\s1601396\\Desktop\\Casino-Prototyyppi\\src\\Game1Pic\\Pic" + num3 + ".png";
+                        Pictures = new ImageIcon(fileLocation);
+                        Num3.setIcon(Pictures);
+                    }else{
+                        Num3.setIcon(null);
+                        Num3.setText(Integer.toString(num3));
+                    }
                     System.out.println(num1);
                     System.out.println(num2);
                     System.out.println(num3);
@@ -1141,23 +1194,72 @@ public final class Game1 extends javax.swing.JFrame {
                 if (luku4 == 10) {
                     luku4 = 1;
                 }
-                Num4.setText(Integer.toString(luku4));
+                if (luku4 < 6) {
+                    Num4.setText("");
+                    fileLocation = "C:\\Users\\s1601396\\Desktop\\Casino-Prototyyppi\\src\\Game1Pic\\Pic" + luku4 + ".png";
+                    Pictures = new ImageIcon(fileLocation);
+                    Num4.setIcon(Pictures);
+                } else {
+                    Num4.setIcon(null);
+                    Num4.setText(Integer.toString(luku4));
+                }
+
                 luku4++;
                 if (luku5 == 10) {
                     luku5 = 1;
                 }
-                Num5.setText(Integer.toString(luku5));
+                if (luku5 < 6) {
+                    Num5.setText("");
+                    fileLocation = "C:\\Users\\s1601396\\Desktop\\Casino-Prototyyppi\\src\\Game1Pic\\Pic" + luku5 + ".png";
+                    Pictures = new ImageIcon(fileLocation);
+                    Num5.setIcon(Pictures);
+                } else {
+                    Num5.setIcon(null);
+                    Num5.setText(Integer.toString(luku5));
+                }
                 luku5++;
                 if (luku6 == 10) {
                     luku6 = 1;
                 }
-                Num6.setText(Integer.toString(luku6));
+                if (luku6 < 6) {
+                    Num6.setText("");
+                    fileLocation = "C:\\Users\\s1601396\\Desktop\\Casino-Prototyyppi\\src\\Game1Pic\\Pic" + luku6 + ".png";
+                    Pictures = new ImageIcon(fileLocation);
+                    Num6.setIcon(Pictures);
+                } else {
+                    Num6.setIcon(null);
+                    Num6.setText(Integer.toString(luku6));
+                }
                 luku6++;
                 if (laskuri2 == 40) {
                     ajastin2.stop();
-                    Num4.setText(Integer.toString(num4));
-                    Num5.setText(Integer.toString(num5));
-                    Num6.setText(Integer.toString(num6));
+                    if (num4 < 6) {
+                        Num4.setText("");
+                        fileLocation = "C:\\Users\\s1601396\\Desktop\\Casino-Prototyyppi\\src\\Game1Pic\\Pic" + num4 + ".png";
+                        Pictures = new ImageIcon(fileLocation);
+                        Num4.setIcon(Pictures);
+                    } else {
+                        Num4.setIcon(null);
+                        Num4.setText(Integer.toString(num4));
+                    }
+                    if (num5 < 6) {
+                        Num5.setText("");
+                        fileLocation = "C:\\Users\\s1601396\\Desktop\\Casino-Prototyyppi\\src\\Game1Pic\\Pic" + num5 + ".png";
+                        Pictures = new ImageIcon(fileLocation);
+                        Num5.setIcon(Pictures);
+                    } else {
+                        Num5.setIcon(null);
+                        Num5.setText(Integer.toString(num5));
+                    }
+                    if (num6 < 6) {
+                        Num6.setText("");
+                        fileLocation = "C:\\Users\\s1601396\\Desktop\\Casino-Prototyyppi\\src\\Game1Pic\\Pic" + num6 + ".png";
+                        Pictures = new ImageIcon(fileLocation);
+                        Num6.setIcon(Pictures);
+                    }else{
+                        Num6.setIcon(null);
+                        Num6.setText(Integer.toString(num6));
+                    }
                     System.out.println(num4);
                     System.out.println(num5);
                     System.out.println(num6);
@@ -1180,26 +1282,72 @@ public final class Game1 extends javax.swing.JFrame {
                 if (luku7 == 10) {
                     luku7 = 1;
                 }
-                Num7.setText(Integer.toString(luku7));
+                if (luku7 < 6) {
+                    Num7.setText("");
+                    fileLocation = "C:\\Users\\s1601396\\Desktop\\Casino-Prototyyppi\\src\\Game1Pic\\Pic" + luku7 + ".png";
+                    Pictures = new ImageIcon(fileLocation);
+                    Num7.setIcon(Pictures);
+                } else {
+                    Num7.setIcon(null);
+                    Num7.setText(Integer.toString(luku7));
+                }
+
                 luku7++;
                 if (luku8 == 10) {
                     luku8 = 1;
                 }
-                Num8.setText(Integer.toString(luku8));
+                if (luku8 < 6) {
+                    Num8.setText("");
+                    fileLocation = "C:\\Users\\s1601396\\Desktop\\Casino-Prototyyppi\\src\\Game1Pic\\Pic" + luku8 + ".png";
+                    Pictures = new ImageIcon(fileLocation);
+                    Num8.setIcon(Pictures);
+                } else {
+                    Num8.setIcon(null);
+                    Num8.setText(Integer.toString(luku8));
+                }
                 luku8++;
                 if (luku9 == 10) {
                     luku9 = 1;
                 }
-                Num9.setText(Integer.toString(luku9));
+                if (luku9 < 6) {
+                    Num9.setText("");
+                    fileLocation = "C:\\Users\\s1601396\\Desktop\\Casino-Prototyyppi\\src\\Game1Pic\\Pic" + luku9 + ".png";
+                    Pictures = new ImageIcon(fileLocation);
+                    Num9.setIcon(Pictures);
+                } else {
+                    Num9.setIcon(null);
+                    Num9.setText(Integer.toString(luku9));
+                }
                 luku9++;
                 if (laskuri3 == 50) {
-                    if (laskuri4 == auto) {
-                        jToggleButton3.doClick();
-                    }
                     ajastin3.stop();
-                    Num7.setText(Integer.toString(num7));
-                    Num8.setText(Integer.toString(num8));
-                    Num9.setText(Integer.toString(num9));
+                    if (num7 < 6) {
+                        Num7.setText("");
+                        fileLocation = "C:\\Users\\s1601396\\Desktop\\Casino-Prototyyppi\\src\\Game1Pic\\Pic" + num7 + ".png";
+                        Pictures = new ImageIcon(fileLocation);
+                        Num7.setIcon(Pictures);
+                    } else {
+                        Num7.setIcon(null);
+                        Num7.setText(Integer.toString(num7));
+                    }
+                    if (num8 < 6) {
+                        Num8.setText("");
+                        fileLocation = "C:\\Users\\s1601396\\Desktop\\Casino-Prototyyppi\\src\\Game1Pic\\Pic" + num8 + ".png";
+                        Pictures = new ImageIcon(fileLocation);
+                        Num8.setIcon(Pictures);
+                    } else {
+                        Num8.setIcon(null);
+                        Num8.setText(Integer.toString(num8));
+                    }
+                    if (num9 < 6) {
+                        Num9.setText("");
+                        fileLocation = "C:\\Users\\s1601396\\Desktop\\Casino-Prototyyppi\\src\\Game1Pic\\Pic" + num9 + ".png";
+                        Pictures = new ImageIcon(fileLocation);
+                        Num9.setIcon(Pictures);
+                    }else{
+                        Num9.setIcon(null);
+                        Num9.setText(Integer.toString(num9));
+                    }
                     System.out.println(num7);
                     System.out.println(num8);
                     System.out.println(num9);
