@@ -220,7 +220,7 @@ public class VoitonJako {
 
     public static double JackPot(int num1, int num2, int num3, int num4, int num5, int num6, int num7, int num8, int num9) {
         if (num1 == num2 && num2 == num3 && num3 == num4 && num4 == num5 && num5 == num6 && num6 == num7 && num7 == num8 && num8 == num9 && num9 == 9) {
-            return (50);
+            return (500);
         } else {
             return (0);
         }

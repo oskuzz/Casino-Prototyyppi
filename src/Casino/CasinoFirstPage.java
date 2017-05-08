@@ -503,6 +503,8 @@ public final class CasinoFirstPage extends javax.swing.JFrame {
             FirstNameField.setText(eName);
             LastNameField.setText(sName);
             jToggleButton1.doClick();
+            FirstNameField.setText("");
+            LastNameField.setText("");
         }
 
     }//GEN-LAST:event_SaveButton1ActionPerformed
@@ -515,6 +517,8 @@ public final class CasinoFirstPage extends javax.swing.JFrame {
                     Salasana = PasswordField2.getText();
                     DBConnections.toProfile(eName, sName, Salasana);
                     jToggleButton1.doClick();
+                    PasswordField.setText("");
+                    PasswordField2.setText("");
                 }
             }
         }
