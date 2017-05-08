@@ -634,7 +634,7 @@ public final class Game1 extends javax.swing.JFrame {
 
         Num1.setFont(new java.awt.Font("Tahoma", 0, 70)); // NOI18N
         Num1.setForeground(new java.awt.Color(255, 255, 255));
-        Num1.setText("0");
+        Num1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/BackgroundImages/Game1Pic1.png"))); // NOI18N
 
         javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
         jPanel6.setLayout(jPanel6Layout);
@@ -653,14 +653,14 @@ public final class Game1 extends javax.swing.JFrame {
                 .addGap(0, 0, Short.MAX_VALUE))
         );
 
-        jPanel2.add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 10, 130, 100));
+        jPanel2.add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 15, 130, 100));
 
         jPanel5.setOpaque(false);
         jPanel5.setPreferredSize(new java.awt.Dimension(125, 100));
 
         Num2.setFont(new java.awt.Font("Tahoma", 0, 70)); // NOI18N
         Num2.setForeground(new java.awt.Color(255, 255, 255));
-        Num2.setText("0");
+        Num2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/BackgroundImages/Game1Pic1.png"))); // NOI18N
 
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
@@ -686,7 +686,7 @@ public final class Game1 extends javax.swing.JFrame {
 
         Num3.setFont(new java.awt.Font("Tahoma", 0, 70)); // NOI18N
         Num3.setForeground(new java.awt.Color(255, 255, 255));
-        Num3.setText("0");
+        Num3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/BackgroundImages/Game1Pic1.png"))); // NOI18N
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
@@ -705,7 +705,7 @@ public final class Game1 extends javax.swing.JFrame {
                 .addGap(0, 0, Short.MAX_VALUE))
         );
 
-        jPanel2.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 240, 130, 100));
+        jPanel2.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 235, 130, 100));
 
         jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/BackgroundImages/Game1NumberFrame2.png"))); // NOI18N
         jPanel2.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 0, -1, -1));
