@@ -18,7 +18,7 @@ public class DBConnections {
     private double Kassa = 0;
     static private Connection con;
     private static int id;
-    private static String Salasana;
+    private static String Salasana; 
 
     public DBConnections(String urlToDataBase) throws ClassNotFoundException, SQLException {
 
