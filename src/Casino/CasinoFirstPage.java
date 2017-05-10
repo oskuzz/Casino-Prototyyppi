@@ -5,6 +5,7 @@
  */
 package Casino;
 
+import AdminPanel.AdminPanel;
 import DB.DBBank;
 import DB.DBConnections;
 import Game1.Game1;
@@ -652,15 +653,27 @@ public final class CasinoFirstPage extends javax.swing.JFrame {
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         try {
-            // TODO add your handling code here:
             DBConnections.Admin();
+            AdminHelp();
         } catch (SQLException ex) {
             Logger.getLogger(CasinoFirstPage.class.getName()).log(Level.SEVERE, null, ex);
         }
-        this.setVisible(false);
-        new AdminLogin().setVisible(true);
     }//GEN-LAST:event_jButton4ActionPerformed
 
+    public void admin(int luku) {
+
+        if (luku == 1) {
+            this.setVisible(false);
+            new AdminLogin().setVisible(true);
+        } else if (luku == 2) {
+
+            new AdminPanel().setVisible(true);
+        }
+    }
+    
+    public void AdminHelp(){
+        this.setVisible(false);
+    }
     private void jToggleButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton5ActionPerformed
         // TODO add your handling code here:
         if (jToggleButton5.isSelected()) {

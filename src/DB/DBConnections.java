@@ -181,9 +181,11 @@ public class DBConnections {
             String Admin = rs.getString(1);
 
             if (Admin.equals("Kyllä")) {
-                System.out.println("Admin? Kyllä!");
+                CasinoFirstPage CFP = new CasinoFirstPage();
+                CFP.admin(2);
             } else if (Admin.equals("Ei")) {
-                System.out.println("Admin? Naaaah man!");
+                CasinoFirstPage CFP = new CasinoFirstPage();
+                CFP.admin(1);
             }
         }
 

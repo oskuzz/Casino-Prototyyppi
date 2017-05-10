@@ -12,7 +12,9 @@ import Casino.CasinoFirstPage;
  * @author osku0
  */
 public class AdminPanel extends javax.swing.JFrame {
+
     static int Back;
+
     /**
      * Creates new form AdminPanel
      */
@@ -208,7 +210,7 @@ public class AdminPanel extends javax.swing.JFrame {
         CFP.BackGround(0);
         BackGround(0);
     }//GEN-LAST:event_jButton7ActionPerformed
-    
+
     public void BackGround(int luku) {
         Back = luku;
         if (luku == 0) {
@@ -225,6 +227,7 @@ public class AdminPanel extends javax.swing.JFrame {
             jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/BackgroundImages/Eiffel-Tower-lanscape-Wallpaper-HD.png")));
         }
     }
+
     /**
      * @param args the command line arguments
      */
