@@ -21,6 +21,7 @@ public class AdminPanel extends javax.swing.JFrame {
     public AdminPanel() {
         initComponents();
         jButton2.setVisible(false);
+        jButton7.setVisible(false);
         jButton3.setVisible(false);
         jButton4.setVisible(false);
         jButton5.setVisible(false);
@@ -148,12 +149,14 @@ public class AdminPanel extends javax.swing.JFrame {
             jButton4.setVisible(true);
             jButton5.setVisible(true);
             jButton1.setVisible(true);
+            jButton7.setVisible(true);
         } else {
             jButton2.setVisible(false);
             jButton3.setVisible(false);
             jButton4.setVisible(false);
             jButton5.setVisible(false);
             jButton1.setVisible(false);
+            jButton7.setVisible(false);
         }
     }//GEN-LAST:event_jToggleButton1ActionPerformed
 
