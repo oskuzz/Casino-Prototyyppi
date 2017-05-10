@@ -1,4 +1,6 @@
 # Casino-Prototyyppi
-K‰‰nt‰minen ja k‰ynnist‰minen alkavat Start.java filusta.
+K√§√§nt√§minen ja k√§ynnist√§minen alkavat Start.java filusta.
 Siihen liittyy Register.java ja Login.java filut.
-Sen j‰lkeen p‰‰see CasinoFirtsPage.java filuun.
+Sen j√§lkeen p√§√§see CasinoFirtsPage.java filuun.
+
+Jos commit = "-" meinaa silloin jotain turhaa tai pient√§ committia jolla ei ole vaikutusta projektin toimintaan. 
