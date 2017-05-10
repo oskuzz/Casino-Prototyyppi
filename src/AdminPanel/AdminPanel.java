@@ -6,6 +6,7 @@
 package AdminPanel;
 
 import Casino.CasinoFirstPage;
+import DB.DBConnections;
 
 /**
  *
@@ -20,6 +21,8 @@ public class AdminPanel extends javax.swing.JFrame {
      */
     public AdminPanel() {
         initComponents();
+
+        jButton8.setVisible(false);
         jButton2.setVisible(false);
         jButton7.setVisible(false);
         jButton3.setVisible(false);
@@ -46,6 +49,7 @@ public class AdminPanel extends javax.swing.JFrame {
         jButton5 = new javax.swing.JButton();
         jButton6 = new javax.swing.JButton();
         jButton7 = new javax.swing.JButton();
+        jButton8 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -134,6 +138,18 @@ public class AdminPanel extends javax.swing.JFrame {
         });
         getContentPane().add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 70, -1, -1));
 
+        jButton8.setFont(new java.awt.Font("Tahoma", 1, 15)); // NOI18N
+        jButton8.setForeground(new java.awt.Color(255, 255, 255));
+        jButton8.setText("Set as default");
+        jButton8.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
+        jButton8.setContentAreaFilled(false);
+        jButton8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton8ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton8, new org.netbeans.lib.awtextra.AbsoluteConstraints(1060, 680, -1, -1));
+
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/BackgroundImages/Best HD Walls - FreeHD.Blogspot (64).jpg"))); // NOI18N
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
@@ -150,7 +166,9 @@ public class AdminPanel extends javax.swing.JFrame {
             jButton5.setVisible(true);
             jButton1.setVisible(true);
             jButton7.setVisible(true);
+            jButton8.setVisible(true);
         } else {
+            jButton8.setVisible(false);
             jButton2.setVisible(false);
             jButton3.setVisible(false);
             jButton4.setVisible(false);
@@ -214,6 +232,11 @@ public class AdminPanel extends javax.swing.JFrame {
         BackGround(0);
     }//GEN-LAST:event_jButton7ActionPerformed
 
+    private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
+        // TODO add your handling code here:
+        DBConnections.updateBackGround(Back);
+    }//GEN-LAST:event_jButton8ActionPerformed
+
     public void BackGround(int luku) {
         Back = luku;
         if (luku == 0) {
@@ -274,6 +297,7 @@ public class AdminPanel extends javax.swing.JFrame {
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
     private javax.swing.JButton jButton7;
+    private javax.swing.JButton jButton8;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JToggleButton jToggleButton1;
     // End of variables declaration//GEN-END:variables

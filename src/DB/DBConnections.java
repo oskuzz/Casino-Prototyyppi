@@ -5,6 +5,7 @@
  */
 package DB;
 
+import AdminPanel.AdminPanel;
 import Casino.CasinoFirstPage;
 
 import java.sql.*;
@@ -80,6 +81,7 @@ public class DBConnections {
 
                 if (uName.equals(UserName) && (Password.equals(password))) {
                     getProfile();
+                    BackGround();
                     Login = "Jeah";
                     System.out.println("Jeah");
                     break;
@@ -190,4 +192,30 @@ public class DBConnections {
         }
 
     }
+
+    public static void BackGround() throws SQLException {
+        String query = "SELECT DefaultBackGround FROM Login WHERE ID = ('" + id + "')";
+        Statement sta = con.createStatement();
+        ResultSet rs = sta.executeQuery(query);
+        while (rs.next()) {
+            int BackGround = rs.getInt(1);
+            CasinoFirstPage CFP = new CasinoFirstPage();
+            AdminPanel Admin = new AdminPanel();
+            CFP.BackGround(BackGround);
+            Admin.BackGround(BackGround);
+            
+        }
+    }
+
+    public static void updateBackGround(int luku) {
+        try {
+            Statement sta = con.createStatement();
+
+            sta.executeUpdate("UPDATE Login SET DefaultBackGround = ('" + luku + "') WHERE ID = ('" + id + "')");
+            System.out.println("Inserted into database");
+        } catch (SQLException e) {
+            System.out.println(e);
+        }
+    }
+
 }

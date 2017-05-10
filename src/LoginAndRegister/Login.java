@@ -6,7 +6,6 @@
 package LoginAndRegister;
 
 import Casino.CasinoFirstPage;
-import DB.DBBank;
 import DB.DBConnections;
 import DB.DBConnections2;
 import java.sql.SQLException;
