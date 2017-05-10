@@ -651,7 +651,12 @@ public final class CasinoFirstPage extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton8ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        // TODO add your handling code here:
+        try {
+            // TODO add your handling code here:
+            DBConnections.Admin();
+        } catch (SQLException ex) {
+            Logger.getLogger(CasinoFirstPage.class.getName()).log(Level.SEVERE, null, ex);
+        }
         this.setVisible(false);
         new AdminLogin().setVisible(true);
     }//GEN-LAST:event_jButton4ActionPerformed

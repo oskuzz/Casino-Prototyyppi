@@ -18,7 +18,7 @@ public class DBConnections {
     private double Kassa = 0;
     static private Connection con;
     private static int id;
-    private static String Salasana; 
+    private static String Salasana;
 
     public DBConnections(String urlToDataBase) throws ClassNotFoundException, SQLException {
 
@@ -54,7 +54,7 @@ public class DBConnections {
         try {
             Salasana = password;
             Statement sta = conn.createStatement();
-            
+
             System.out.println(id);
 
             sta.executeUpdate("INSERT INTO Login (ID, uNimi, eNimi, sNimi, Salasana) VALUES ('" + (id = getID()) + "','" + ID + "','" + eName + "','" + sName + "', '" + password + "');");
@@ -143,7 +143,7 @@ public class DBConnections {
         while (rs.next()) {
             String ID = rs.getString(1);
             return Integer.parseInt(ID);
-            
+
         }
         return 0;
     }
@@ -171,5 +171,21 @@ public class DBConnections {
         } catch (SQLException e) {
             System.out.println(e);
         }
+    }
+
+    public static void Admin() throws SQLException {
+        String query = "SELECT Admin FROM Login WHERE ID = ('" + id + "')";
+        Statement sta = con.createStatement();
+        ResultSet rs = sta.executeQuery(query);
+        while (rs.next()) {
+            String Admin = rs.getString(1);
+
+            if (Admin.equals("Kyllä")) {
+                System.out.println("Admin? Kyllä!");
+            } else if (Admin.equals("Ei")) {
+                System.out.println("Admin? Naaaah man!");
+            }
+        }
+
     }
 }
