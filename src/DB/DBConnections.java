@@ -57,8 +57,7 @@ public class DBConnections {
             Statement sta = conn.createStatement();
 
             System.out.println(id);
-
-            sta.executeUpdate("INSERT INTO Login (ID, uNimi, eNimi, sNimi, Salasana) VALUES ('" + (id = getID()) + "','" + ID + "','" + eName + "','" + sName + "', '" + password + "');");
+            sta.executeUpdate("INSERT INTO Login (ID, Admin, uNimi, eNimi, sNimi, Salasana) VALUES ('" + id + "', 'No', '" + ID + "', '" + eName + "', '" + sName + "', '" + password + "');");
             getProfile();
             System.out.println("Inserted into database");
         } catch (SQLException e) {
@@ -137,17 +136,17 @@ public class DBConnections {
 
     }
 
-    public int getID() throws SQLException {
-        String query = "SELECT ID FROM Login ORDER BY ID DESC";
+    public static void getID() throws SQLException {
+        String query = "SELECT ID FROM Login ORDER BY ID ASC";
 
         Statement sta = con.createStatement();
         ResultSet rs = sta.executeQuery(query);
         while (rs.next()) {
-            String ID = rs.getString(1);
-            return Integer.parseInt(ID);
-
+            int ID = rs.getInt(1);
+            id = ID;
+            id++;
         }
-        return 0;
+
     }
 
     public static void getProfile() throws SQLException {
@@ -182,15 +181,38 @@ public class DBConnections {
         while (rs.next()) {
             String Admin = rs.getString(1);
 
-            if (Admin.equals("Kyllä")) {
+            if (Admin.equals("Yes")) {
                 CasinoFirstPage CFP = new CasinoFirstPage();
                 CFP.admin(2);
-            } else if (Admin.equals("Ei")) {
+            } else if (Admin.equals("No")) {
                 CasinoFirstPage CFP = new CasinoFirstPage();
                 CFP.admin(1);
             }
         }
 
+    }
+
+    public static String User(String UserName) throws SQLException {
+        String query = "SELECT uNimi FROM Login WHERE uNimi = ('" + UserName + "')";
+        Statement sta = con.createStatement();
+        ResultSet rs = sta.executeQuery(query);
+        String User = null;
+        while (rs.next()) {
+            User = rs.getString(1);
+        }
+        System.out.println(User);
+        return User;
+    }
+
+    public static void giveAdmin(String Sana, String uname) {
+        try {
+            Statement sta = con.createStatement();
+
+            sta.executeUpdate("UPDATE Login SET Admin = ('" + Sana + "') WHERE uNimi = ('" + uname + "')");
+            System.out.println("Inserted into database");
+        } catch (SQLException e) {
+            System.out.println(e);
+        }
     }
 
     public static void BackGround() throws SQLException {
@@ -203,7 +225,7 @@ public class DBConnections {
             AdminPanel Admin = new AdminPanel();
             CFP.BackGround(BackGround);
             Admin.BackGround(BackGround);
-            
+
         }
     }
 

@@ -29,6 +29,7 @@ public class Register extends javax.swing.JFrame {
         try {
             initComponents();
             bMan = new DBConnections2();
+            DBConnections.getID();
 
         } catch (ClassNotFoundException ex) {
             Logger.getLogger(Register.class.getName()).log(Level.SEVERE, null, ex);
@@ -124,8 +125,9 @@ public class Register extends javax.swing.JFrame {
         // TODO add your handling code here:
         DBConnections DB = bMan.getStorageManager();
         CasinoFirstPage CFP = new CasinoFirstPage();
+        
         try {
-            DB.getID();
+            
             DB.writeToDataBase(ID.getText(), eName.getText(), sName.getText(), password.getText());
             this.setVisible(false);
             new RegisterMoneyPage().setVisible(true);
