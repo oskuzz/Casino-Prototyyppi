@@ -30,6 +30,7 @@ public final class CasinoFirstPage extends javax.swing.JFrame {
     static String eName;
     static String sName;
     static String Salasana;
+    static int Back;
 
     public CasinoFirstPage() {
 
@@ -48,7 +49,7 @@ public final class CasinoFirstPage extends javax.swing.JFrame {
         PasswordField2.setVisible(false);
         jPanel2.setVisible(false);
         jPanel4.setVisible(false);
-
+        BackGround(Back);
         Kassa = kassa;
         DBtoKassa();
 
@@ -663,6 +664,23 @@ public final class CasinoFirstPage extends javax.swing.JFrame {
             jPanel4.setVisible(false);
         }
     }//GEN-LAST:event_jToggleButton5ActionPerformed
+
+    public void BackGround(int luku) {
+        Back = luku;
+        if (luku == 0) {
+            jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/BackgroundImages/Best HD Walls - FreeHD.Blogspot (64).jpg")));
+        } else if (luku == 1) {
+            jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/BackgroundImages/1pqkC3.png")));
+        } else if (luku == 2) {
+            jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/BackgroundImages/bicycle-1280x720.png")));
+        } else if (luku == 3) {
+            jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/BackgroundImages/Cherry-Blossom-Flower-Wallpaper-Collection-HD.png")));
+        } else if (luku == 4) {
+            jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/BackgroundImages/Desktop-HD-Wallpaper-Free-Download-1.png")));
+        } else if (luku == 5) {
+            jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/BackgroundImages/Eiffel-Tower-lanscape-Wallpaper-HD.png")));
+        }
+    }
 
     /**
      * @param args the command line arguments
