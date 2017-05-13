@@ -121,6 +121,7 @@ public final class CasinoFirstPage extends javax.swing.JFrame {
         jPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/BackgroundImages/MenuExitButton.png"))); // NOI18N
+        jButton1.setBorder(null);
         jButton1.setBorderPainted(false);
         jButton1.setContentAreaFilled(false);
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -131,6 +132,7 @@ public final class CasinoFirstPage extends javax.swing.JFrame {
         jPanel4.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(8, 180, -1, -1));
 
         jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/BackgroundImages/MenuAdminButton.png"))); // NOI18N
+        jButton4.setBorder(null);
         jButton4.setBorderPainted(false);
         jButton4.setContentAreaFilled(false);
         jButton4.addActionListener(new java.awt.event.ActionListener() {
@@ -141,6 +143,7 @@ public final class CasinoFirstPage extends javax.swing.JFrame {
         jPanel4.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(8, 30, -1, -1));
 
         jButton8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/BackgroundImages/MenuBankButton.png"))); // NOI18N
+        jButton8.setBorder(null);
         jButton8.setBorderPainted(false);
         jButton8.setContentAreaFilled(false);
         jButton8.addActionListener(new java.awt.event.ActionListener() {
@@ -151,6 +154,7 @@ public final class CasinoFirstPage extends javax.swing.JFrame {
         jPanel4.add(jButton8, new org.netbeans.lib.awtextra.AbsoluteConstraints(8, 80, -1, -1));
 
         jButton9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/BackgroundImages/MenuLogoutButton.png"))); // NOI18N
+        jButton9.setBorder(null);
         jButton9.setBorderPainted(false);
         jButton9.setContentAreaFilled(false);
         jButton9.addActionListener(new java.awt.event.ActionListener() {
@@ -200,6 +204,7 @@ public final class CasinoFirstPage extends javax.swing.JFrame {
         jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 15, 250, 20));
 
         jToggleButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/BackgroundImages/CFPMenuButton.png"))); // NOI18N
+        jToggleButton5.setBorder(null);
         jToggleButton5.setBorderPainted(false);
         jToggleButton5.setContentAreaFilled(false);
         jToggleButton5.addActionListener(new java.awt.event.ActionListener() {
