@@ -264,6 +264,7 @@ public final class CasinoFirstPage extends javax.swing.JFrame {
         jToggleButton2.setFont(new java.awt.Font("Tahoma", 0, 15)); // NOI18N
         jToggleButton2.setForeground(new java.awt.Color(255, 255, 255));
         jToggleButton2.setText("Edit");
+        jToggleButton2.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
         jToggleButton2.setContentAreaFilled(false);
         jToggleButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -295,6 +296,7 @@ public final class CasinoFirstPage extends javax.swing.JFrame {
         SaveButton1.setFont(new java.awt.Font("Tahoma", 0, 15)); // NOI18N
         SaveButton1.setForeground(new java.awt.Color(255, 255, 255));
         SaveButton1.setText("Save");
+        SaveButton1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
         SaveButton1.setContentAreaFilled(false);
         SaveButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -337,6 +339,7 @@ public final class CasinoFirstPage extends javax.swing.JFrame {
         jToggleButton3.setFont(new java.awt.Font("Tahoma", 0, 15)); // NOI18N
         jToggleButton3.setForeground(new java.awt.Color(255, 255, 255));
         jToggleButton3.setText("Profile");
+        jToggleButton3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
         jToggleButton3.setContentAreaFilled(false);
         jToggleButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -348,6 +351,7 @@ public final class CasinoFirstPage extends javax.swing.JFrame {
         jToggleButton4.setFont(new java.awt.Font("Tahoma", 0, 15)); // NOI18N
         jToggleButton4.setForeground(new java.awt.Color(255, 255, 255));
         jToggleButton4.setText("Password");
+        jToggleButton4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
         jToggleButton4.setContentAreaFilled(false);
         jToggleButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
