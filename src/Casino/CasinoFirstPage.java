@@ -121,6 +121,7 @@ public final class CasinoFirstPage extends javax.swing.JFrame {
         jPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/BackgroundImages/MenuExitButton.png"))); // NOI18N
+        jButton1.setBorder(null);
         jButton1.setBorderPainted(false);
         jButton1.setContentAreaFilled(false);
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -131,6 +132,7 @@ public final class CasinoFirstPage extends javax.swing.JFrame {
         jPanel4.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(8, 180, -1, -1));
 
         jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/BackgroundImages/MenuAdminButton.png"))); // NOI18N
+        jButton4.setBorder(null);
         jButton4.setBorderPainted(false);
         jButton4.setContentAreaFilled(false);
         jButton4.addActionListener(new java.awt.event.ActionListener() {
@@ -141,6 +143,7 @@ public final class CasinoFirstPage extends javax.swing.JFrame {
         jPanel4.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(8, 30, -1, -1));
 
         jButton8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/BackgroundImages/MenuBankButton.png"))); // NOI18N
+        jButton8.setBorder(null);
         jButton8.setBorderPainted(false);
         jButton8.setContentAreaFilled(false);
         jButton8.addActionListener(new java.awt.event.ActionListener() {
@@ -151,6 +154,7 @@ public final class CasinoFirstPage extends javax.swing.JFrame {
         jPanel4.add(jButton8, new org.netbeans.lib.awtextra.AbsoluteConstraints(8, 80, -1, -1));
 
         jButton9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/BackgroundImages/MenuLogoutButton.png"))); // NOI18N
+        jButton9.setBorder(null);
         jButton9.setBorderPainted(false);
         jButton9.setContentAreaFilled(false);
         jButton9.addActionListener(new java.awt.event.ActionListener() {
@@ -200,6 +204,7 @@ public final class CasinoFirstPage extends javax.swing.JFrame {
         jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 15, 250, 20));
 
         jToggleButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/BackgroundImages/CFPMenuButton.png"))); // NOI18N
+        jToggleButton5.setBorder(null);
         jToggleButton5.setBorderPainted(false);
         jToggleButton5.setContentAreaFilled(false);
         jToggleButton5.addActionListener(new java.awt.event.ActionListener() {
@@ -259,6 +264,7 @@ public final class CasinoFirstPage extends javax.swing.JFrame {
         jToggleButton2.setFont(new java.awt.Font("Tahoma", 0, 15)); // NOI18N
         jToggleButton2.setForeground(new java.awt.Color(255, 255, 255));
         jToggleButton2.setText("Edit");
+        jToggleButton2.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
         jToggleButton2.setContentAreaFilled(false);
         jToggleButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -290,6 +296,7 @@ public final class CasinoFirstPage extends javax.swing.JFrame {
         SaveButton1.setFont(new java.awt.Font("Tahoma", 0, 15)); // NOI18N
         SaveButton1.setForeground(new java.awt.Color(255, 255, 255));
         SaveButton1.setText("Save");
+        SaveButton1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
         SaveButton1.setContentAreaFilled(false);
         SaveButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -332,6 +339,7 @@ public final class CasinoFirstPage extends javax.swing.JFrame {
         jToggleButton3.setFont(new java.awt.Font("Tahoma", 0, 15)); // NOI18N
         jToggleButton3.setForeground(new java.awt.Color(255, 255, 255));
         jToggleButton3.setText("Profile");
+        jToggleButton3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
         jToggleButton3.setContentAreaFilled(false);
         jToggleButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -343,6 +351,7 @@ public final class CasinoFirstPage extends javax.swing.JFrame {
         jToggleButton4.setFont(new java.awt.Font("Tahoma", 0, 15)); // NOI18N
         jToggleButton4.setForeground(new java.awt.Color(255, 255, 255));
         jToggleButton4.setText("Password");
+        jToggleButton4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
         jToggleButton4.setContentAreaFilled(false);
         jToggleButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
