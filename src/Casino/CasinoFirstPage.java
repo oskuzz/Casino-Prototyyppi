@@ -102,16 +102,10 @@ public final class CasinoFirstPage extends javax.swing.JFrame {
         jToggleButton4 = new javax.swing.JToggleButton();
         jLabel3 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
-        try {
-            jButton3 =(javax.swing.JButton)java.beans.Beans.instantiate(getClass().getClassLoader(), "Casino.CasinoFirstPage_jButton3");
-        } catch (ClassNotFoundException e) {
-            e.printStackTrace();
-        } catch (java.io.IOException e) {
-            e.printStackTrace();
-        }
         jButton6 = new javax.swing.JButton();
         jButton7 = new javax.swing.JButton();
         jButton5 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -380,13 +374,6 @@ public final class CasinoFirstPage extends javax.swing.JFrame {
         jPanel3.setOpaque(false);
         jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
-            }
-        });
-        jPanel3.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 310, 176));
-
         jButton6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/BackgroundImages/game2ButtonDesing.png"))); // NOI18N
         jButton6.setBorderPainted(false);
         jButton6.setContentAreaFilled(false);
@@ -414,6 +401,17 @@ public final class CasinoFirstPage extends javax.swing.JFrame {
             }
         });
         jPanel3.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 196, 310, 176));
+
+        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/BackgroundImages/Game1ButtonDesing.png"))); // NOI18N
+        jButton2.setBorder(null);
+        jButton2.setBorderPainted(false);
+        jButton2.setContentAreaFilled(false);
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+        jPanel3.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         getContentPane().add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 220, 650, 380));
 
@@ -683,6 +681,15 @@ public final class CasinoFirstPage extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jToggleButton5ActionPerformed
 
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+        if (jToggleButton4.isSelected()) {
+            jToggleButton4.doClick();
+        }
+        this.setVisible(false);
+        new Game1().setVisible(true);
+    }//GEN-LAST:event_jButton2ActionPerformed
+
     public void BackGround(int luku) {
         Back = luku;
         if (luku == 0) {
@@ -752,7 +759,7 @@ public final class CasinoFirstPage extends javax.swing.JFrame {
     private javax.swing.JButton SaveButton1;
     private javax.swing.JButton SaveButton2;
     private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
