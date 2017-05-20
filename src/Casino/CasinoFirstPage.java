@@ -53,6 +53,9 @@ public final class CasinoFirstPage extends javax.swing.JFrame {
         BackGround(Back);
         Kassa = kassa;
         DBtoKassa();
+        jButton5.setVisible(false);
+        jButton6.setVisible(false);
+        jButton7.setVisible(false);
 
     }
 

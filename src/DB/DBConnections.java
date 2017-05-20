@@ -33,6 +33,22 @@ public class DBConnections {
     public DBConnections() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
+    public ResultSet query(String SQL) throws SQLException {
+        Statement stmt = conn.createStatement();
+        ResultSet result = stmt.executeQuery(SQL);
+        return result;
+    }
+
+    public int updateReturnID(String SQL) throws SQLException {
+        Statement stmt = conn.createStatement();
+        int id = -1;
+        stmt.executeUpdate(SQL, Statement.RETURN_GENERATED_KEYS);
+        ResultSet result = stmt.getGeneratedKeys();
+        if (result.next()) {
+            id = result.getInt(1);
+        }
+        return id;
+    }
 
     public void writeToDataBase(String ID, String eName, String sName, String password) throws ClassNotFoundException, SQLException {
         try {
