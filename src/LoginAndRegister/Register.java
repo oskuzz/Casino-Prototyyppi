@@ -68,10 +68,18 @@ public class Register extends javax.swing.JFrame {
         setResizable(false);
         setSize(new java.awt.Dimension(397, 326));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        getContentPane().add(ID, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 80, 180, -1));
-        getContentPane().add(eName, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 120, 180, -1));
-        getContentPane().add(sName, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 160, 180, -1));
-        getContentPane().add(password, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 200, 180, -1));
+
+        ID.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
+        getContentPane().add(ID, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 85, 180, 20));
+
+        eName.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
+        getContentPane().add(eName, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 125, 180, 20));
+
+        sName.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
+        getContentPane().add(sName, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 165, 180, 20));
+
+        password.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
+        getContentPane().add(password, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 205, 180, 20));
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/BackgroundImages/UserNameButton.png"))); // NOI18N
@@ -126,16 +134,36 @@ public class Register extends javax.swing.JFrame {
         DBConnections DB = bMan.getStorageManager();
         CasinoFirstPage CFP = new CasinoFirstPage();
         
-        try {
+        ID.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
+        eName.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
+        sName.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
+        password.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
+        
+        if (ID.getText().equals("")) {
             
-            DB.writeToDataBase(ID.getText(), eName.getText(), sName.getText(), password.getText());
-            this.setVisible(false);
-            new RegisterMoneyPage().setVisible(true);
+            ID.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 0, 0)));
+        } else if (eName.getText().equals("")) {
 
-        } catch (ClassNotFoundException ex) {
-            Logger.getLogger(Register.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (SQLException ex) {
-            Logger.getLogger(Register.class.getName()).log(Level.SEVERE, null, ex);
+            eName.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 0, 0)));
+        } else if (sName.getText().equals("")) {
+
+            sName.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 0, 0)));
+        } else if (password.getText().equals("")) {
+
+            password.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 0, 0)));
+        } else {
+
+            try {
+
+                DB.writeToDataBase(ID.getText(), eName.getText(), sName.getText(), password.getText());
+                this.setVisible(false);
+                new RegisterMoneyPage().setVisible(true);
+
+            } catch (ClassNotFoundException ex) {
+                Logger.getLogger(Register.class.getName()).log(Level.SEVERE, null, ex);
+            } catch (SQLException ex) {
+                Logger.getLogger(Register.class.getName()).log(Level.SEVERE, null, ex);
+            }
         }
     }//GEN-LAST:event_jButton1ActionPerformed
 
