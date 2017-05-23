@@ -302,7 +302,7 @@ public final class Game1 extends javax.swing.JFrame {
         VoittoField.setBackground(new java.awt.Color(0, 0, 2));
         VoittoField.setForeground(new java.awt.Color(255, 255, 255));
         VoittoField.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-        VoittoField.setText("0");
+        VoittoField.setText("0.0 €");
         VoittoField.setBorder(null);
         jPanel1.add(VoittoField, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 40, 80, 28));
 
@@ -873,7 +873,7 @@ public final class Game1 extends javax.swing.JFrame {
 
         kassa = Double.parseDouble(KassaField.getText());
 
-        VoittoField.setText("0.0");
+        VoittoField.setText("0.0" + " €");
         jTextField3.setVisible(false);
         jLabel7.setVisible(false);
         jLabel8.setVisible(false);
@@ -936,7 +936,7 @@ public final class Game1 extends javax.swing.JFrame {
             }
 
             voitto = VoitonJako.voitto(taso1Voitto, taso2Voitto, taso3Voitto, taso4Voitto, taso5Voitto, taso, jackPot);
-            VoittoField.setText(Double.toString(voitto));
+            VoittoField.setText(Double.toString(voitto) + " €");
             if (voitto > 0) {
                 loppuKassa = loppuKassa + voitto;
 
@@ -947,7 +947,7 @@ public final class Game1 extends javax.swing.JFrame {
             } catch (SQLException ex) {
                 Logger.getLogger(Game1.class.getName()).log(Level.SEVERE, null, ex);
             }
-            KassaField.setText(Double.toString(loppuKassa));
+            KassaField.setText(Double.toString(loppuKassa)+ " €");
 
         } else if (taso == 2) {
             taso1Voitto = VoitonJako.Taso1(luku2, luku5, luku8);
@@ -964,7 +964,7 @@ public final class Game1 extends javax.swing.JFrame {
             taso2Voitto = taso2Voitto * lopullinenPanos2;
 
             voitto = VoitonJako.voitto(taso1Voitto, taso2Voitto, taso3Voitto, taso4Voitto, taso5Voitto, taso, jackPot);
-            VoittoField.setText(Double.toString(voitto));
+            VoittoField.setText(Double.toString(voitto)+ " €");
             if (voitto > 0) {
                 loppuKassa = loppuKassa + voitto;
 
@@ -996,7 +996,7 @@ public final class Game1 extends javax.swing.JFrame {
             taso3Voitto = taso3Voitto * lopullinenPanos2;
 
             voitto = VoitonJako.voitto(taso1Voitto, taso2Voitto, taso3Voitto, taso4Voitto, taso5Voitto, taso, jackPot);
-            VoittoField.setText(Double.toString(voitto));
+            VoittoField.setText(Double.toString(voitto)+ " €");
             if (voitto > 0) {
                 loppuKassa = loppuKassa + voitto;
 
@@ -1034,7 +1034,7 @@ public final class Game1 extends javax.swing.JFrame {
             taso4Voitto = taso4Voitto * lopullinenPanos2;
 
             voitto = VoitonJako.voitto(taso1Voitto, taso2Voitto, taso3Voitto, taso4Voitto, taso5Voitto, taso, jackPot);
-            VoittoField.setText(Double.toString(voitto));
+            VoittoField.setText(Double.toString(voitto)+ " €");
             if (voitto > 0) {
                 loppuKassa = loppuKassa + voitto;
 
@@ -1082,7 +1082,7 @@ public final class Game1 extends javax.swing.JFrame {
             }
 
             voitto = VoitonJako.voitto(taso1Voitto, taso2Voitto, taso3Voitto, taso4Voitto, taso5Voitto, taso, jackPot);
-            VoittoField.setText(Double.toString(voitto));
+            VoittoField.setText(Double.toString(voitto)+ " €");
             if (voitto > 0) {
                 loppuKassa = loppuKassa + voitto;
 
@@ -1287,7 +1287,7 @@ public final class Game1 extends javax.swing.JFrame {
         System.out.println("Ajastin go");
         kassa = Double.parseDouble(KassaField.getText());
 
-        VoittoField.setText("0.0");
+        VoittoField.setText("0.0"+ " €");
         jTextField3.setVisible(false);
         jLabel7.setVisible(false);
         jLabel8.setVisible(false);
