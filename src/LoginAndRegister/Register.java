@@ -69,15 +69,24 @@ public class Register extends javax.swing.JFrame {
         setSize(new java.awt.Dimension(397, 326));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        ID.setBackground(new java.awt.Color(102, 102, 102));
         ID.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
+        ID.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                IDActionPerformed(evt);
+            }
+        });
         getContentPane().add(ID, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 85, 180, 20));
 
+        eName.setBackground(new java.awt.Color(102, 102, 102));
         eName.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
         getContentPane().add(eName, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 125, 180, 20));
 
+        sName.setBackground(new java.awt.Color(102, 102, 102));
         sName.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
         getContentPane().add(sName, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 165, 180, 20));
 
+        password.setBackground(new java.awt.Color(102, 102, 102));
         password.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
         getContentPane().add(password, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 205, 180, 20));
 
@@ -166,6 +175,10 @@ public class Register extends javax.swing.JFrame {
             }
         }
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void IDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_IDActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_IDActionPerformed
 
     /**
      * @param args the command line arguments
