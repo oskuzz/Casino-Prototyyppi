@@ -10,7 +10,7 @@ import DB.DBBank;
 import DB.DBConnections;
 import Game1.Game1;
 import Game2.Game2;
-import Game3.Game3;
+import GUI.TexasHoldemSetup;
 import Game4.Game4;
 import LoginAndRegister.AdminLogin;
 import LoginAndRegister.Start;
@@ -53,7 +53,7 @@ public final class CasinoFirstPage extends javax.swing.JFrame {
         BackGround(Back);
         Kassa = kassa;
         DBtoKassa();
-        jButton5.setVisible(false);
+        //jButton5.setVisible(false);
         jButton6.setVisible(false);
         jButton7.setVisible(false);
 
@@ -393,7 +393,7 @@ public final class CasinoFirstPage extends javax.swing.JFrame {
         });
         jPanel3.add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 196, 310, 176));
 
-        jButton5.setText("Game3");
+        jButton5.setText("TexasHoldem");
         jButton5.setPreferredSize(new java.awt.Dimension(200, 112));
         jButton5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -495,7 +495,7 @@ public final class CasinoFirstPage extends javax.swing.JFrame {
             jToggleButton4.doClick();
         }
         this.setVisible(false);
-        new Game3().setVisible(true);
+        new TexasHoldemSetup().setVisible(true);
     }//GEN-LAST:event_jButton5ActionPerformed
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
