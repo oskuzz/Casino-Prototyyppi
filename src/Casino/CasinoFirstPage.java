@@ -325,6 +325,7 @@ public final class CasinoFirstPage extends javax.swing.JFrame {
         SaveButton2.setFont(new java.awt.Font("Tahoma", 0, 15)); // NOI18N
         SaveButton2.setForeground(new java.awt.Color(255, 255, 255));
         SaveButton2.setText("Save");
+        SaveButton2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
         SaveButton2.setContentAreaFilled(false);
         SaveButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

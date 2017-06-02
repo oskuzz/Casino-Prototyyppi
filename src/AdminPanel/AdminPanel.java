@@ -60,6 +60,7 @@ public class AdminPanel extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Admin");
+        setUndecorated(true);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jToggleButton1.setFont(new java.awt.Font("Tahoma", 1, 15)); // NOI18N
@@ -169,7 +170,7 @@ public class AdminPanel extends javax.swing.JFrame {
                 jButton8ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton8, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 700, -1, -1));
+        jPanel1.add(jButton8, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 32, -1, -1));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 0, 290, 760));
 
